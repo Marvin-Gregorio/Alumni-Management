@@ -1,7 +1,4 @@
-<?php 
-session_start();
-include "server.php";
-if (!isset($_SESSION['username']) && !isset($_SESSION['id'])) {   ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +10,7 @@ if (!isset($_SESSION['username']) && !isset($_SESSION['id'])) {   ?>
 
     <!-- This is Website Logo -->
     <link rel="icon" href="assets/css/images/logo.png">
-fdasfddfds
+
     <!-- This is Additionanl CSS Link -->
     <link rel="stylesheet" href="style.css">
 
@@ -43,14 +40,14 @@ fdasfddfds
                     <div class="card">
                         <div class="card-body">
                             <div class="text-center">
-                                <p class="fs-5"><b>Admin Panel</b></p>
+                                <p class="fs-5"><b>Login Panel</b></p>
                             </div>
                             <div>
                                 <input type="text" name="username" id="username" class="form-control my-4 py-2" placeholder="Username" autocomplete="off">
                                 <input type="password" name="password" id="password" class="form-control my-4 py-2" placeholder="Password" autocomplete="off">
                             </div>
-                            <div class="text-center d-grid gap-2 col-5 mx-auto">
-                                <button type="submit" name="submit" id="submit" class="btn btn-success">Login</button>
+                            <div class="text-center d-grid gap-2 mx-auto">
+                                <button onclick="authenticateUser()" type="submit" name="submit" id="submit" class="btn btn-success form-control">Login</button>
                             </div>
                         </div>
                     </div>
@@ -65,19 +62,8 @@ fdasfddfds
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
     <script src="sweetalert.min.js"></script>
-<?php if (isset($_GET['error'])) { ?>
-<script>
-swal({
-  title: "<?php echo $_GET['error']; ?>",
-  // text: "You clicked the button!",
-  icon: "warning",
-  button: "Got it",
-});
-</script>
-<?php } ?>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/authenticate.js" type="text/javascript"></script>
 </body>
-
 </html>
-<?php }else{
-     header("Location: index.php");
-} ?>
