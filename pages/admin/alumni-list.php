@@ -3,6 +3,7 @@ session_start();
 include "server.php";
 $sql = "SELECT * FROM alumni ORDER BY id DESC";
 $result = mysqli_query($conn, $sql);
+if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +50,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <ul class="navbar-nav">
 <li class="nav-item dropdown">
 <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-<span class="mx-3">Alumni Admin / <?=$_SESSION['username']?></span>
+<span class="mx-3">Staff / <?=$_SESSION['username']?></span>
 <img src="assets/css/images/avatar.png" width="50px" class="rounded-circle" alt="">
 </a>
 <ul class="dropdown-menu">
@@ -71,7 +72,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <li class="nav-item"><a id="nav-menu" href="analytics.php" class="nav-link mx-3">Analytics</a></li>
 <li class="nav-item"><a id="nav-menu" href="alumni-list.php" class="nav-link mx-3">Alumni List</a></li>
 <li class="nav-item"><a id="nav-menu" href="alumni-attendance.php" class="nav-link mx-3">Alumni Attendance</a></li>
-<li class="nav-item"><a id="nav-menu" href="user-list.php" class="nav-link mx-3">Users List</a></li>
 </ul>
 </div>
 </Header>
@@ -315,4 +315,6 @@ currentYear -= 1;
 </body>
 
 </html>
- ?>
+<?php }else{
+	header("Location: login.php");
+} ?>

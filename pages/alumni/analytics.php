@@ -1,10 +1,7 @@
 <?php
 session_start();
-include "server.php";
-$sql = "SELECT * FROM alumni ORDER BY id DESC";
-$result = mysqli_query($conn, $sql);
+if (isset($_SESSION['username']) && isset($_SESSION['id'])) {
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +14,7 @@ $result = mysqli_query($conn, $sql);
 <!-- This is Website Logo -->
 <link rel="icon" href="assets/css/images/logo.png">
 
-<!-- This is Additionanl CSS Link -->  
+<!-- This is Additionanl CSS Link -->
 <link rel="stylesheet" href="style.css">
 
 <!-- This is Bootstrap CSS Link -->
@@ -30,8 +27,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- This is Table Link -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
 
 </head>
 
@@ -49,11 +44,12 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <ul class="navbar-nav">
 <li class="nav-item dropdown">
 <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-<span class="mx-3">Alumni Admin / <?=$_SESSION['username']?></span>
+<span class="mx-3">Staff / <?=$_SESSION['username']?></span>
 <img src="assets/css/images/avatar.png" width="50px" class="rounded-circle" alt="">
 </a>
 <ul class="dropdown-menu">
-<li><a href="user-profile.php" a class="dropdown-item">Manage Accout</a></li>
+<li><a href="user-profile
+" a class="dropdown-item">Manage Accout</a></li>
 <li><a href="logout.php" a class="dropdown-item">Logout</a></li>
 </ul>
 </li>
@@ -71,7 +67,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <li class="nav-item"><a id="nav-menu" href="analytics.php" class="nav-link mx-3">Analytics</a></li>
 <li class="nav-item"><a id="nav-menu" href="alumni-list.php" class="nav-link mx-3">Alumni List</a></li>
 <li class="nav-item"><a id="nav-menu" href="alumni-attendance.php" class="nav-link mx-3">Alumni Attendance</a></li>
-<li class="nav-item"><a id="nav-menu" href="user-list.php" class="nav-link mx-3">Users List</a></li>
 </ul>
 </div>
 </Header>
@@ -79,25 +74,20 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- This is Main -->
 
 <div class="container-fluid" id="main">
-        
-<div class="row">
 
-
+<div class="col-md-12 mb-3">
 <div class="card">
 <div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
-
-<div class="d-flex justify-content-between">
+<div class="d-flex justify-content-between mb-2">
 <span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
-<h5>Alumni List</h5>
+<h5>Alumni Analytics</h5>
 </span>
-<a href="add-new.php" class="btn btn-info text-white">+ Add New</a>
+<form action="" method="" class="d-flex">
+<input type="search"  class="form-control form-control-sm mx-1" placeholder="Search">
+<button class="btn btn-info text-white rounded-circle" type="submit"><i class="fas fa-search"></i></button>
+</form>
 </div>
-
-<form action="" method="POST" id="" class="d-flex justify-content-between mb-3">
-<div class="mx-1">
-<label for="" id="label-text">Search</label>
-<input type="search" class="form-control form-control-sm" placeholder="Search">
-</div>
+<form action="" method="POST" class="d-flex justify-content-between mb-3">
 <div class="mx-1">
 <label for="" id="label-text">Year</label>
 <select name="" id='date-dropdown' class="form-select form-select-sm">
@@ -226,77 +216,87 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 </select>
 </div>
 </form>
-<form class="form-horizontal well mb-3" action="import.php" method="POST" name="upload_excel" enctype="multipart/form-data">
-<fieldset>
-<div class="control-group mb-1">
-<span><b>Import CSV/Excel file</b></span>
-<div class="control-label">
-<label for="">CSV/Excel File:</label>
+<div class="mb-3">
+            
+<div class="row mb-3">
+<div class="col-md-3">
+<div class="card">
+<div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+<div>
+<span>
+<h5>Alumni By Educational Attainment</h5>
+</span>
 </div>
-<div class="controls">
-<input type="file" name="file" id="file" class="input-large">
+<div class="educ-chart" style="position: relative; height:40vh; width:20vw">
+<canvas id="doughnut-chart"></canvas>
 </div>
-</div>
-<div class="control-group">
-<div class="controls">
-<button type="submit" id="submit" name="Import" class="btn btn-primary button-loading btn-sm" data-loading-text="Loading...">Upload</button>
-</div>
-</div>
-</fieldset>
-</form>
-                    
-<?php if (mysqli_num_rows($result)) { ?>
-<table id="example" class="table table-borderless">
-<thead>
-<tr>
-<th>Full Name</th>
-<th>Email Address</th>
-<th>Contact</th>
-<th>Address</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<?php 
-$i = 0;
-while($rows = mysqli_fetch_assoc($result)){
-$i++;
-?>
-<tr>
-<td ><?php echo $rows['lastname']; ?> , <?php echo $rows['firstname']; ?> <?php echo $rows['middlename']; ?></td>
-<td><?php echo $rows['emailaddr']; ?></td>
-<td><?php echo $rows['contact']; ?></td>
-<td><?php echo $rows['presentaddr']; ?></td>
-<td>
-<a href="view-info-alumni.php" class="btn btn-info btn-sm text-white"><i class="fas fa-eye"></i></a>
-</td>
-</tr>
-<?php } ?>
-</tbody>
-</table>
-<?php } ?>
-
-                            
 </div>
 </div>
 </div>
 
+<div class="col-md-3">
+<div class="card">
+<div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+<div>
+<span>
+<h5>Alumni by Gender</h5>
+</span>
+</div>
+<div class="gender-chart" style="position: relative; height:40vh; width:20vw">
+<canvas id="pie-chart"></canvas>
+</div>
+</div>
+</div>
 </div>
 
+<div class="col-md-3">
+<div class="card">
+<div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+<div>
+<span>
+<h5>Alumni By Civil Status</h5>
+</span>
+</div>
+<div class="civil-chart" style="position: relative; height:40vh; width:20vw">
+<canvas id="polar-chart"></canvas>
+</div>
+</div>
+</div>
+</div>
 
+<div class="col-md-3">
+<div class="card">
+<div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+<div>
+<span>
+<h5>Emnployment Status</h5>
+</span>
+</div>
+<div class="emp-chart" style="position: relative; height:40vh; width:20vw">
+<canvas id="donutchart"></canvas>
+</div>
+</div>
+</div>
+</div>
 
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
 
 <!-- This is Script Js Link -->
 <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
-<script>
-// This is Table
-$(document).ready(function () {
-$('#example').DataTable();
-});
-// Table end here
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+<script src="chart.js"></script>
+<script src="script.js"></script>
 
-// This is Select Year
+<script>
 let dateDropdown = document.getElementById('date-dropdown'); 
        
 let currentYear = new Date().getFullYear();    
@@ -308,11 +308,26 @@ dateOption.value = currentYear;
 dateDropdown.add(dateOption);      
 currentYear -= 1;    
 }
-// Select Year End here
-
 </script>
 
+<?php if (isset($_GET['success'])) { ?>
+<script>
+swal({
+title: "<?php echo $_GET['success']; ?>",
+// text: "You clicked the button!",
+icon: "success",
+button: "Got it",
+});
+</script>
+<?php } ?>
+<script>
+$(document).ready(function() {
+    $('#add').DataTable();
+} );
+</script>
 </body>
 
 </html>
- ?>
+<?php }else{
+	header("Location: login.php");
+} ?>
