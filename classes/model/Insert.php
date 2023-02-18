@@ -31,6 +31,32 @@
 			return $stmt;
 		}
 
+		protected function insertEmploymentInfo($id,$name,$email,$address,$number){
+			$sql = 'insert into employment_info(company_name,company_email,company_address,company_number,user_id) values(?,?,?,?,?)';
+			$stmt = $this->connect()->prepare($sql);
+
+			try{
+				$stmt->execute([$name,$email,$address,$number,$id]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+
+			return $stmt;
+		}
+
+		protected function insertEducationalInfo($id,$elem_school,$elem_year,$junior_school,$junior_year,$senior_school,$senior_year,$senior_course,$college_school,$college_year,$college_course,$master_school,$master_year,$master_course,$doctor_school,$doctor_year,$doctor_course){
+			$sql = 'insert into educational_info(elem_school, elem_year, junior_school, junior_year, senior_school, senior_year, senior_course, college_school, college_year, college_course, master_school, master_year, master_course, doctor_school, doctor_year, doctor_course, user_id) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)';
+			$stmt = $this->connect()->prepare($sql);
+
+			try{
+				$stmt->execute([$elem_school,$elem_year,$junior_school,$junior_year,$senior_school,$senior_year,$senior_course,$college_school,$college_year,$college_course,$master_school,$master_year,$master_course,$doctor_school,$doctor_year,$doctor_course,$id]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+
+			return $stmt;
+		}
+
 	}
 
 ?>

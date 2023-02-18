@@ -44,14 +44,83 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <div class="bg-white mt-2 container-fluid" id="main">
     <div class="row">
-    	<div class="col-4">
+    	<div class="col-sm-4">
     		<div>
-                <img src="../../profileImg/profile.jpg"class="w-100 img img-thumbnail" id="profileImg">
-                <button class="btn btn-primary form-control mt-2" onclick="clickImage()">Change Profile</button>     
-            </div>
+          <img src="../../profileImg/profile.jpg"class="w-100 img img-thumbnail" id="profileImg">
+          <button class="btn btn-primary form-control mt-2" onclick="clickImage()">Change Profile</button>     
+        </div>
+        <div class="mt-4">
+          <h5>Change Password:</h5>
+          <div class="pt-2">
+            <label>Old Password: </label>
+            <input type="password" id="old_pass" class="form-control">
+          </div>
+          <div class="pt-2">
+            <label>New Password: </label>
+            <input type="password" id="new_pass" class="form-control">
+          </div>
+          <div class="pt-2">
+            <label>Confirm Password: </label>
+            <input type="password" id="confirm_pass" class="form-control">
+          </div>
+          <button onclick="updatePassword()" class="btn btn-primary mt-2 form-control">Update Password</button>
+        </div>
     	</div>
-    	<div class="col-6">
-    		fads
+    	<div class="col-sm-8">
+    		<div>
+          <h2>Personal Information:</h2>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-4">
+                <label>First Name:</label>
+                <input class="form-control" id="fname" value="fda">
+              </div>
+              <div class="col-sm-4">
+                <label>Middle Name:</label>
+                <input class="form-control" id="mname" value="fdasf">
+              </div>
+              <div class="col-sm-4">
+                <label>Last Name:</label>
+                <input class="form-control" id="lname" value="fdasf">
+              </div>
+            </div>
+            <div class="mt-2">
+              <label>Email: </label>
+              <input type="text" id="p_email" value="fdasf" class="form-control">
+            </div>
+            <div class="mt-2">
+              <label>Cellphone Number:</label>
+              <input type="text" id="p_cp_number" value="fdasf" class="form-control">
+            </div>
+            <div class="mt-2">
+              <label>Birth Date:</label>
+              <input type="date" id="b_date" class="form-control">
+            </div>
+            <div class="mt-2">
+              <label>Username:</label>
+              <input type="text" id="uname" value="fdasf" class="form-control">
+            </div>
+            <div class="mt-2">
+              <label>Gender:</label>
+              <select type="text" id="gender" class="form-control">
+                <option value="MALE">Male</option>
+                <option value="FEMALE">Female</option>
+              </select>
+            </div>
+            <div class="mt-2">
+              <label>Status:</label>
+              <select type="text" id="status" class="form-control">
+                <option value="SINGLE">Single</option>
+                <option value="MARRIED">Married</option>
+                <option value="WIDOW">Widow</option>
+              </select>
+            </div>
+          </div>
+          <button onclick="updatePersonalDetails()" class="btn btn-primary form-control mt-2">Update Profile Info</button>  
+        </div>
+
+        
+        </div>
     	</div>
     </div>
     <form method="post">

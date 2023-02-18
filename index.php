@@ -23,30 +23,32 @@
 
 <body style="background-color: #e0e0e0;">
 
-    <div class="container mt-5 pt-5">
+    <div class="d-flex justify-content-center align-items-center vh-100">
         
-            <div class="text-center">
-                <img src="assets/css/images/logo.png" width="150px" alt="">
-            </div>
-            <div class="text-center mb-3">
-                <h3 id="school-name">Columban College, Inc.</h3>
-                <span id="cp-title" class="fw-semibold">Alumni Management System</span>
-            </div>
-            <div class="row">
-                <div class="col-12 col-sm-8 col-md-3 m-auto">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div class="text-center">
-                                <p class="fs-5"><b>Login Panel</b></p>
+            <div>
+                <div class="text-center">
+                    <img src="assets/css/images/logo.png" width="150px" alt="">
+                </div>
+                <div class="text-center mb-3">
+                    <h3 id="school-name">Columban College, Inc.</h3>
+                    <span id="cp-title" class="fw-semibold">Alumni Management System</span>
+                </div>
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="text-center">
+                                    <p class="fs-5"><b>Login Panel</b></p>
+                                </div>
+                                <div>
+                                    <input type="text" name="username" id="username" class="form-control my-4 py-2" placeholder="Username" autocomplete="off">
+                                    <input type="password" name="password" id="password" class="form-control my-4 py-2" placeholder="Password" autocomplete="off">
+                                </div>
+                                <div class="text-center d-grid gap-2 mx-auto">
+                                    <button onclick="authenticateUser()" type="button" name="submit" id="submit" class="btn btn-success form-control">Login</button>
+                                </div>
+                                <button class="btn form-control" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign up?</button>
                             </div>
-                            <div>
-                                <input type="text" name="username" id="username" class="form-control my-4 py-2" placeholder="Username" autocomplete="off">
-                                <input type="password" name="password" id="password" class="form-control my-4 py-2" placeholder="Password" autocomplete="off">
-                            </div>
-                            <div class="text-center d-grid gap-2 mx-auto">
-                                <button onclick="authenticateUser()" type="button" name="submit" id="submit" class="btn btn-success form-control">Login</button>
-                            </div>
-                            <button class="btn form-control" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign up?</button>
                         </div>
                     </div>
                 </div>

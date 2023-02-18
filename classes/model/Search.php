@@ -27,6 +27,28 @@
 			return $stmt;
 		}
 
+		protected function searchUserEmploymentById($id){
+			$sql = 'select * from employment_info where user_id = ? ';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$id]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
+		protected function searchUserEducationById($id){
+			$sql = 'select * from educational_info where user_id = ? ';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$id]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
 	}
 
 ?>
