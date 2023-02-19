@@ -29,7 +29,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
-<body style="background-color: #e0e0e0;">
+<body style="background-image: linear-gradient(#5ecde1, #2caee2);background-position: center;background-size: cover;background-repeat: no-repeat;min-height: 100vh;">
 
 <!-- This is Sub-Header -->
 
@@ -42,10 +42,11 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 <div class="container-fluid" id="main">
+
 <div class="row mb-3">
 <div class="col-md-12">
-<div class="card">
-<div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+<div class="card" style="background-color: #ffffff50;border-radius: 20px;box-shadow: 13px 11px 29px -1px rgba(0,0,0,0.81);">
+<div class="card-body">
 <div class="d-flex justify-content-between mb-3">
 <span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
 <h5>Alumni List</h5>
@@ -78,10 +79,11 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 </div>
 </div>
 </div>
+
 <div class="row">
 <div class="col-md-6">
-<div class="card">
-<div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+<div class="card" style="background-color: #ffffff50;border-radius: 20px;box-shadow: 13px 11px 29px -1px rgba(0,0,0,0.81);">
+<div class="card-body">
 <div class="d-flex justify-content-between mb-3">
 <span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
 <h5>Analytics</h5>
@@ -99,8 +101,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 </div>
 </div>
 <div class="col-md-6">
-<div class="card">
-<div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+<div class="card" style="background-color: #ffffff50;border-radius: 20px;box-shadow: 13px 11px 29px -1px rgba(0,0,0,0.81);">
+<div class="card-body">
 <div class="d-flex justify-content-between mb-3">
 <span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
 <h5>Alumni Attendance</h5>

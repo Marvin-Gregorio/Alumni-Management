@@ -149,6 +149,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <div class="col-sm-4">
                   <label>Course:</label>
                   <select id="senior_course" class="form-control">
+                    <option selected></option>
                     <option value="BSCS">TVL</option>
                     <option value="BSOA">ABM</option>
                     <option value="BLIS">HUMMS</option>
@@ -169,6 +170,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <div class="col-sm-4">
                   <label>Course:</label>
                   <select id="college_course" class="form-control">
+                    <option selected></option>
                     <option value="BSCS">BSCS</option>
                     <option value="BSOA">BSOA</option>
                     <option value="BLIS">BLIS</option>
@@ -189,6 +191,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <div class="col-sm-4">
                   <label>Course:</label>
                   <select id="master_course" class="form-control">
+                    <option selected></option>
                     <option value="MSCS">MSCS</option>
                     <option value="MSOA">MSOA</option>
                     <option value="MLIS">MLIS</option>
@@ -209,6 +212,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <div class="col-sm-4">
                   <label>Course:</label>
                   <select id="doctor_course" class="form-control">
+                    <option selected></option>
                     <option value="DSCS">DSCS</option>
                     <option value="DSOA">DSOA</option>
                     <option value="DLIS">DLIS</option>
