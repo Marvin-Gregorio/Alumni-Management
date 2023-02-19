@@ -10,6 +10,8 @@
 #header
 {
     background: var(--white);
+    border-radius: 20px;
+    padding: 10px;
 }
 .sub-header
 {

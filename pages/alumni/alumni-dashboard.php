@@ -31,98 +31,9 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <body style="background-image: linear-gradient(#5ecde1, #2caee2);background-position: center;background-size: cover;background-repeat: no-repeat;min-height: 100vh;">
 
-<!-- This is Sub-Header -->
-
 <!-- This is Header -->
-
 <?php include('header.php') ?>
-
-<!-- This is Main -->
-
-
-
-<div class="container-fluid" id="main">
-
-<div class="row mb-3">
-<div class="col-md-12">
-<div class="card" style="background-color: #ffffff50;border-radius: 20px;box-shadow: 13px 11px 29px -1px rgba(0,0,0,0.81);">
-<div class="card-body">
-<div class="d-flex justify-content-between mb-3">
-<span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
-<h5>Alumni List</h5>
-</span>
-<a href="alumni-list.php" class="btn btn-info text-white">View All</a>
-</div>
-<table id="example" class="table table-borderless">
-<thead>
-<tr>
-<th>Full Name</th>
-<th>Email Address</th>
-<th>Contact</th>
-<th>Address</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td scope="row"></td>
-<td></td>
-<td></td>
-<td></td>
-<td>
-<a href="view-info-alumni.php" class="btn btn-info btn-sm text-white"><i class="fas fa-eye"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-md-6">
-<div class="card" style="background-color: #ffffff50;border-radius: 20px;box-shadow: 13px 11px 29px -1px rgba(0,0,0,0.81);">
-<div class="card-body">
-<div class="d-flex justify-content-between mb-3">
-<span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
-<h5>Analytics</h5>
-</span>
-<a href="analytics.php" class="btn btn-info text-white">View All</a>
-</div>
-&nbsp;
-<div class="mb-3" style="position: relative;">
-<canvas id="alumni" height="20vw" width="80vw"></canvas>
-</div>
-<div class="mb-3">
-<span><b>TOTAL NUMBER OF ALUMNI:</b><span class="mx-5 fs-5"><b>6,308</b></span></span>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-<div class="card" style="background-color: #ffffff50;border-radius: 20px;box-shadow: 13px 11px 29px -1px rgba(0,0,0,0.81);">
-<div class="card-body">
-<div class="d-flex justify-content-between mb-3">
-<span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
-<h5>Alumni Attendance</h5>
-<span><b>60th Founding Anniversary Kick Off Activity</b></span>
-<p>November 21, 2022</p>
-</span>
-<a href="alumni-attendance.php" class="btn btn-info text-white">View All</a>
-</div>
-&nbsp;
-<div class="mb-3" style="position: relative;">
-<canvas id="attend" height="20vw" width="80vw"></canvas>
-</div>
-<div class="mb-3">
-<span><b>TOTAL NUMBER OF ATTENDEES:</b><span class="mx-5 fs-5"><b>53,600</b></span></span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<!-- Header ends here -->
 
 <!-- This is Script Js Link -->
 <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
