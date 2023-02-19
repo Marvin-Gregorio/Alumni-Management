@@ -53,7 +53,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                         <li class="nav-item"><a href="alumni-dashboard.php" id="nav-menu" class="nav-link px-3 py-2 d-block mb-2"><i class="fas fa-home mx-2"></i>Dashboard</a></li>
                         <li class="nav-item"><a href="announcement.php" id="nav-menu" class="nav-link px-3 py-2 d-block mb-2"><i class="fas fa-bullhorn mx-2"></i>Announcement</a></li>
                         <li class="nav-item"><a href="message.php" id="nav-menu" class="nav-link px-3 py-2 d-block mb-2"><i class="fas fa-message mx-2"></i>Message<span class="badge text-bg-danger mx-5">4</span></a></li>
-                        <li class="nav-item"><a href="account-settings" id="nav-menu" class="nav-link px-3 py-2 d-block mb-5"><i class="fas fa-address-card mx-2"></i>My Profile</a></li>
+                        <li class="nav-item"><a href="account-settings.php" id="nav-menu" class="nav-link px-3 py-2 d-block mb-5"><i class="fas fa-address-card mx-2"></i>My Profile</a></li>
                         <br>
                         &nbsp;
                         <div class="px-4">
@@ -70,7 +70,25 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         <div class="col-md-10">
             <div class="card" style="background-color: #ffffff65; box-shadow: -1px -1px 23px 3px rgba(0,0,0,0.75);">
                 <div class="card-body">
-                    <span style="border-left: 4px solid black;"><b class="mx-2">Dashboard</b></span>
+                    <div class="mb-3">
+                        <span style="border-left: 4px solid black;"><b class="mx-2">Announcement</b></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Jobs Offer</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5>Events</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

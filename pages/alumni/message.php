@@ -70,7 +70,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         <div class="col-md-10">
             <div class="card" style="background-color: #ffffff65; box-shadow: -1px -1px 23px 3px rgba(0,0,0,0.75);">
                 <div class="card-body">
-                    <span style="border-left: 4px solid black;"><b class="mx-2">Dashboard</b></span>
+                    <span style="border-left: 4px solid black;"><b class="mx-2">Message</b></span>
                 </div>
             </div>
         </div>

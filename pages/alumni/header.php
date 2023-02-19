@@ -18,16 +18,3 @@
 		</div>
 	</div>
 </nav>
-
-
-<Header class="navbar navbar-expand-sm sub-header" id="header">
-<div class="container-fluid">
-<ul class="navbar-nav mx-3">
-<li class="nav-item"><a id="nav-menu" href="alumni-dashboard.php" class="nav-link mx-3"><i class="fas fa-home mx-1"></i>Home</a></li>
-<li class="nav-item"><a id="nav-menu" href="forum.php" class="nav-link mx-3"><i class="fas fa-bullhorn mx-1"></i>Announcement</a></li>
-<li class="nav-item"><a id="nav-menu" href="forum.php" class="nav-link mx-3"><i class="fas fa-envelope mx-1"></i>Message</a></li>
-<li class="nav-item"><a id="nav-menu" href="account-settings.php" class="nav-link mx-3"><i class="fas fa-address-card mx-1"></i>My Profile</a></li>
-</ul>
-<a onclick="logOut()" class="btn btn-sm btn-danger"><b>LOGOUT</b><i class="fas fa-right-from-bracket mx-2"></i></a>
-</div>
-</Header>

@@ -24,7 +24,7 @@
 #nav-menu
 {
     font-weight: 600;
-    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
     color: var(--black);
     font-family: "Poppins", sans-serif;
 }
