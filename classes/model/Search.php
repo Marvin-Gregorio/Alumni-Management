@@ -16,8 +16,30 @@
 			return $stmt;
 		}
 
+		protected function searchSession($id){
+			$sql = 'select * from session where user_id = ? ';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$id]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
 		protected function searchUserId($username){
 			$sql = 'select * from user_info where user_id = ? ';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$username]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
+		protected function searchUserByType($username){
+			$sql = 'select * from user_info where type = ? ';
 			$stmt = $this->connect()->prepare($sql);
 			try{
 				$stmt->execute([$username]);

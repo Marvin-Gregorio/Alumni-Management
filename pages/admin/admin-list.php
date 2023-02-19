@@ -1,278 +1,206 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Columban College, Inc. | Alumni Database Management System</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Columban College, Inc. | Alumni Database Management System</title>
 
-<!-- This is Website Logo -->
-<link rel="icon" href="assets/css/images/logo.png">
+	<!-- This is Website Logo -->
+	<link rel="icon" href="assets/css/images/logo.png">
 
-<!-- This is Additionanl CSS Link -->  
-<link rel="stylesheet" href="style.css">
+	<!-- This is Additionanl CSS Link -->  
+	<link rel="stylesheet" href="style.css">
 
-<!-- This is Bootstrap CSS Link -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+	<!-- This is Bootstrap CSS Link -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 
-<!-- Fontawesome Link -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Fontawesome Link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+	integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<!-- This is Table Link -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
 
 </head>
 
 <body style="background-color: #e0e0e0;">
 
-<!-- This is Sub-Header -->
+	<!-- This is Sub-Header -->
 
 
-<!-- This is Header -->
+	<!-- This is Header -->
 
-<?php include('header.php') ?>
+	<?php include('header.php') ?>
 
-<!-- This is Main -->
+	<!-- This is Main -->
 
-<div class="container-fluid" id="main">
-        
-<div class="row">
+	<div class="container-fluid" id="main">
 
-
-<div class="card">
-<div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
-
-<div class="d-flex justify-content-between">
-<span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
-<h5>Alumni List</h5>
-</span>
-<a href="add-new.php" class="btn btn-info text-white">+ Add New</a>
-</div>
-
-<form action="" method="POST" id="" class="d-flex justify-content-between mb-3">
-<div class="mx-1">
-<label for="" id="label-text">Search</label>
-<input type="search" class="form-control form-control-sm" placeholder="Search">
-</div>
-<div class="mx-1">
-<label for="" id="label-text">Year</label>
-<select name="" id='date-dropdown' class="form-select form-select-sm">
-<option>All</option>
-</select>
-</div>
-<div class="mx-1">
-<label for="" id="label-text">Degree</label>
-<select name="" id="" class="form-select form-select-sm">
-<option>All</option>
-<option value="">Elementary Graduate</option>
-<option value="">High School Graduate</option>
-<option value="">Bachelor's Degree</option>
-<option value="">Associate's Degree</option>
-<option value="">Master's Degree</option>
-<option value="">Doctoral Degree</option>
-</select>
-</div>
-<div class="mx-1">
-<label for="" id="label-text">Basci Education</label>
-<select name="" id="" class="form-select form-select-sm">
-<option >All</option>
-<option value="">Elementary</option>
-<option value="">Junior High School</option>
-<option value="">Senior High School</option>
-</select>
-</div>
-<div class="mx-1">
-<label for="" id="label-text">Field Of Study</label>
-<select name="" id="" class="form-select form-select-sm">
-<option >All</option>
-<option value="">Food and Beverages</option>
-<option value="">Computer System Servicing</option>
-<option value="">Academic Track Cookery</option>
-</select>
-</div>
-<div class="mx-1">
-<label for="" id="label-text">Under</label>
-<select name="" id="" class="form-select form-select-sm">
-<option >All</option>
-<option value="">TVL-HE</option>
-<option value="">TVL-ICT</option>
-<option value="">ABM</option>
-<option value="">STEM</option>
-<option value="">GAS</option>
-<option value="">HUMSS</option>
-</select>
-</div>
-<div class="mx-1">
-<label for="" id="label-text">Undergraduate</label>
-<select name="" id="" class="form-select form-select-sm">
-<option >All</option>
-<option value="">College of Architecture</option>
-<option value="">College of Arts, Science and Education</option>
-<option value="">College of Business and Accountancy</option>
-<option value="">College of Computer Studies</option>
-<option value="">College of Engineering</option>
-<option value="">College of Nursing</option>
-</select>
-</div>
-<div class="mx-1">
-<label for="" id="label-text">Field of Study</label>
-<select name="" id="" class="form-select form-select-sm">
-<option >All</option>
-<option value="">Bachelor of Science in Architecture</option>
-<option value="">Bachelor of Arts in Communication</option>
-<option value="">Bachelor of Arts in Political Science</option>
-<option value="">Bachelor of Science in Social Work</option>
-<option value="">Bachelor in Human Services</option>
-<option value="">Bachelor of Elementary Education</option>
-<option value="">Bachelor of Physical Education</option>
-<option value="">Bachelor of Early Childhood Education</option>
-<option value="">Bachelor of Secondary Education</option>
-<option value="">Bachelor of Science in Accountancy</option>
-<option value="">Bachelor of Science in Hospitality Management</option>
-<option value="">Bachelor of Science in Tourism Management</option>
-<option value="">Bachelor of Science in Business Administration</option>
-<option value="">Bachelor of Science in Information Technology</option>
-<option value="">Bachelor of Science in Computer Science</option>
-<option value="">Bachelor of Library and Information Science</option>
-<option value="">Bachelor of Science in Office Administration</option>
-<option value="">Associate in Computer Technology</option>
-<option value="">Bachelor of Science in Civil Engineering</option>
-<option value="">Bachelor of Science in Computer Engineering</option>
-<option value="">Bachelor of Science in Electrical Engineering</option>
-<option value="">Bachelor of Science in Electronics Engineering</option>
-<option value="">Bachelor of Science in Industrial Engineering</option>
-<option value="">Bachelor of Science in Nursing</option>
-</select>
-</div>
-<div class="mx-1">
-<label for="" id="label-text">Major</label>
-<select name="" id="" class="form-select form-select-sm">
-<option >All</option>
-<option value="">English</option>
-<option value="">Filipino</option>
-<option value="">Mathematics</option>
-<option value="">Science</option>
-<option value="">Social Studies</option>
-<option value="">Religious Education</option>
-<option value="">Values Education</option>
-<option value="">Financial Management</option>
-<option value="">Human Resource Dev. Management</option>
-<option value="">Marketing Management</option>
-</select>
-</div>
-<div class="mx-1">
-<label for="" id="label-text">Graduate Programs</label>
-<select name="" id="" class="form-select form-select-sm">
-<option >All</option>
-<option value="">Doctor of Education</option>
-<option value="">Master in Business Administration</option>
-<option value="">Master in Public Management</option>
-<option value="">Master of Arts in Education</option>
-</select>
-</div>
-<div class="mx-1">
-<label for="" id="label-text">Major</label>
-<select name="" id="" class="form-select form-select-sm">
-<option >All</option>
-<option value="">Educational Administration</option>
-<option value="">English Language Teaching</option>
-<option value="">Religious Education</option>
-<option value="">Science Education</option>
-<option value="">Values Education</option>
-</select>
-</div>
-</form>
-<form class="form-horizontal well mb-3" action="import.php" method="POST" name="upload_excel" enctype="multipart/form-data">
-<fieldset>
-<div class="control-group mb-1">
-<span><b>Import CSV/Excel file</b></span>
-<div class="control-label">
-<label for="">CSV/Excel File:</label>
-</div>
-<div class="controls">
-<input type="file" name="file" id="file" class="input-large">
-</div>
-</div>
-<div class="control-group">
-<div class="controls">
-<button type="submit" id="submit" name="Import" class="btn btn-primary button-loading btn-sm" data-loading-text="Loading...">Upload</button>
-</div>
-</div>
-</fieldset>
-</form>
-                    
-
-<table id="example" class="table table-borderless">
-<thead>
-<tr>
-<th>Full Name</th>
-<th>Email Address</th>
-<th>Contact</th>
-<th>Address</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>
-<a href="view-info-alumni.php" class="btn btn-info btn-sm text-white"><i class="fas fa-eye"></i></a>
-</td>
-</tr>
-</tbody>
-</table>
-
-                            
-</div>
-</div>
-</div>
-
-</div>
+		<div class="row">
 
 
+			<div class="card">
+				<div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+
+					<div class="d-flex justify-content-between">
+						<span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
+							<h5>Alumni List</h5>
+						</span>
+					</div>
+
+					<table id="myTable" class="table table-striped">
+						<thead>
+							<tr>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Email</th>
+								<th>Phone Number</th>
+								<th>Gender</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+
+						<div class="col-md-4">
+							<h2>Personal Information:</h2>
+							<div class="container-fluid">
+								
+								<div class="mt-1">
+									<label class="fw-semibold" >Full Name:</label>
+									<p><span id="fname"> </span><span id="mname"> </span><span id="lname"> </span></p>
+								</div>
+
+								<div class="mt-1">
+									<label class="fw-semibold" >Email:</label>
+									<p><span id="p_email"> </span></p>
+								</div>
+
+								<div class="mt-1">
+									<label class="fw-semibold" >Cellphone Number:</label>
+									<p><span id="p_cp_number"> </span></p>
+								</div>
+								
+								<div class="mt-1">
+									<label class="fw-semibold" >Birth Date:</label>
+									<p><span id="b_date"> </span></p>
+								</div>
+
+								<div class="mt-1">
+									<label class="fw-semibold" >Username:</label>
+									<p><span id="uname"> </span></p>
+								</div>
+
+								<div class="mt-1">
+									<label class="fw-semibold" >Gender:</label>
+									<p><span id="gender"> </span></p>
+								</div>
+
+								<div class="mt-1">
+									<label class="fw-semibold" >Status:</label>
+									<p><span id="status"> </span></p>
+								</div>
+
+							</div>
+						</div>
+						
+						<div class="col-md-4">
+							<h2>Educational Information:</h2>
+							<div class="container-fluid">
+								
+								
+								<div>
+									<label class=" fw-semibold">Elementary (Grade 1-6)</label>
+									<p><span id="elem_school"></span> - <span id="elem_year"></span></p>
+								</div>
+
+								
+								<div class="">
+									<label class=" fw-semibold">Junior (Grade 7-10)</label>
+									<p><span id="junior_school"></span> - <span id="junior_year"></span></p>
+								</div>
+								<label class=" fw-semibold">Senior (Grade 11-12)</label>
+								<div class="">
+									<p><span id="senior_course"></span> | <span id="senior_school"></span> - <span id="senior_year"></span></p>
+								</div>
+								<label class=" fw-semibold">Undegraduate</label>
+								<div class="">
+									<p><span id="college_course"></span> | <span id="college_school"></span> - <span id="college_year"></span></p>
+								</div>
+								<label class=" fw-semibold">Masteral</label>
+								<div class="">
+									<p><span id="master_course"></span> | <span id="master_school"></span> - <span id="master_year"></span></p>
+								</div>
+								<label class=" fw-semibold">Doctoral</label>
+								<div class="">
+									<p><span id="doctor_course"></span> | <span id="doctor_school"></span> - <span id="doctor_year"></span></p>
+								</div>
+								
+							</div>  
+						</div>
+						
+						<div class="col-md-4">
+							<div >
+								<h2>Employment Information:</h2>
+								<div class="container-fluid">
+									<div class="mt-1">
+										<label class="fw-semibold" >Company Name:</label>
+										<p><span id="company_name"> </span></p>
+									</div>
+									<div class="mt-1">
+										<label class="fw-semibold" >Company Number:</label>
+										<p><span id="company_number"> </span></p>
+									</div>
+									<div class="mt-1">
+										<label class="fw-semibold" >Company Address:</label>
+										<p><span id="company_address"> </span></p>
+									</div>
+									<div class="mt-1">
+										<label class="fw-semibold" >Company Email:</label>
+										<p><span id="company_email"> </span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
 
-<!-- This is Script Js Link -->
-<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
-<script>
-// This is Table
-$(document).ready(function () {
-$('#example').DataTable();
-});
-// Table end here
+			<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+			<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+			<script src="//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js" type="text/javascript"></script>
 
-// This is Select Year
-let dateDropdown = document.getElementById('date-dropdown'); 
-       
-let currentYear = new Date().getFullYear();    
-let earliestYear = 1900;     
-while (currentYear >= earliestYear) {      
-let dateOption = document.createElement('option');          
-dateOption.text = currentYear;      
-dateOption.value = currentYear;        
-dateDropdown.add(dateOption);      
-currentYear -= 1;    
-}
-// Select Year End here
+			<script src="../../js/loadAlumniList.js" type="text/javascript"></script>
+			<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+			<script src="../../js/logOut.js" type="text/javascript"></script>
+			<script src="../../js/nav_profile.js" type="text/javascript"></script>
+			<script src="../../js/adminList.js" type="text/javascript"></script>
+		</body>
 
-
-</script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="../../js/logOut.js" type="text/javascript"></script>
-<script src="../../js/nav_profile.js" type="text/javascript"></script>
-
-</body>
-
-</html>
+		</html>

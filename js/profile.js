@@ -136,6 +136,7 @@ function updatePersonalDetails(){
         success:function(result){
             console.log(result);
             loadAccountDetails();
+            loadProfileDetails();
             Swal.fire({
               icon: 'success',
               title: 'Successful...',

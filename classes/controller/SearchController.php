@@ -19,6 +19,11 @@
 			return false;
 		}
 
+		function getAllUserByType($type){
+			$result = $this->searchUserByType($type);
+			return $result;
+		}
+
 		function hasEmployment($id){
 			$result = $this->searchUserEmploymentById($id);
 			if ($result->rowCount() > 0) {
@@ -45,6 +50,19 @@
 					$data[] = $row['first_name'];
 					$data[] = $row['middle_name'];
 					$data[] = $row['last_name'];
+				}
+				return $data;
+			}
+
+			return false;
+		}
+
+		function getSession($id){
+			$result = $this->searchSession($id);
+			if ($result->rowCount() > 0) {
+				$data[] = array();
+				while($row = $result->fetch()){
+					$data[] = $row['log_date'];
 				}
 				return $data;
 			}

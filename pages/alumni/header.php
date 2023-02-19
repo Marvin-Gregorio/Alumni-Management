@@ -10,8 +10,8 @@
 			<ul class="navbar-nav">
 				<li class="nav-item dropdown">
 				<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				<span class="mx-3">Alumni | <?=$_SESSION['first_name']." ".$_SESSION['last_name']?></span>
-				<img src="../../profileImg/.png" width="50px" class="rounded-circle" id="nav_profile">
+				<span class="">Alumni | </span><span class="mr-3" id="header_name"></span>
+				<img src="" width="50px" class="rounded-circle" id="nav_profile">
 				</a>
 				
 			</ul>
