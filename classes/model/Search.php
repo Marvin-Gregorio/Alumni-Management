@@ -16,6 +16,17 @@
 			return $stmt;
 		}
 
+		protected function searchForum(){
+			$sql = 'select * from forum order by forum_id desc';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute();
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
 		protected function searchSession($id){
 			$sql = 'select * from session where user_id = ? ';
 			$stmt = $this->connect()->prepare($sql);

@@ -14,6 +14,15 @@
 			
 		}
 
+		function new_message($text,$date){
+			try{
+				$this->insertMessage($text,$date);
+			}catch(Exception $e){
+				echo "caught exception: ". $e->getMessage(). "\n";
+			}
+			
+		}
+
 		function logs($id,$date){
 			try{
 				$this->insertLogs($id,$date);

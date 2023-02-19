@@ -31,6 +31,19 @@
 			return $stmt;
 		}
 
+		protected function insertMessage($text,$date){
+			$sql = 'insert into forum(text, date_created) values(?,?)';
+			$stmt = $this->connect()->prepare($sql);
+
+			try{
+				$stmt->execute([$text,$date]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+
+			return $stmt;
+		}
+
 		protected function insertEmploymentInfo($id,$name,$email,$address,$number){
 			$sql = 'insert into employment_info(company_name,company_email,company_address,company_number,user_id) values(?,?,?,?,?)';
 			$stmt = $this->connect()->prepare($sql);

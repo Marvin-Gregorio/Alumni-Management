@@ -19,6 +19,11 @@
 			return false;
 		}
 
+		function getForum(){
+			$result = $this->searchForum();
+			return $result;
+		}
+
 		function getAllUserByType($type){
 			$result = $this->searchUserByType($type);
 			return $result;

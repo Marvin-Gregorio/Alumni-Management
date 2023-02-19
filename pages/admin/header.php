@@ -24,7 +24,7 @@
 <ul class="navbar-nav mx-3">
 <li class="nav-item"><a id="nav-menu" href="admin-dashboard.php" class="nav-link mx-3">Dashboard</a></li>
 <li class="nav-item"><a id="nav-menu" href="admin-list.php" class="nav-link mx-3">Alumni List</a></li>
-<li class="nav-item"><a id="nav-menu" href="admin-list.php" class="nav-link mx-3">Forum</a></li>
+<li class="nav-item"><a id="nav-menu" href="forum.php" class="nav-link mx-3">Forum</a></li>
 <li class="nav-item"><a id="nav-menu" href="account-settings.php" class="nav-link mx-3">Account Settings</a></li>
 </ul>
 <a onclick="logOut()" class="btn btn-danger">Sign-out</a>
