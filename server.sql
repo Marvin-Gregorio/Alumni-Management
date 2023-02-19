@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 19, 2023 at 06:03 AM
+-- Generation Time: Feb 19, 2023 at 04:37 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -118,7 +118,8 @@ CREATE TABLE `educational_info` (
 
 INSERT INTO `educational_info` (`education_id`, `elem_school`, `elem_year`, `junior_school`, `junior_year`, `senior_school`, `senior_year`, `senior_course`, `college_school`, `college_year`, `college_course`, `master_school`, `master_year`, `master_course`, `doctor_school`, `doctor_course`, `doctor_year`, `user_id`) VALUES
 (1, 'OCES', '2008', 'OCABIS', '2012', 'COLUMBAN COLLEGE', '2018', 'BSCS', 'COLUMBAN COLLEGE', '2023', 'BSIT', 'COLUMBAN COLLEGE', '2024', 'MSIT', 'COLUMBAN COLLEGE', 'DSIT', '2026', 8),
-(2, 'COLUMBAN', '2019', 'COLUMBAN', '2020', 'COLUMBAN', '2021', 'BLIS', 'COLUMBAN ', '2022', 'BLIS', 'COLUMBAN', '2023', 'MLIS', 'COLUMBAN', 'DLIS', '2024', 6);
+(2, 'COLUMBAN', '2019', 'COLUMBAN', '2020', 'COLUMBAN', '2021', 'BLIS', 'COLUMBAN ', '2022', 'BLIS', 'COLUMBAN', '2023', 'MLIS', 'COLUMBAN', 'DLIS', '2024', 6),
+(3, 'Columban College', '2008', 'Columban College', '2012', 'Columban College', '2014', 'BSOA', 'Columban College', '2018', 'BSIT', 'Columban College', '2019', 'MSIT', 'Columban College', 'DSIT', '2020', 9);
 
 -- --------------------------------------------------------
 
@@ -141,7 +142,48 @@ CREATE TABLE `employment_info` (
 
 INSERT INTO `employment_info` (`employment_id`, `company_name`, `company_number`, `company_address`, `company_email`, `user_id`) VALUES
 (1, 'Signopsys Inc.', '09121231234', 'BGC, Taguig', 'signopsys.marketing@gmail.com', 8),
-(2, 'Planate Management Inc.', '09121229012', 'Subic Bay Freeport Zone', 'planate.marketing.philippines@gmail.com', 6);
+(2, 'Planate Management Inc.', '09121229012', 'Subic Bay Freeport Zone', 'planate.marketing.philippines@gmail.com', 6),
+(3, 'Columban College Inc', '091829192441', '1st St. New Asinan, Olongapo City', 'columban.edu.ph@gmail.com', 9);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `forum`
+--
+
+CREATE TABLE `forum` (
+  `forum_id` int(11) NOT NULL,
+  `text` longtext NOT NULL,
+  `date_created` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `forum`
+--
+
+INSERT INTO `forum` (`forum_id`, `text`, `date_created`) VALUES
+(1, 'fdasfd', '2023-02-19 07:38:48'),
+(2, 'fdsafdfasfdfdafafdfas', '2023-02-19 08:33:01'),
+(3, 'fdsafdfasfdfdafafdfas', '2023-02-19 08:33:15'),
+(4, 'fdsafdfasfdfdafafdfas', '2023-02-19 08:33:27'),
+(5, 'fdsafdfasfdfdafafdfas', '2023-02-19 08:33:38'),
+(6, 'fdsafdfasfdfdafafdfas', '2023-02-19 08:33:51'),
+(7, 'fdsafdfasfdfdafafdfas', '2023-02-19 08:34:03'),
+(8, 'asdfjkl;', '2023-02-19 08:35:06'),
+(9, 'asdf', '2023-02-19 08:37:57'),
+(10, 'Marvinfdasfjdkfj', '2023-02-19 09:33:49'),
+(11, 'Hello! I\'fadfjkdf\nfdkasjf;kf\nfadsfjdkf\'', '2023-02-19 09:34:45'),
+(12, 'Good morning Alumni\'s. Congratulations!!!', '2023-02-19 09:58:19'),
+(13, '', '2023-02-19 10:03:27'),
+(14, '', '2023-02-19 10:05:22'),
+(15, 'fadsf', '2023-02-19 10:06:16'),
+(16, 'asdf', '2023-02-19 10:10:17'),
+(17, 'af', '2023-02-19 10:57:45'),
+(18, 'fadsf', '2023-02-19 11:00:50'),
+(19, 'Hello everyone,\n\nWe are excited to announce that our CCS Days occasion will be taking place from March 22-24. We have a lot of fun activities planned, including games, competitions, and a culminating night you won\'t want to miss.\n\nTo help us make sure that we have the right games and activities for everyone, we would like you to complete a short survey. The survey will only take a few minutes to complete, and your feedback will help us make sure that everyone has a great time.\n\nhttps://forms.gle/oZ5N2RDZnzHWhPpM8\nDeadline to answer this survey is until Feb. 24, 2023\n\nWe are looking forward to seeing you all at the event, and we hope that you will enjoy all of the activities that we have planned. If you have any questions, please feel free to contact us.\n\nThank you, and we hope to see you soon!', '2023-02-19 11:16:34'),
+(20, 'Hello! Everyone...', '2023-02-19 11:22:06'),
+(21, 'Hi!...', '2023-02-19 11:28:55'),
+(22, 'Hakuna Matata', '2023-02-19 11:33:45');
 
 -- --------------------------------------------------------
 
@@ -198,7 +240,33 @@ INSERT INTO `session` (`session_id`, `user_id`, `log_date`) VALUES
 (36, 7, '2023-02-19 12:29:58'),
 (37, 8, '2023-02-19 12:34:19'),
 (38, 8, '2023-02-19 12:38:27'),
-(39, 8, '2023-02-19 12:42:54');
+(39, 8, '2023-02-19 12:42:54'),
+(40, 8, '2023-02-19 01:31:53'),
+(41, 8, '2023-02-19 01:32:54'),
+(42, 8, '2023-02-19 01:38:49'),
+(43, 8, '2023-02-19 01:43:36'),
+(44, 7, '2023-02-19 01:53:52'),
+(45, 7, '2023-02-19 03:05:42'),
+(46, 7, '2023-02-19 03:25:38'),
+(47, 7, '2023-02-19 03:27:42'),
+(48, 7, '2023-02-19 04:09:51'),
+(49, 7, '2023-02-19 04:11:19'),
+(50, 7, '2023-02-19 04:14:09'),
+(51, 8, '2023-02-19 06:11:39'),
+(52, 7, '2023-02-19 06:53:10'),
+(53, 7, '2023-02-19 06:56:12'),
+(54, 9, '2023-02-19 06:56:46'),
+(55, 7, '2023-02-19 06:59:59'),
+(56, 7, '2023-02-19 08:31:10'),
+(57, 7, '2023-02-19 08:34:15'),
+(58, 7, '2023-02-19 09:20:32'),
+(59, 8, '2023-02-19 09:35:45'),
+(60, 7, '2023-02-19 09:35:56'),
+(61, 8, '2023-02-19 10:06:33'),
+(62, 7, '2023-02-19 10:09:15'),
+(63, 7, '2023-02-19 10:45:09'),
+(64, 8, '2023-02-19 10:48:29'),
+(65, 7, '2023-02-19 10:55:29');
 
 -- --------------------------------------------------------
 
@@ -227,9 +295,10 @@ CREATE TABLE `user_info` (
 --
 
 INSERT INTO `user_info` (`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `cp_number`, `birth_date`, `password`, `username`, `type`, `gender`, `status`, `pic`) VALUES
-(6, 'Leofer', 'Martinez', 'Dela Cruz', 'leofer@gmail.com', '09071021182', '2023-03-03', '$2y$12$4V6ZnicgTd5mcNMx.yLi2uRAt0C3MRJhU.pZ37Uck60BWEbolyM72', 'leofer_delacruz', 'ALUMNI', 'MALE', 'SINGLE', '1676738551.png'),
-(7, 'Anata', 'Berania', 'Sy', 'ana_sy@gmail.com', '09182831664', '2023-01-30', '$2y$12$cZomaZADS2GfORuyIslGJOZUZkhLflHe4Sc1ez9IxtUxESwSXidoG', 'admin', 'ADMIN', 'FEMALE', 'MARRIED', '1676721475.png'),
-(8, 'Melvin', 'Esguerra', 'Vargas', 'marvingregorio56@gmail.com', '09091231223', '2023-03-02', '$2y$12$EMphGelfoecHxBmwM/pQ1umOiKpKXdyHXhZq0hR/UpcmvUHMyhSpq', 'melvin_vargas', 'ALUMNI', 'MALE', 'SINGLE', '1676738874.png');
+(6, 'Leofer', 'Martinez', 'Dela Cruz', 'gregoriomarvin56@gmail.com', '09071021182', '2023-03-03', '$2y$12$4V6ZnicgTd5mcNMx.yLi2uRAt0C3MRJhU.pZ37Uck60BWEbolyM72', 'leofer_delacruz', 'ALUMNI', 'MALE', 'SINGLE', '1676738551.png'),
+(7, 'Anatalia', 'Berania', 'Sy', 'gregoriomarvin.ph@gmail.com', '09182831664', '2023-01-30', '$2y$12$cZomaZADS2GfORuyIslGJOZUZkhLflHe4Sc1ez9IxtUxESwSXidoG', 'admin', 'ADMIN', 'FEMALE', 'MARRIED', '1676721475.png'),
+(8, 'Melvin', 'Esguerra', 'Vargas', 'marvingregorio56@gmail.com', '09091231223', '2023-03-02', '$2y$12$EMphGelfoecHxBmwM/pQ1umOiKpKXdyHXhZq0hR/UpcmvUHMyhSpq', 'melvin_vargas', 'ALUMNI', 'MALE', 'SINGLE', '1676738874.png'),
+(9, 'Aurora', 'Gonzalo', 'Pilorin', 'aurora.ccs@gmail.com', '09182421223', '2002-02-19', '$2y$12$ixzzvC0OD4VtYAv0P0EVL.2EhjIZ/EyJey9rT6NAm.ZGJ754823wS', 'aurora_pilorin', 'ALUMNI', 'MALE', 'SINGLE', '1676804344.png');
 
 --
 -- Indexes for dumped tables
@@ -260,6 +329,12 @@ ALTER TABLE `educational_info`
 ALTER TABLE `employment_info`
   ADD PRIMARY KEY (`employment_id`),
   ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `forum`
+--
+ALTER TABLE `forum`
+  ADD PRIMARY KEY (`forum_id`);
 
 --
 -- Indexes for table `session`
@@ -294,25 +369,31 @@ ALTER TABLE `alumni`
 -- AUTO_INCREMENT for table `educational_info`
 --
 ALTER TABLE `educational_info`
-  MODIFY `education_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `education_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `employment_info`
 --
 ALTER TABLE `employment_info`
-  MODIFY `employment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `employment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `forum`
+--
+ALTER TABLE `forum`
+  MODIFY `forum_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `session`
 --
 ALTER TABLE `session`
-  MODIFY `session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables

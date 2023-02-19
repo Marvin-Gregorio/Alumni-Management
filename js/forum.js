@@ -6,12 +6,12 @@ function new_thread(){
 	$.ajax({
 		url:'../../backend/sendMessage.php',
 		method:'post',
-		beforeSend:function(){
-			document.getElementById('spinner').style.visibility = 'visible';
-		},
 		data:{text:text},
+		beforeSend:function(){
+			document.getElementById('spinner').style.display = 'inline-block';
+		},
 		success:function(data){
-			document.getElementById('spinner').style.visibility = 'hidden';
+			document.getElementById('spinner').style.display = 'none';
 			Swal.fire({
 				icon: 'success',
 				title: 'Successful...',

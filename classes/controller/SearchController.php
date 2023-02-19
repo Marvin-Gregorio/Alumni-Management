@@ -29,6 +29,24 @@
 			return $result;
 		}
 
+		function getAllUser(){
+			$result = $this->searchUserByType('ALUMNI');
+			if($result){
+				$data[] = array();
+
+				while($row = $result->fetch()){
+					$sub[] = array();
+					$sub[] = $row['first_name'];
+					$sub[] = $row['last_name'];
+					$sub[] = $row['email'];
+					$data[] = $sub;
+
+					unset($sub);
+				}
+				return $data;
+			}
+		}
+
 		function hasEmployment($id){
 			$result = $this->searchUserEmploymentById($id);
 			if ($result->rowCount() > 0) {

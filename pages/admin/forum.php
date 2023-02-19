@@ -78,7 +78,7 @@
 	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeThread">Close</button>
 	        <button onclick="new_thread()" type="button" class="btn btn-primary">
 	        	Send
-	        	<div id="spinner" hidden class="spinner-border" role="status" style="height: 17px; width: 17px;">
+	        	<div id="spinner" class="spinner-border" role="status" style="display: none; height: 17px; width: 17px;">
 				  <span class="sr-only">Loading...</span>
 				</div>
 	        </button>
