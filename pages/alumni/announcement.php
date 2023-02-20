@@ -50,7 +50,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                     </div>
                     <hr>
                     <ul class="list-unstyled">
-                        <li class="nav-item"><a href="alumni-dashboard.php" id="nav-menu" class="nav-link px-3 py-2 d-block mb-2"><i class="fas fa-home mx-2"></i>Dashboard</a></li>
                         <li class="nav-item"><a href="announcement.php" id="nav-menu" class="nav-link px-3 py-2 d-block mb-2"><i class="fas fa-bullhorn mx-2"></i>Announcement</a></li>
                         <li class="nav-item"><a href="message.php" id="nav-menu" class="nav-link px-3 py-2 d-block mb-2"><i class="fas fa-message mx-2"></i>Message<span class="badge text-bg-danger mx-5">4</span></a></li>
                         <li class="nav-item"><a href="account-settings.php" id="nav-menu" class="nav-link px-3 py-2 d-block mb-5"><i class="fas fa-address-card mx-2"></i>My Profile</a></li>

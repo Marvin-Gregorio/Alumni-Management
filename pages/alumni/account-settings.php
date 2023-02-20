@@ -41,12 +41,14 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <?php include('header.php') ?>
 
 <!-- This is Main -->
+<div class="container-fluid" style="padding: 20px;">
 <div class="bg-white mt-2 container-fluid" id="main">
     <div class="row">
         <div class="col-sm-4">
             <div class="text-center">
           <img src="../../profileImg/profile.jpg"class="img img-thumbnail" width="50%" id="profileImg">
-          <button class="btn btn-primary form-control mt-2" onclick="clickImage()">Change Profile</button>     
+          <br>
+          <button class="btn btn-primary btn-sm mt-2" onclick="clickImage()">Change Profile</button>     
         </div>
         <div class="mt-4">
           <h5>Change Password:</h5>
@@ -62,7 +64,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
             <label>Confirm Password: </label>
             <input type="password" id="confirm_pass" class="form-control">
           </div>
-          <button onclick="updatePassword()" class="btn btn-primary mt-2 form-control">Update Password</button>
+          <button onclick="updatePassword()" class="btn btn-primary mt-2 btn-sm">Update Password</button>
         </div>
         </div>
         <div class="col-sm-8">
@@ -115,7 +117,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
               </select>
             </div>
           </div>
-          <button onclick="updatePersonalDetails()" class="btn btn-primary form-control mt-2">Update Profile Info</button>  
+          <button onclick="updatePersonalDetails()" class="btn btn-primary btn-sm mt-2">Update Profile Info</button>  
         </div>
 
         <div class="mt-4">
@@ -229,7 +231,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 </div>
               </div>
             </div>
-            <button onclick="updateEducationalDetails()" class="btn btn-primary form-control mt-2">Update Educational Info</button> 
+            <button onclick="updateEducationalDetails()" class="btn btn-primary btn-sm mt-2">Update Educational Info</button> 
           </div>  
 
           <div class="mt-4">
@@ -252,8 +254,11 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
               <input type="text" id="company_email" value="" class="form-control">
             </div>
             
-          <button onclick="updateEmploymentDetails()" class="btn btn-primary form-control mt-2">Update Employment Info</button>  
+          <button onclick="updateEmploymentDetails()" class="btn btn-primary btn-sm mt-2">Update Employment Info</button>  
         </div>
+        </div>
+        <div class="text-end">
+          <a type="button" href="announcement.php" class="btn btn-sm btn-danger">Back</a>
         </div>
         </div>
     </div>
@@ -285,6 +290,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
           </div>
       </div>
   </div>
+</div>
 </div>
 
 </body>

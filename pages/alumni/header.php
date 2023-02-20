@@ -1,6 +1,6 @@
 
 <?php session_start(); ?>
-<nav class="navbar navbar-expand-lg" id="header">
+<nav class="navbar navbar-expand-lg sticky-top" id="header">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="#" id="logo-name">
 			<img src="assets/css/images/logo.png" width="50px;" alt="">
