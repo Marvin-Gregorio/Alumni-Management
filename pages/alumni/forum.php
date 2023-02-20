@@ -37,7 +37,7 @@
 
     <!-- This is Main -->
 
-    <div class="container-fluid" id="main">
+    <div class="container-fluid" style="padding: 20px;">
 
         <div class="row">
 
