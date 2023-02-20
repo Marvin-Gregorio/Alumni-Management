@@ -52,6 +52,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <button class="btn btn-info text-white mt-2" onclick="clickImage()"><b>Change Profile</b></button>     
               </div>
               <div class="row">
+                <h5><b>Change Password:</b></h5>
                 <div class="col-md-12">
                 <label>Old Password: </label>
                 <input type="password" id="old_pass" class="form-control form-control-sm">
