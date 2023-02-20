@@ -80,6 +80,47 @@
 			return false;
 		}
 
+		function getDeptCount($dept){
+			$result = $this->searchUserDept($dept);
+			if ($result->rowCount() > 0) {
+				$data = 0;
+				while($row = $result->fetch()){
+					$data = $row['total'];
+				}
+				return $data;
+			}
+
+			return false;
+		}
+
+		function getDailyCount($dept,$date){
+
+			$result = $this->searchUserSession($dept,$date);
+			if ($result->rowCount() > 0) {
+				$data = 0;
+				while($row = $result->fetch()){
+					$data = $row['total'];
+				}
+				return $data;
+			}
+
+			return false;
+		}
+
+		function getMonthlyCount($dept,$start,$end){
+
+			$result = $this->searchUserBetweenSession($dept,$start,$end);
+			if ($result->rowCount() > 0) {
+				$data = 0;
+				while($row = $result->fetch()){
+					$data = $row['total'];
+				}
+				return $data;
+			}
+
+			return false;
+		}
+
 		function getSession($id){
 			$result = $this->searchSession($id);
 			if ($result->rowCount() > 0) {

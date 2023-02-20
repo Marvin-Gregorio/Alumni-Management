@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 19, 2023 at 04:37 PM
+-- Generation Time: Feb 20, 2023 at 05:16 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -266,7 +266,21 @@ INSERT INTO `session` (`session_id`, `user_id`, `log_date`) VALUES
 (62, 7, '2023-02-19 10:09:15'),
 (63, 7, '2023-02-19 10:45:09'),
 (64, 8, '2023-02-19 10:48:29'),
-(65, 7, '2023-02-19 10:55:29');
+(65, 7, '2023-02-19 10:55:29'),
+(66, 7, '2023-02-20 09:44:38'),
+(67, 8, '2023-02-20 09:45:55'),
+(68, 7, '2023-02-20 09:58:14'),
+(69, 7, '2023-02-20 10:31:47'),
+(70, 24, '2023-02-20 10:33:18'),
+(71, 6, '2023-02-20 10:38:28'),
+(72, 6, '2023-02-20 10:39:44'),
+(73, 6, '2023-02-20 10:42:32'),
+(74, 6, '2023-02-20 11:32:07'),
+(75, 6, '2023-02-20 11:33:51'),
+(76, 24, '2023-02-20 11:48:44'),
+(77, 24, '2023-02-20 11:49:00'),
+(78, 8, '2023-02-20 11:50:11'),
+(79, 7, '2023-02-20 12:16:25');
 
 -- --------------------------------------------------------
 
@@ -287,18 +301,20 @@ CREATE TABLE `user_info` (
   `type` enum('ALUMNI','ADMIN') NOT NULL,
   `gender` enum('MALE','FEMALE') NOT NULL,
   `status` enum('SINGLE','MARRIED','WIDOW') NOT NULL,
-  `pic` varchar(255) NOT NULL
+  `pic` varchar(255) NOT NULL,
+  `department` enum('CCS','CBA','Architecture','CASED','Engineering','Nursing') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user_info`
 --
 
-INSERT INTO `user_info` (`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `cp_number`, `birth_date`, `password`, `username`, `type`, `gender`, `status`, `pic`) VALUES
-(6, 'Leofer', 'Martinez', 'Dela Cruz', 'gregoriomarvin56@gmail.com', '09071021182', '2023-03-03', '$2y$12$4V6ZnicgTd5mcNMx.yLi2uRAt0C3MRJhU.pZ37Uck60BWEbolyM72', 'leofer_delacruz', 'ALUMNI', 'MALE', 'SINGLE', '1676738551.png'),
-(7, 'Anatalia', 'Berania', 'Sy', 'gregoriomarvin.ph@gmail.com', '09182831664', '2023-01-30', '$2y$12$cZomaZADS2GfORuyIslGJOZUZkhLflHe4Sc1ez9IxtUxESwSXidoG', 'admin', 'ADMIN', 'FEMALE', 'MARRIED', '1676721475.png'),
-(8, 'Melvin', 'Esguerra', 'Vargas', 'marvingregorio56@gmail.com', '09091231223', '2023-03-02', '$2y$12$EMphGelfoecHxBmwM/pQ1umOiKpKXdyHXhZq0hR/UpcmvUHMyhSpq', 'melvin_vargas', 'ALUMNI', 'MALE', 'SINGLE', '1676738874.png'),
-(9, 'Aurora', 'Gonzalo', 'Pilorin', 'aurora.ccs@gmail.com', '09182421223', '2002-02-19', '$2y$12$ixzzvC0OD4VtYAv0P0EVL.2EhjIZ/EyJey9rT6NAm.ZGJ754823wS', 'aurora_pilorin', 'ALUMNI', 'MALE', 'SINGLE', '1676804344.png');
+INSERT INTO `user_info` (`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `cp_number`, `birth_date`, `password`, `username`, `type`, `gender`, `status`, `pic`, `department`) VALUES
+(6, 'Leofer', 'Martinez', 'Dela Cruz', 'gregoriomarvin56@gmail.com', '09071021182', '2023-03-03', '$2y$12$4V6ZnicgTd5mcNMx.yLi2uRAt0C3MRJhU.pZ37Uck60BWEbolyM72', 'leofer_delacruz', 'ALUMNI', 'MALE', 'SINGLE', '1676738551.png', 'Architecture'),
+(7, 'Anatalia', 'Berania', 'Sy', 'gregoriomarvin.ph@gmail.com', '09182831664', '2023-01-30', '$2y$12$cZomaZADS2GfORuyIslGJOZUZkhLflHe4Sc1ez9IxtUxESwSXidoG', 'admin', 'ADMIN', 'FEMALE', 'MARRIED', '1676721475.png', ''),
+(8, 'Melvin', 'Esguerra', 'Vargas', 'marvingregorio56@gmail.com', '09091231223', '2023-03-02', '$2y$12$EMphGelfoecHxBmwM/pQ1umOiKpKXdyHXhZq0hR/UpcmvUHMyhSpq', 'melvin_vargas', 'ALUMNI', 'MALE', 'SINGLE', '1676738874.png', 'CBA'),
+(9, 'Aurora', 'Gonzalo', 'Pilorin', 'aurora.ccs@gmail.com', '09182421223', '2002-02-19', '$2y$12$ixzzvC0OD4VtYAv0P0EVL.2EhjIZ/EyJey9rT6NAm.ZGJ754823wS', 'aurora_pilorin', 'ALUMNI', 'MALE', 'SINGLE', '1676804344.png', 'CBA'),
+(24, 'April', 'Ross', 'Aquilino', 'april.ccs@gmail.com', '09161212221', '2023-01-31', '$2y$12$BDM9mPwQfDg01t4VW1Ru/.Z24oOHFPvhdxrHB3rMvJu2s76YII6QO', 'april_ross', 'ALUMNI', 'FEMALE', 'SINGLE', '', 'CCS');
 
 --
 -- Indexes for dumped tables
@@ -387,13 +403,13 @@ ALTER TABLE `forum`
 -- AUTO_INCREMENT for table `session`
 --
 ALTER TABLE `session`
-  MODIFY `session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Constraints for dumped tables

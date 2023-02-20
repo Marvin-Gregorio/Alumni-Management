@@ -5,6 +5,40 @@
 	use Classes\Data\Database;
 
 	class Search extends Database{
+
+		protected function searchUserDept($dept){
+			$sql = 'select count(*) as total from user_info where department = ? ';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$dept]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
+		protected function searchUserSession($dept,$date){
+			$sql = 'select count(*) as total from user_info inner join session on session.user_id = user_info.user_id where department = ? and log_date > ?';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$dept,$date]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
+		protected function searchUserBetweenSession($dept,$start,$end){
+			$sql = 'select count(*) as total from user_info inner join session on session.user_id = user_info.user_id where department = ? and log_date >= ? and log_date <= ?';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$dept,$start,$end]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
 		protected function searchUser($username){
 			$sql = 'select * from user_info where username = ? ';
 			$stmt = $this->connect()->prepare($sql);
