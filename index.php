@@ -57,7 +57,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Sign Up Form:</h5>
@@ -66,45 +66,53 @@
             </button>
           </div>
           <div class="modal-body">
-            <div>
+            <div class="row">
+            <div class="col-md-4">
                 <label>First name:</label>
-                <input type="text" class="form-control" id="f_name">
+                <input type="text" class="form-control form-control-sm" autocomplete="off" id="f_name">
             </div>
-            <div>
+            <div class="col-md-4">
                 <label>Middle name:</label>
-                <input type="text" class="form-control" id="m_name">
+                <input type="text" class="form-control form-control-sm" autocomplete="off" id="m_name">
             </div>
-            <div>
+            <div class="col-md-4">
                 <label>Last name:</label>
-                <input type="text" class="form-control" id="l_name">
+                <input type="text" class="form-control form-control-sm" autocomplete="off" id="l_name">
             </div>
-            <div>
+            </div>
+            <div class="row">
+            <div class="col-md-6">
                 <label>Email:</label>
-                <input type="text" class="form-control" id="email">
+                <input type="text" class="form-control form-control-sm" autocomplete="off" id="email">
             </div>
-            <div>
+            <div class="col-md-3">
                 <label>Cellphone Number:</label>
-                <input type="text" class="form-control" id="cp_number">
+                <input type="text" class="form-control form-control-sm" autocomplete="off" id="cp_number">
             </div>
-            <div>
+            <div class="col-md-3">
                 <label>Birthday:</label>
-                <input type="date" class="form-control" id="b_day">
+                <input type="date" class="form-control form-control-sm" autocomplete="off" id="b_day">
             </div>
-            <div>
+            </div>
+            <div class="row">
+            <div class="col-md-4">
                 <label>Username:</label>
-                <input type="text" class="form-control" id="c_username">
+                <input type="text" class="form-control form-control-sm" autocomplete="off" id="c_username">
             </div>
-            <div>
+            <div class="col-md-4">
                 <label>Password:</label>
-                <input type="text" class="form-control" id="n_pass">
+                <input type="text" class="form-control form-control-sm" autocomplete="off" id="n_pass">
             </div>
-            <div>
+            <div class="col-md-4">
                 <label>Confirm Password:</label>
-                <input type="text" class="form-control" id="c_pass">
+                <input type="text" class="form-control form-control-sm" autocomplete="off" id="c_pass">
             </div>
-            <div>
+            </div>
+            <div class="row">
+            <div class="col-md-8">
                 <label>Department:</label>
-                <select class="form-control" id="dept">
+                <select class="form-select form-select-sm" autocomplete="off" id="dept">
+                    <option selected><--Select Department--></option>
                     <option value="CCS">College of Computer Studies</option>
                     <option value="CBA">College of Business Administration</option>
                     <option value="CASED">College of Arts, Science, and Education</option>
@@ -113,21 +121,24 @@
                     <option value="NURSING">College of Nursing</option>
                 </select>
             </div>
-            <div>
+            <div class="col-md-2">
                 <label>Gender:</label>
-                <select class="form-control" id="gender">
+                <select class="form-select form-select-sm" autocomplete="off" id="gender">
+                    <option selected><--Select Gender--></option>
                     <option value="MALE">Male</option>
                     <option value="FEMALE">Female</option>
                 </select>
             </div>
             
-            <div>
+            <div class="col-md-2">
                 <label>Civil Status:</label>
-                <select class="form-control" id="status">
+                <select class="form-select form-select-sm" autocomplete="off" id="status">
+                    <option selected><--Select Stauts--></option>
                     <option value="SINGLE">Single</option>
                     <option value="MARRIED">Married</option>
                     <option value="WIDOW">Widow</option>
                 </select>
+            </div>
             </div>
           </div>
           <div class="modal-footer">
