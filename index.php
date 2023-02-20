@@ -103,12 +103,24 @@
                 <input type="text" class="form-control" id="c_pass">
             </div>
             <div>
+                <label>Department:</label>
+                <select class="form-control" id="dept">
+                    <option value="CCS">College of Computer Studies</option>
+                    <option value="CBA">College of Business Administration</option>
+                    <option value="CASED">College of Arts, Science, and Education</option>
+                    <option value="ARCHITECTURE">College of Architecture</option>
+                    <option value="ENGINEERING">College of Engineering</option>
+                    <option value="NURSING">College of Nursing</option>
+                </select>
+            </div>
+            <div>
                 <label>Gender:</label>
                 <select class="form-control" id="gender">
                     <option value="MALE">Male</option>
                     <option value="FEMALE">Female</option>
                 </select>
             </div>
+            
             <div>
                 <label>Civil Status:</label>
                 <select class="form-control" id="status">
@@ -119,13 +131,14 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closemodal">Close</button>
             <button type="button" onclick="createUser()" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
     </div>
     <!-- This is Script Js Link -->
+    
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>

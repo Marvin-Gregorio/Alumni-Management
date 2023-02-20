@@ -11,6 +11,7 @@ function createUser(){
 	let c_pass = document.getElementById('c_pass').value;
 	let gender = document.getElementById('gender').value;
 	let status = document.getElementById('status').value;
+	let dept = document.getElementById('dept').value;
 
 	if(pass != c_pass){
 		Swal.fire({
@@ -33,7 +34,6 @@ function createUser(){
 	}else{
 		document.getElementById('n_pass').classList.remove('border-danger');
 		document.getElementById('c_pass').classList.remove('border-danger');
-
 		$.ajax({
 			url:'backend/createUser.php',
 			method:'post',
@@ -55,6 +55,9 @@ function createUser(){
 					icon: 'success',
 					title: 'Successful...',
 					text: 'User created successfully!'
+				}).then(function(){
+			       	
+			        document.getElementById('closemodal').click();
 				})
 			}
 		})
