@@ -25,7 +25,7 @@
 <ul class="navbar-nav mx-3">
 <li class="nav-item"><a id="nav-menu" href="alumni-dashboard.php" class="nav-link mx-3">Home</a></li>
 <li class="nav-item"><a id="nav-menu" href="announcement.php" class="nav-link mx-3">Announcements</a></li>
-<li class="nav-item"><a id="nav-menu" href="job.php" class="nav-link mx-3">Jobs Offer</a></li>
+<li class="nav-item"><a id="nav-menu" href="job.php" class="nav-link mx-3">Jobs</a></li>
 <li class="nav-item"><a id="nav-menu" href="event.php" class="nav-link mx-3">Events</a></li>
 <li class="nav-item"><a id="nav-menu" href="forum.php" class="nav-link mx-3">Forum</a></li>
 <li class="nav-item"><a id="nav-menu" href="account-settings.php" class="nav-link mx-3">My Profile</a></li>

@@ -186,12 +186,12 @@
     <script src="js/createuser.js" type="text/javascript"></script>
     <script src="js/policyModal.js" type="text/javascript"></script>
     <script>
-var checkboxes = $("input[type='checkbox']"),
+    var checkboxes = $("input[type='checkbox']"),
     submitButt = $("input[type='submit']");
 
-checkboxes.click(function() {
+    checkboxes.click(function() {
     submitButt.attr("disabled", !checkboxes.is(":checked"));
-});
+    });
     </script>
 </body>
 </html>
