@@ -148,7 +148,31 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal for user policy and data privacy -->
+    <div class="modal fade" id="user_policy" tabindex="-1" data-bs-backdrop="static" role="dialog" aria-labelledby="user_policy" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">User Policy</h5>
+          </div>
+          <div class="modal-body">
+            Insert Data Privacy and User Policy Here
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- dont delete this -->
+    <button hidden id="policyButton" class="btn form-control" data-bs-toggle="modal" data-bs-target="#user_policy">Policy</button>
+
     <!-- This is Script Js Link -->
+
+
     
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
@@ -156,5 +180,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/authenticate.js" type="text/javascript"></script>
     <script src="js/createuser.js" type="text/javascript"></script>
+    <script src="js/policyModal.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,0 +1,1 @@
+document.onload = document.getElementById('policyButton').click();
