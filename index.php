@@ -151,16 +151,20 @@
 
     <!-- Modal for user policy and data privacy -->
     <div class="modal fade" id="user_policy" tabindex="-1" data-bs-backdrop="static" role="dialog" aria-labelledby="user_policy" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">User Policy</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Data Privacy Policy</h5>
           </div>
           <div class="modal-body">
-            Insert Data Privacy and User Policy Here
+            <p class="mb-3"><b>Republic Act No. 10173, otherwise known as the Data Privacy Act is a law that
+                seeks to protect all forms of information, be it private, personal, or sensitive.
+                It is meant to cover both natural and juridical persons involved in the processing 
+                of personal information.</b></p><br>
+            <input type="checkbox" name="check" id="check" class="mx-3"><label><b>I agree the <a href="#">terms of use</a></b></label>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Accept</button>
+            <input type="submit" value="Accept" class="btn btn-success" data-bs-dismiss="modal" disabled>
           </div>
         </div>
       </div>
@@ -181,5 +185,13 @@
     <script src="js/authenticate.js" type="text/javascript"></script>
     <script src="js/createuser.js" type="text/javascript"></script>
     <script src="js/policyModal.js" type="text/javascript"></script>
+    <script>
+var checkboxes = $("input[type='checkbox']"),
+    submitButt = $("input[type='submit']");
+
+checkboxes.click(function() {
+    submitButt.attr("disabled", !checkboxes.is(":checked"));
+});
+    </script>
 </body>
 </html>
