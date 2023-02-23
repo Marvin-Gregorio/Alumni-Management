@@ -41,7 +41,40 @@
 
 
 
-    <div class="container-fluid" style="padding: 20px;">
+    <div class="container-" style="padding: 20px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table id="eventstable">
+                            <thead style="font-size: 13px;">
+                                <tr>
+                                    <th>Events Name</th>
+                                    <th>Events Place</th>
+                                    <th>Events Date</th>
+                                    <th>Events Time</th>
+                                    <th>Events Description</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CBA vs CCS</td>
+                                    <td>CC Baretto Gym</td>
+                                    <td>11/24/2022</td>
+                                    <td>01:00 PM</td>
+                                    <td>Come and Join us to watch the game and support your teams</td>
+                                    <td>
+                                        <a href="" class="btn btn-sm btn-success">Going</a>
+                                        <a href="" class="btn btn-sm btn-danger">Not Going</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- This is Script Js Link -->
@@ -52,6 +85,25 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../js/logOut.js" type="text/javascript"></script>
     <script src="../../js/nav_profile.js" type="text/javascript"></script>
+
+    <!-- This is datatable -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script>
+    <!-- datatable ends here -->
+
+    <script>
+        $(document).ready(function() {
+    var table = $('#eventstable').DataTable( {
+        responsive: true
+    } );
+ 
+    new $.fn.dataTable.FixedHeader( table );
+    } );
+    </script>
 </body>
 
 </html>

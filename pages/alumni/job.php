@@ -48,26 +48,11 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-4">
-                                <input type="text" class="form-control form-control-sm" value="Job title, keyword or company">
+                                <input type="text" class="form-control form-control-sm" value="Job Title or Company Name">
                             </div>
                             <div class="col-md-4">
                                 <select name="" id="" class="form-select form-select-sm">
-                                    <option selected>All Job Specializations</option>
-                                    <option value="">Hotel Management</option>
-                                    <option value="">Flight Attendant</option>
-                                    <option value="">Accounting / Marketing</option>
-                                    <option value="">Civil Engineer</option>
-                                    <option value="">Architecture Design</option>
-                                    <option value="">Network Administrator</option>
-                                    <option value="">CISCO</option>
-                                    <option value="">System Engineer</option>
-                                    <option value="">Healthcare</option>
-                                    <option value="">Construction Worker</option>
-                                    <option value="">Electrical Engineer</option>
-                                    <option value="">Journalist</option>
-                                    <option value="">Arts / Media</option>
-                                    <option value="">Services</option>
-                                    <option value="">Others</option>
+                                    <option selected>Job Category</option>
                                 </select>
                             </div>
                             <div class="col-md-2">
@@ -78,6 +63,7 @@
                                     <option value="">Temporary</option>
                                     <option value="">Contract</option>
                                     <option value="">Internship</option>
+                                    <option value="">Fresh Graduate</option>
                                 </select>
                             </div>
                             <div class="col-md-2">
@@ -91,133 +77,35 @@
     </div>
 
     <div class="container">
-        <div class="row mb-3">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                            <h4><b>Network Administrator</b></h4>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <img src="https://rb.gy/mtrseh" width="100px" alt="">
-                        </div>
-                        <div class="mx-3">
-                            <a href="viewdetailsJob.php">IT Supervisor (Network Administrator)</a>
-                        </div>
-                        <div class="mx-3">
-                            <p>Cloudstaff Philippines Inc.</p>
-                        </div>
-                        <div class="mx-3">
-                            <p>
-                                <b>Pampanga (Angeles City)</b>
-                                <br>
-                                <b>PHP 40K - 60K Monthly</b>
-                            </p>
-                        </div>
-                        <div class="mx-3">
-                            <p>
-                                <b>Job Description:</b>
-                                <br>
-                                <b class="mx-2">.</b> Create and verify backups of data and configurations.
-                                <br>
-                                <b class="mx-2">.</b> Acts as a back-up of the IT Team Leader.
-                                <br>
-                                <b class="mx-2">.</b> Install and test computer-related equipment.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div>
-                            <span>Date posted : &nbsp;February 17, 2023</span>
+        <div class="mb-3">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-flex justify-content-between">
+                                <a href="viewdetailsJob.php" class="text-decoration-none"><b>IT Supervisor (Network Administrator)</b></a>
+                                <a href="viewdetailsJob.php" class="btn btn-warning btn-sm"><b>Job Details</b></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                            <h4><b>Network Administrator</b></h4>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <img src="https://rb.gy/mtrseh" width="100px" alt="">
-                        </div>
-                        <div class="mx-3">
-                            <a href="viewdetailsJob.php">IT Supervisor (Network Administrator)</a>
-                        </div>
-                        <div class="mx-3">
-                            <p>Cloudstaff Philippines Inc.</p>
-                        </div>
-                        <div class="mx-3">
-                            <p>
-                                <b>Pampanga (Angeles City)</b>
-                                <br>
-                                <b>PHP 40K - 60K Monthly</b>
-                            </p>
-                        </div>
-                        <div class="mx-3">
-                            <p>
-                                <b>Job Description:</b>
-                                <br>
-                                <b class="mx-2">.</b> Create and verify backups of data and configurations.
-                                <br>
-                                <b class="mx-2">.</b> Acts as a back-up of the IT Team Leader.
-                                <br>
-                                <b class="mx-2">.</b> Install and test computer-related equipment.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div>
-                            <span>Date posted : &nbsp;February 17, 2023</span>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+                                <ul class="list-unstyled">
+                                    <li><b>Gridpoint, Technologies Inc.</b></li>
+                                    <li><h5>IT Supervisor (Network Administrator)</h5></li>
+                                    <li><small>Pasig City / Full-Time</small></li>
+                                    <li><small>Php20,000-23,000 a month</small></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                            <h4><b>Network Administrator</b></h4>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <img src="https://rb.gy/mtrseh" width="100px" alt="">
-                        </div>
-                        <div class="mx-3">
-                            <a href="viewdetailsJob.php">IT Supervisor (Network Administrator)</a>
-                        </div>
-                        <div class="mx-3">
-                            <p>Cloudstaff Philippines Inc.</p>
-                        </div>
-                        <div class="mx-3">
-                            <p>
-                                <b>Pampanga (Angeles City)</b>
-                                <br>
-                                <b>PHP 40K - 60K Monthly</b>
-                            </p>
-                        </div>
-                        <div class="mx-3">
-                            <p>
-                                <b>Job Description:</b>
-                                <br>
-                                <b class="mx-2">.</b> Create and verify backups of data and configurations.
-                                <br>
-                                <b class="mx-2">.</b> Acts as a back-up of the IT Team Leader.
-                                <br>
-                                <b class="mx-2">.</b> Install and test computer-related equipment.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div>
-                            <span>Date posted : &nbsp;February 17, 2023</span>
-                        </div>
+                <div class="card-footer">
+                    <div>
+                        Date Posted: February 23, 2023
                     </div>
                 </div>
             </div>

@@ -21,10 +21,10 @@
       'gender' => $row['gender'],
       'action' => '
         <div class="d-flex">
-          <button onclick="seeMoreDetails('.$row["user_id"].')" class="btn btn-warning m-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button onclick="seeMoreDetails('.$row["user_id"].')" class="btn btn-info text-white m-1" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size:.875rem; padding: .25rem .4rem; line-height: .5; border-radius: .2rem;">
             <i class="fas fa-eye"></i>
           </button>
-          <a href="../../classes/views/printDetails.php?id='.$row['user_id'].'" class="btn btn-warning m-1">
+          <a href="../../classes/views/printDetails.php?id='.$row['user_id'].'" class="btn btn-secondary m-1" style="font-size:.875rem; padding: .25rem .4rem; line-height: .5; border-radius: .2rem;">
             <i class="fas fa-print"></i>
           </a> 
         </div>',

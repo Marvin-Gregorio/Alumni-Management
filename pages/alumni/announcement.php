@@ -56,16 +56,25 @@
                                     <a href="job.php" class="btn btn-sm btn-info text-white"><b>View All</b></a>
                                 </div>
                                 <div class="mt-3">
-                                    <table id="jobs" class="table table-sm table-bordered">
+                                    <table id="jobs" style="font-size: 13px;">
                                         <thead>
                                             <tr>
+                                                <th>Occuptional Title</th>
                                                 <th>Comapny Name</th>
-                                                <th>Postion</th>
+                                                <th>Category</th>
                                                 <th>Job Type</th>
-                                                <th>Address</th>
-                                                <th>Description</th>
+                                                <th>Salary</th>
                                             </tr>
                                         </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a href="viewdetailsJob.php" class="text-decoration-none"><b>IT Supervisor (Network Administrator)</b></a></td>
+                                                <td>Gridpoint, Technologies Inc.</td>
+                                                <td>IT</td>
+                                                <td>Full-Time</td>
+                                                <td>Phhp20,000-23,000 a month</td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -79,16 +88,25 @@
                                     <a href="event.php" class="btn btn-sm btn-info text-white"><b>View All</b></a>
                                 </div>
                                 <div class="mt-3">
-                                    <table id="events" class="table table-sm table-bordered">
+                                    <table id="events" style="font-size: 13px;">
                                         <thead>
                                             <tr>
-                                                <th>Title</th>
-                                                <th>Place</th>
-                                                <th>Date</th>
-                                                <th>Status</th>
-                                                <th>Description</th>
+                                                <th>Events Name</th>
+                                                <th>Events Place</th>
+                                                <th>Events Date</th>
+                                                <th>Events Time</th>
+                                                <th>Events Description</th>
                                             </tr>
                                         </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>CBA vs CCS</td>
+                                                <td>CC Baretto Gym</td>
+                                                <td>11/24/2022</td>
+                                                <td>01:00 PM</td>
+                                                <td>Come and Join us to watch the game and support your teams</td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>

@@ -40,23 +40,51 @@
     <!-- This is Main -->
 
     <div class="container" style="padding: 20px;">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card">
-                <div class="card-header">
-                    <div class="text-center">
-                        <img src="https://rb.gy/mtrseh" width="20%">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <ul class="list-unstyled">
+                                <li><h3>Gridpoint, Technologies Inc.</h3></li>
+                                <li><b>IT Supervisor (Network Administrator)</b></li>
+                                <li>Pasig City</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <span><b>Job Description:</b></span>
+                            <ul>
+                                <li>Management of infrastructure, network, equipment, and facilities.</li>
+                                <li>Plans internal and external process improvements for continued service excellence.</li>
+                                <li>Develop a back-up/disaster recovery plan for a network emergency.</li>
+                                <li>Provides troubleshooting for servers, network devices, and firewall configurations.</li>
+                                <li>Notifies end users of outage and/or maintenance schedule.</li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <span><b>Qualifications:</b></span>
+                            <ul>
+                                <li>Bachelor's Degree in Information Science/Technology or any related course..</li>
+                                <li>2-3 years of experience in network and system management and administration. MSCE and Cisco Certification desired..</li>
+                                <li>Strong knowledge of network operating systems (Microsoft NT/2003/Server) and data communication protocols and technologies.</li>
+                                <li>Experience in MS Active Directory, PFSense, Cacti, MRTG, LDAP, TeamViewer, VNC, etc..</li>
+                                <li>Good and functional level of English.</li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <span><b>Job Type :</b> Full-Time</span>
+                        </div>
+                        <div class="form-group">
+                            <span><b>Salary :</b> Php20,000-23,000 a month</span>
+                        </div>
                     </div>
-                </div>
-                <div class="card-body">
                 </div>
             </div>
         </div>
-    </div>
-    <div class="d-flex justify-content-between mt-3">
-        <a href="job.php" class="btn btn-sm btn-info text-white">Back</a>
-        <a href="applyJob.php" class="btn btn-sm btn-info text-white">Apply Now !</a>
-    </div>
+        <div class="d-flex justify-content-between mt-3">
+            <a href="job.php" class="btn btn-sm btn-danger text-white"><i class="fas fa-arrow-left"></i> <b>Back</b></a>
+        </div>
     </div>
 
     <!-- This is Script Js Link -->

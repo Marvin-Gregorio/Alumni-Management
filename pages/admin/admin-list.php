@@ -51,9 +51,9 @@
 						</span>
 					</div>
 
-					<table id="myTable" class="table table-striped">
+					<table id="myTable" class="table table-hover">
 						<thead>
-							<tr>
+							<tr style="font-size: 12px;">
 								<th>First Name</th>
 								<th>Last Name</th>
 								<th>Email</th>
@@ -62,7 +62,7 @@
 								<th>Action</th>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody style="font-size: 12px;">
 						</tbody>
 					</table>
 				</div>
