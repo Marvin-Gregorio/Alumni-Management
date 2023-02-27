@@ -39,17 +39,7 @@
 
     <div class="container-fluid" style="padding: 20px;">
         <div class="row">
-            <div class="col-md-2">
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-unstyled px-1">
-                            <l class="nav-item"><a href="events.php" class="nav-link px-3 py-2 d-block btn btn-info mt-2"><i class="fas fa-calendar-days mx-2"></i><b>Events</b></a></l>
-                            <l class="nav-item"><a href="participants-event.php" class="nav-link px-3 py-2 d-block btn btn-info mt-2"><i class="fas fa-users mx-2"></i><b> Participants</b></a></l>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <div class="card">
 					<div class="card-body">
                         <div class="d-flex justify-content-between">

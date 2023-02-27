@@ -54,7 +54,6 @@
                                     <th>Events Date</th>
                                     <th>Events Time</th>
                                     <th>Events Description</th>
-                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -64,10 +63,6 @@
                                     <td>11/24/2022</td>
                                     <td>01:00 PM</td>
                                     <td>Come and Join us to watch the game and support your teams</td>
-                                    <td>
-                                        <a href="" class="btn btn-sm btn-success">Going</a>
-                                        <a href="" class="btn btn-sm btn-danger">Not Going</a>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>

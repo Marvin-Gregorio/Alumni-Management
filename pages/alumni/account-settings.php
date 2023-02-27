@@ -43,7 +43,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- This is Main -->
 <div class="container-fluid" style="padding: 20px;">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div class="card">
             <div class="card-body">
               <div class="text-center">
@@ -76,7 +76,12 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
             </div>
           </div>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-8">
+            <div class="d-flex mb-2">
+              <button type="button" class="btn btn-info btn-sm text-white mx-2"><a href="account-settings.php" class="nav-link">Personal Information</a></button>
+              <button type="button" class="btn btn-info btn-sm text-white mx-2"><a href="educationinfo.php" class="nav-link">Educational Background</a></button>
+              <button type="button" class="btn btn-info btn-sm text-white mx-2"><a href="employmentstats.php" class="nav-link">Employment Status</a></button>
+            </div>
           <div class="card">
             <div class="card-body">
             <div class="row">
@@ -131,136 +136,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
               <div class="text-end">
               <button onclick="updatePersonalDetails()" class="btn btn-info text-white mt-2">Update Profile Info</button>  
               </div>
-            </div>
-            <div class="row">
-              <h5>Educational Background:</h5>
-              <div class="col-md-4">
-              <span><b>Elementary (Grade 1-6)</b></span>
-              <label>School Name:</label>
-              <input class="form-control form-control-sm" id="elem_school">
-              </div>
-              <div class="col-md-2">
-              <label>Year:</label>
-              <input class="form-control form-control-sm" id="elem_year">
-              </div>
-              <div class="col-md-4">
-              <span><b>Junior Highschool (Grade 7-10)</b></span>
-              <label>School Name:</label>
-              <input class="form-control form-control-sm" id="junior_school">
-              </div>
-              <div class="col-md-2">
-              <label>Year Graduated:</label>
-              <input class="form-control form-control-sm" id="junior_year">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
-              <span><b>Senior Highschool (Grade 11-12)</b></span>
-              <label>Course:</label>
-                  <select id="senior_course" class="form-control form-control-sm">
-                    <option value="BSCS">TVL</option>
-                    <option value="BSOA">ABM</option>
-                    <option value="BLIS">HUMMS</option>
-                    <option value="BSIT">GAS</option>
-                  </select>
-              </div>
-              <div class="col-md-4">
-              <label>School Name:</label>
-              <input class="form-control form-control-sm" id="senior_school">
-              </div>
-              <div class="col-md-4">
-              <label>Year Graduated:</label>
-              <input class="form-control form-control-sm" id="senior_year">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
-                <span><b>Undergraduate</b></span>
-              <label>Course:</label>
-                  <select id="college_course" class="form-control form-control-sm">
-                    <option value="BSCS">BSCS</option>
-                    <option value="BSOA">BSOA</option>
-                    <option value="BLIS">BLIS</option>
-                    <option value="BSIT">BSIT</option>
-                  </select>
-              </div>
-              <div class="col-md-4">
-              <label>School Name:</label>
-              <input class="form-control form-control-sm" id="college_school">
-              </div>
-              <div class="col-md-4">
-              <label>Year Graduated:</label>
-              <input class="form-control form-control-sm" id="college_year">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
-              <span><b>Masteral</b></span>
-              <label>Course:</label>
-                  <select id="master_course" class="form-control form-control-sm">
-                    <option value="MSCS">MSCS</option>
-                    <option value="MSOA">MSOA</option>
-                    <option value="MLIS">MLIS</option>
-                    <option value="MSIT">MSIT</option>
-                  </select>
-              </div>
-              <div class="col-md-4">
-              <label>School Name:</label>
-              <input class="form-control form-control-sm" id="master_school">
-              </div>
-              <div class="col-md-4">
-              <label>Year Graduated:</label>
-              <input class="form-control form-control-sm" id="master_year">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
-              <span><b>Doctorate</b></span>
-              <label>Course:</label>
-                  <select id="doctor_course" class="form-control form-control-sm">
-                    <option value="DSCS">DSCS</option>
-                    <option value="DSOA">DSOA</option>
-                    <option value="DLIS">DLIS</option>
-                    <option value="DSIT">DSIT</option>
-                  </select>
-              </div>
-              <div class="col-md-4">
-              <label>School Name:</label>
-                  <input class="form-control form-control-sm" id="doctor_school">
-              </div>
-              <div class="col-md-4">
-              <label>Year Graduated:</label>
-                  <input class="form-control form-control-sm" id="doctor_year">
-              </div>
-            </div>
-            <div class="text-end">
-            <button onclick="updateEducationalDetails()" class="btn btn-info text-white mt-2">Update Educational Info</button>
-            </div>
-            <div class="row">
-              <h5><b>Employment Status</b></h5>
-              <div class="col-md-12">
-              <label>Company Name: </label>
-              <input type="text" id="company_name" value="" class="form-control form-control-sm">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-8">
-              <label>Company Email:</label>
-              <input type="text" id="company_email" value="" class="form-control form-control-sm">
-              </div>
-              <div class="col-md-4">
-              <label>Company Number:</label>
-              <input type="text" id="company_number" value="" class="form-control form-control-sm">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-              <label>Company Address: </label>
-              <input type="text" id="company_address" value="" class="form-control form-control-sm">
-              </div>
-            </div>
-            <div class="text-end">
-            <button onclick="updateEmploymentDetails()" class="btn btn-info text-white mt-2">Update Employment Info</button>
             </div>
             </div>
           </div>

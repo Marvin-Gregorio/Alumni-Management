@@ -37,42 +37,69 @@
 
 	<!-- This is Main -->
     <div class="container-fluid" style="padding: 20px;">
-        <div class="row">
-            <div class="col-md-2">
+
+        <div class="row mb-3">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <ul class="list-unstyled px-1">
-                            <li class="nav-item"><a href="jobs-list.php" class="nav-link px-3 py-2 d-block btn btn-info mt-2"><i class="fas fa-building mx-2"></i><b>Company</b></a></li>
-                            <li class="nav-item"><a href="vacancy-list.php" class="nav-link px-3 py-2 d-block btn btn-info mt-2"><i class="fas fa-briefcase mx-2"></i><b>Vacancy</b></a></li>
-                            <li class="nav-item"><a href="category-list.php" class="nav-link px-3 py-2 d-block btn btn-info mt-2"><i class="fas fa-list mx-2"></i><b>Category</b></a></li>
-                        </ul>
+                        <div class="row">
+                        <div class="col-md-4">
+                                <input type="text" class="form-control form-control-sm" value="Job Title or Company Name">
+                            </div>
+                            <div class="col-md-4">
+                                <select name="" id="" class="form-select form-select-sm">
+                                    <option selected>Job Category</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <select name="" id="" class="form-select form-select-sm">
+                                    <option selected>Job type</option>
+                                    <option value="">Full-Time </option>
+                                    <option value="">Part-Time</option>
+                                    <option value="">Temporary</option>
+                                    <option value="">Contract</option>
+                                    <option value="">Internship</option>
+                                    <option value="">Fresh Graduate</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-sm btn-info text-white">Search</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-10">
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <span><b>List of Companies</b></span>
-                            <a href="" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#jobslist"><i class="fas fa-circle-plus"></i> Add Company</a>
+                    <div class="d-flex justify-content-between">
+                            <span><b>List of Vacancies</b></span>
+                            <a href="" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#vacancylist"><i class="fas fa-circle-plus"></i> Add Vacancy</a>
                         </div>
                         <hr>
                         <table id="joblist">
                             <thead>
                                 <tr style="font-size: 13px;">
                                     <th>Company Name</th>
-                                    <th>Company Address</th>
-                                    <th>Company Contact No.</th>
+                                    <th>Category</th>
+                                    <th>Occuptational Title</th>
+                                    <th>Salary</th>
+                                    <th>Job Type</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr style="font-size: 13px;">
                                     <td>Gridpoint, Technologies Inc.</td>
-                                    <td>Pasig City</td>
-                                    <td>091234567879</td>
+                                    <td>IT</td>
+                                    <td>IT Supervisor (Network Administrator)</td>
+                                    <td>Php20,000-23,000 a month</td>
+                                    <td>Full-Time</td>
                                     <td>
-                                        <a href="" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#viewjobs"><i class="fas fa-pen-to-square"></i></a>
+                                        <a href="" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#viewvacancy"><i class="fas fa-pen-to-square"></i></a>
                                         <a href="" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                     </td>
                                 </tr>
@@ -84,12 +111,12 @@
         </div>
     </div>
 
-    <!-- Jobs Modal here -->
-    <div class="modal fade" id="jobslist" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- This is vacancy -->
+    <div class="modal fade" id="vacancylist" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <span><h5><b>Add New Company</b></h5></span>
+                    <span><h5><b>Add New Vacancy</b></h5></span>
                     <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -103,15 +130,47 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="" class="col-md-5 col-form-label">Company Address:</label>
+                                    <label for="" class="col-md-5 col-form-label">Category:</label>
+                                    <div class="col-md-12">
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option selected>Select Category</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-md-5 col-form-label">Occuptional Title:</label>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-md-5 col-form-label">Salary:</label>
+                                    <input type="text" class="form-control form-control-sm">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-md-5 col-form-label">Job Description:</label>
                                     <div class="col-md-12">
                                         <textarea name="" class="form-control form-control-sm" id=""></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="" class="col-md-5 col-form-label">Company Contract No.:</label>
+                                    <label for="" class="col-md-5 col-form-label">Qualification:</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-sm">
+                                        <textarea name="" class="form-control form-control-sm" id=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-md-5 col-form-label">Job Type:</label>
+                                    <div class="col-md-12">
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option selected>Select Job Type</option>
+                                            <option value="">Full-Time</option>
+                                            <option value="">Part-Time</option>
+                                            <option value="">Contract</option>
+                                            <option value="">Temporarily</option>
+                                            <option value="">Internship</option>
+                                            <option value="">Fresh Graduate</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -125,14 +184,13 @@
             </div>
         </div>
     </div>
-    <!-- Jobs Modal ends here -->
 
-    <!-- Jobs view -->
-    <div class="modal fade" id="viewjobs" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- View vacancy -->
+    <div class="modal fade" id="viewvacancy" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <span><h5><b>Update Company</b></h5></span>
+                    <span><h5><b>Update Job Vacancy</b></h5></span>
                     <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -146,15 +204,47 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="" class="col-md-5 col-form-label">Company Address:</label>
+                                    <label for="" class="col-md-5 col-form-label">Category:</label>
+                                    <div class="col-md-12">
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option selected>Select Category</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-md-5 col-form-label">Occuptional Title:</label>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-md-5 col-form-label">Salary:</label>
+                                    <input type="text" class="form-control form-control-sm">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-md-5 col-form-label">Job Description:</label>
                                     <div class="col-md-12">
                                         <textarea name="" class="form-control form-control-sm" id=""></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="" class="col-md-5 col-form-label">Company Contract No.:</label>
+                                    <label for="" class="col-md-5 col-form-label">Qualification:</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-sm">
+                                        <textarea name="" class="form-control form-control-sm" id=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-md-5 col-form-label">Job Type:</label>
+                                    <div class="col-md-12">
+                                        <select name="" id="" class="form-select form-select-sm">
+                                            <option selected>Select Job Type</option>
+                                            <option value="">Full-Time</option>
+                                            <option value="">Part-Time</option>
+                                            <option value="">Contract</option>
+                                            <option value="">Temporarily</option>
+                                            <option value="">Internship</option>
+                                            <option value="">Fresh Graduate</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
