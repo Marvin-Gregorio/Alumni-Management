@@ -23,6 +23,15 @@
 			
 		}
 
+		function new_event($name,$place,$description,$date,$time){
+			try{
+				$this->insertEvent($name,$place,$description,$date,$time);
+			}catch(Exception $e){
+				echo "caught exception: ". $e->getMessage(). "\n";
+			}
+			
+		}
+
 		function new_message($text,$date){
 			try{
 				$this->insertMessage($text,$date);

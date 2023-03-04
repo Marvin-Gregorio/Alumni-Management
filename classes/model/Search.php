@@ -72,8 +72,30 @@
 			return $stmt;
 		}
 
+		protected function searchEventList(){
+			$sql = 'select * from events';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute();
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
 		protected function searchSpecificJobList($id){
 			$sql = 'select * from jobs_list where job_id = ?';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$id]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
+		protected function searchSpecificEventList($id){
+			$sql = 'select * from events where event_id = ?';
 			$stmt = $this->connect()->prepare($sql);
 			try{
 				$stmt->execute([$id]);

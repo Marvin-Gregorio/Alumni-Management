@@ -31,6 +31,19 @@
 			return $stmt;
 		}
 
+		protected function insertEvent($name,$place,$description,$date,$time){
+			$sql = 'insert into events(name,place,description,set_date,set_time) values(?,?,?,?,?)';
+			$stmt = $this->connect()->prepare($sql);
+
+			try{
+				$stmt->execute([$name,$place,$description,$date,$time]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+
+			return $stmt;
+		}
+
 		protected function insertLogs($id,$date){
 			$sql = 'insert into session(user_id, log_date) values(?,?)';
 			$stmt = $this->connect()->prepare($sql);

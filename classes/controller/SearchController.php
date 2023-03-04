@@ -24,6 +24,11 @@
 			return $result;
 		}
 
+		function getEventList(){
+			$result = $this->searchEventList();
+			return $result;
+		}
+
 		function getCategoryJobList($data){
 			$result = $this->searchCategoryJobList($data);
 			return $result;
@@ -47,6 +52,24 @@
 					$data[] = $row['description'];
 					$data[] = $row['qualification'];
 					$data[] = $row['type'];
+				}
+				return $data;
+			}
+
+			return false;
+		}
+
+		function getEventDetails($id){
+			$result = $this->searchSpecificEventList($id);
+			if ($result->rowCount() > 0) {
+				$data[] = array();
+				while($row = $result->fetch()){
+					$data[] = $row['event_id'];
+					$data[] = $row['name'];
+					$data[] = $row['place'];
+					$data[] = $row['description'];
+					$data[] = $row['set_date'];
+					$data[] = $row['set_time']
 				}
 				return $data;
 			}

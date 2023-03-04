@@ -47,7 +47,7 @@
                         <a href="" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#createevents"><i class="fas fa-circle-plus"></i> Add Events</a>
                     </div>
                     <hr>
-                    <table id="joblist">
+                    <table id="eventlist" class="table table-hover">
                         <thead>
                             <tr style="font-size: 13px;">
                                 <th>Events Name</th>
@@ -59,17 +59,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr style="font-size: 13px;">
-                                <td>CBA vs CCS</td>
-                                <td>CC Baretto Gym</td>
-                                <td>11/24/2022</td>
-                                <td>1:00pm</td>
-                                <td>Come and Join us to watch the game and support your teams</td>
-                                <td>
-                                    <a href="" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#updateevents"><i class="fas fa-pen-to-square"></i></a>
-                                    <a href="" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -84,7 +73,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span><h5><b>Add New Events</b></h5></span>
-                <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button id="addEventCloseModal" type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="container" style="padding: 5px;">
@@ -93,43 +82,43 @@
                             <div class="form-group">
                                 <label for="" class="col-md-5 col-form-label">Events Name:</label>
                                 <div class="col-md-12">
-                                    <input type="text" class="form-control form-control-sm">
+                                    <input id="event_name" type="text" class="form-control form-control-sm">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="" class="col-md-5 col-form-label">Events Place:</label>
                                 <div class="col-md-12">
-                                  <input type="text" class="form-control form-control-sm">
+                                  <input id="event_place" type="text" class="form-control form-control-sm">
                               </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="" class="col-md-5 col-form-label">Events Description:</label>
-                            <div class="col-md-12">
-                              <textarea name="" id="" class="form-control form-control-sm"></textarea>
-                          </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="" class="col-md-5 col-form-label">Date:</label>
-                        <div class="col-md-12">
-                            <input type="date" class="form-control form-control-sm">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="" class="col-md-5 col-form-label">Time:</label>
-                        <div class="col-md-12">
-                            <input type="time" class="form-control form-control-sm">
+                              </div>
+                              <div class="form-group">
+                                <label for="" class="col-md-5 col-form-label">Events Description:</label>
+                                <div class="col-md-12">
+                                    <textarea name="" id="event_description" class="form-control form-control-sm"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-md-5 col-form-label">Date:</label>
+                                <div class="col-md-12">
+                                    <input id="event_date" type="date" name="date-time" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-md-5 col-form-label">Time:</label>
+                                <div class="col-md-12">
+                                    <input id="event_time" type="time" name="date-time" class="form-control">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
+                <button onclick="addEvent()" type="button" class="btn btn-sm btn-info"><i class="fas fa-floppy-disk"></i> Save</button>
+            </div>
         </div>
     </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-sm btn-info"><i class="fas fa-floppy-disk"></i> Save</button>
-    </div>
-</div>
-</div>
 </div>
 
 <!-- This is update events -->
@@ -142,48 +131,45 @@
             </div>
             <div class="modal-body">
                 <div class="container" style="padding: 5px;">
-                    <div class="row">
+                    <input id="update_event_id" hidden>
+                    <div class="form-group">
+                        <label for="" class="col-md-5 col-form-label">Events Name:</label>
                         <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="" class="col-md-5 col-form-label">Events Name:</label>
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control form-control-sm">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="col-md-5 col-form-label">Events Place:</label>
-                                <div class="col-md-12">
-                                  <input type="text" class="form-control form-control-sm">
-                              </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="" class="col-md-5 col-form-label">Events Description:</label>
-                            <div class="col-md-12">
-                              <textarea name="" id="" class="form-control form-control-sm"></textarea>
-                          </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="" class="col-md-5 col-form-label">Date:</label>
-                        <div class="col-md-12">
-                            <input type="date" class="form-control form-control-sm">
+                            <input id="update_event_name" type="text" class="form-control form-control-sm">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="" class="col-md-5 col-form-label">Time:</label>
+                        <label for="" class="col-md-5 col-form-label">Events Place:</label>
                         <div class="col-md-12">
-                            <input type="time" class="form-control form-control-sm">
-                        </div>
+                          <input id="update_event_place" type="text" class="form-control form-control-sm">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="col-md-5 col-form-label">Events Description:</label>
+                    <div class="col-md-12">
+                        <textarea name="" id="updat_event_description" class="form-control form-control-sm"></textarea>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label for="" class="col-md-5 col-form-label">Date:</label>
+                    <div class="col-md-12">
+                        <input id="update_event_date" type="date" name="date-time" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-5 col-form-label">Time:</label>
+                    <div class="col-md-12">
+                        <input id="update_event_time" type="time" name="date-time" class="form-control">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
+                <button onclick="updateEvent()" type="button" class="btn btn-sm btn-info"><i class="fas fa-floppy-disk"></i> Save</button>
             </div>
         </div>
     </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-sm btn-info"><i class="fas fa-floppy-disk"></i> Save</button>
-    </div>
-</div>
-</div>
 </div>
 
 
@@ -196,11 +182,8 @@
 <script src="../../js/logOut.js" type="text/javascript"></script>
 <script src="../../js/nav_profile.js" type="text/javascript"></script>
 <script src="../../js/adminList.js" type="text/javascript"></script>
-<script>
-    $(document).ready(function () {
-        $('#joblist').DataTable();
-    });
-</script>
+<script src="../../js/eventlist.js" type="text/javascript"></script>
+<script src="../../js/event_function.js" type="text/javascript"></script>
 </body>
 
 </html>
