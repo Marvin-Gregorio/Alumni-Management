@@ -14,6 +14,15 @@
 			
 		}
 
+		function new_job($name,$category,$title,$salary,$description,$qualification,$type,$date){
+			try{
+				$this->insertJob($name,$category,$title,$salary,$description,$qualification,$type,$date);
+			}catch(Exception $e){
+				echo "caught exception: ". $e->getMessage(). "\n";
+			}
+			
+		}
+
 		function new_message($text,$date){
 			try{
 				$this->insertMessage($text,$date);

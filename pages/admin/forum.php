@@ -37,63 +37,166 @@
 
 	<!-- This is Main -->
 
-	<div class="container-fluid" id="main">
+    <div class="container-fluid" style="padding: 20px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                   <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <span><b>Events</b></span>
+                        <a href="" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#createevents"><i class="fas fa-circle-plus"></i>New Email Blast</a>
+                    </div>
+                    <hr>
+                    <table id="joblist">
+                        <thead>
+                            <tr style="font-size: 13px;">
+                                <th>Date Created</th>
+                                <th>Title</th>
+                                <th>Text Body</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="font-size: 13px;">
+                                <td>CBA vs CCS</td>
+                                <td>CC Baretto Gym</td>
+                                <td>11/24/2022</td>
+                                <td>
+                                    <a href="" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#updateevents"><i class="fas fa-pen-to-square"></i></a>
+                                    <a href="" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-		<div class="row">
+<!-- This is create events -->
+<div class="modal fade" id="createevents" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span><h5><b>Add New Events</b></h5></span>
+                <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container" style="padding: 5px;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="" class="col-md-5 col-form-label">Events Name:</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-md-5 col-form-label">Events Place:</label>
+                                <div class="col-md-12">
+                                  <input type="text" class="form-control form-control-sm">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="" class="col-md-5 col-form-label">Events Description:</label>
+                            <div class="col-md-12">
+                              <textarea name="" id="" class="form-control form-control-sm"></textarea>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="" class="col-md-5 col-form-label">Date:</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-5 col-form-label">Time:</label>
+                        <div class="col-md-12">
+                            <input type="time" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-sm btn-info"><i class="fas fa-floppy-disk"></i> Save</button>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- This is update events -->
+<div class="modal fade" id="updateevents" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span><h5><b>Update Events</b></h5></span>
+                <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container" style="padding: 5px;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="" class="col-md-5 col-form-label">Events Name:</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-md-5 col-form-label">Events Place:</label>
+                                <div class="col-md-12">
+                                  <input type="text" class="form-control form-control-sm">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="" class="col-md-5 col-form-label">Events Description:</label>
+                            <div class="col-md-12">
+                              <textarea name="" id="" class="form-control form-control-sm"></textarea>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="" class="col-md-5 col-form-label">Date:</label>
+                        <div class="col-md-12">
+                            <input type="date" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-5 col-form-label">Time:</label>
+                        <div class="col-md-12">
+                            <input type="time" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-sm btn-info"><i class="fas fa-floppy-disk"></i> Save</button>
+    </div>
+</div>
+</div>
+</div>
 
 
-			<div class="card">
-				<div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js" type="text/javascript"></script>
 
-					<div class="d-flex justify-content-between">
-						<span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
-							<h5>News Forum</h5>
-						</span>
-						<button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success"> + New Thread</button>
-					</div>
-
-					<div class="container mt-4 " id="forum_field">
-						
-					</div>
-					
-				</div>
-			</div>
-		</div>
-
-	</div>
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	  <div class="modal-dialog modal-dialog-centered" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="exampleModalLabel">New Thread</h5>
-	        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
-	      </div>
-	      <div class="modal-body">
-	        <textarea class="form-control" id="forum_text"></textarea>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeThread">Close</button>
-	        <button onclick="new_thread()" type="button" class="btn btn-primary">
-	        	Send
-	        	<div id="spinner" class="spinner-border" role="status" style="display: none; height: 17px; width: 17px;">
-				  <span class="sr-only">Loading...</span>
-				</div>
-	        </button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-
-
-	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-	<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<script src="../../js/logOut.js" type="text/javascript"></script>
-	<script src="../../js/nav_profile.js" type="text/javascript"></script>
-	<script src="../../js/forum.js" type="text/javascript"></script>
+<script src="../../js/loadAlumniList.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../../js/logOut.js" type="text/javascript"></script>
+<script src="../../js/nav_profile.js" type="text/javascript"></script>
+<script src="../../js/adminList.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        $('#joblist').DataTable();
+    });
+</script>
 </body>
 
 </html>

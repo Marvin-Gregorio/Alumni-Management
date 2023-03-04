@@ -19,9 +19,39 @@
 			return false;
 		}
 
-		function getForum(){
-			$result = $this->searchForum();
+		function getJobList(){
+			$result = $this->searchJobList();
 			return $result;
+		}
+
+		function getCategoryJobList($data){
+			$result = $this->searchCategoryJobList($data);
+			return $result;
+		}
+
+		function getTypeJobList($data){
+			$result = $this->searchTypeJobList($data);
+			return $result;
+		}
+
+		function getJobDetails($id){
+			$result = $this->searchSpecificJobList($id);
+			if ($result->rowCount() > 0) {
+				$data[] = array();
+				while($row = $result->fetch()){
+					$data[] = $row['job_id'];
+					$data[] = $row['name'];
+					$data[] = $row['category'];
+					$data[] = $row['title'];
+					$data[] = $row['salary'];
+					$data[] = $row['description'];
+					$data[] = $row['qualification'];
+					$data[] = $row['type'];
+				}
+				return $data;
+			}
+
+			return false;
 		}
 
 		function getAllUserByType($type){

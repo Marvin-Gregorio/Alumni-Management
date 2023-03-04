@@ -18,6 +18,19 @@
 			return $stmt;
 		}
 
+		protected function insertJob($name,$category,$title,$salary,$description,$qualification,$type,$date){
+			$sql = 'insert into jobs_list(name,category,title,salary,description,qualification,type,date_created) values(?,?,?,?,?,?,?,?)';
+			$stmt = $this->connect()->prepare($sql);
+
+			try{
+				$stmt->execute([$name,$category,$title,$salary,$description,$qualification,$type,$date]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+
+			return $stmt;
+		}
+
 		protected function insertLogs($id,$date){
 			$sql = 'insert into session(user_id, log_date) values(?,?)';
 			$stmt = $this->connect()->prepare($sql);

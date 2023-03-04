@@ -14,6 +14,15 @@
 			
 		}
 
+		function job_details($name,$category,$title,$salary,$description,$qualification,$type,$id){
+			try{
+				$this->updateJobDetails($name,$category,$title,$salary,$description,$qualification,$type,$id);
+			}catch(Exception $e){
+				echo "caught exception: ". $e->getMessage(). "\n";
+			}
+			
+		}
+
 		function password($id, $pass){
 			try{
 				$this->updatePassword($id, $pass);

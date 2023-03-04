@@ -61,6 +61,50 @@
 			return $stmt;
 		}
 
+		protected function searchJobList(){
+			$sql = 'select * from jobs_list';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute();
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
+		protected function searchSpecificJobList($id){
+			$sql = 'select * from jobs_list where job_id = ?';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$id]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
+		protected function searchTypeJobList($data){
+			$sql = 'select * from jobs_list where type = ?';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$data]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
+		protected function searchCategoryJobList($data){
+			$sql = 'select * from jobs_list where category = ?';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$data]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
 		protected function searchSession($id){
 			$sql = 'select * from session where user_id = ? ';
 			$stmt = $this->connect()->prepare($sql);

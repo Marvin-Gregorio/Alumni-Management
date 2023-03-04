@@ -19,6 +19,19 @@
 			return $stmt;
 		}
 
+		protected function updateJobDetails($name,$category,$title,$salary,$description,$qualification,$type,$id){
+			$sql = 'update jobs_list set name = ?, category = ?, title = ?, salary = ?, description = ?, qualification = ?, type = ? where job_id = ?';
+			$stmt = $this->connect()->prepare($sql);
+
+			try{
+				$stmt->execute([$name,$category,$title,$salary,$description,$qualification,$type,$id]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+
+			return $stmt;
+		}
+
 		protected function updatePassword($id,$pass){
 			$sql = 'update user_info set password = ? where user_id = ?';
 			$stmt = $this->connect()->prepare($sql);
