@@ -23,6 +23,24 @@
 			
 		}
 
+		function user_details($fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$id){
+			try{
+				$this->updateUserDetails($fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$id);
+			}catch(Exception $e){
+				echo "caught exception: ". $e->getMessage(). "\n";
+			}
+			
+		}
+
+		function event_details($name,$place,$description,$date,$time,$id){
+			try{
+				$this->updateEventDetails($name,$place,$description,$date,$time,$id);
+			}catch(Exception $e){
+				echo "caught exception: ". $e->getMessage(). "\n";
+			}
+			
+		}
+
 		function password($id, $pass){
 			try{
 				$this->updatePassword($id, $pass);

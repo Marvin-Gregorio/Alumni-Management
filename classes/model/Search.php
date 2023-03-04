@@ -72,6 +72,17 @@
 			return $stmt;
 		}
 
+		protected function searchStaffList(){
+			$sql = 'select * from user_info where type = ?';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute(["STAFF"]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
 		protected function searchEventList(){
 			$sql = 'select * from events';
 			$stmt = $this->connect()->prepare($sql);
@@ -83,8 +94,30 @@
 			return $stmt;
 		}
 
+		protected function searchBlastList(){
+			$sql = 'select * from email_blast';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute();
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
 		protected function searchSpecificJobList($id){
 			$sql = 'select * from jobs_list where job_id = ?';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$id]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
+		protected function searchSpecificUserList($id){
+			$sql = 'select * from user_info where user_id = ?';
 			$stmt = $this->connect()->prepare($sql);
 			try{
 				$stmt->execute([$id]);
@@ -154,6 +187,17 @@
 			$stmt = $this->connect()->prepare($sql);
 			try{
 				$stmt->execute([$username]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
+		protected function searchUserByTypeAndDept($username,$dept){
+			$sql = 'select * from user_info where type = ? and department = ?';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$username,$dept]);
 			}catch(PDOException $e){
 				echo "ERROR : " . $e->getMessage();
 			}

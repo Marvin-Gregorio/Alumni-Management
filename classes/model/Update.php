@@ -32,6 +32,32 @@
 			return $stmt;
 		}
 
+		protected function updateUserDetails($fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$id){
+			$sql = 'update user_info set first_name = ?, middle_name = ?, last_name = ?, email = ?, cp_number = ?, birth_date = ?, username = ?, gender = ? where user_id = ?';
+			$stmt = $this->connect()->prepare($sql);
+
+			try{
+				$stmt->execute([$fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$id]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+
+			return $stmt;
+		}
+
+		protected function updateEventDetails($name,$place,$description,$date,$time,$id){
+			$sql = 'update events set name = ?, place = ?, description = ?, set_date = ?, set_time = ? where event_id = ?';
+			$stmt = $this->connect()->prepare($sql);
+
+			try{
+				$stmt->execute([$name,$place,$description,$date,$time,$id]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+
+			return $stmt;
+		}
+
 		protected function updatePassword($id,$pass){
 			$sql = 'update user_info set password = ? where user_id = ?';
 			$stmt = $this->connect()->prepare($sql);

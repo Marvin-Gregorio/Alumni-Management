@@ -31,6 +31,19 @@
 			return $stmt;
 		}
 
+		protected function deleteEventPost($id){
+			$sql = 'delete from events where event_id = ? ';
+			$stmt = $this->connect()->prepare($sql);
+
+			try{
+				$stmt->execute([$id]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+
+			return $stmt;
+		}
+
 		protected function deleteAppointment($id){
 			$sql = 'delete from user_appointment where appointment_id = ? ';
 			$stmt = $this->connect()->prepare($sql);

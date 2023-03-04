@@ -9,15 +9,14 @@
 	$insert = new Classes\Controller\InsertController();
 
 	date_default_timezone_set('Asia/Manila');
-	$date = date("Y-m-d h:i:s");
 
-	$options = [
-	  'cost' => 12,
-	];
-	$password = password_hash($_POST['pass'],PASSWORD_BCRYPT,$options);
-	
+	$date = date("Y-m-d h:i:s");
+	$title = $_POST['title'];
+	$text = $_POST['text'];
+	$to = $_POST['send_to'];
+
 	try{
-		$insert->new_user($_POST['f_name'],$_POST['m_name'],$_POST['l_name'],$_POST['email'],$_POST['cp_number'],$_POST['b_day'],$_POST['username'],$password,$_POST['gender'],$_POST['status'],$_POST['dept']);
+		$insert->new_blast($title,$text,$to,$date);
 	}catch(Exception $e){
 		echo "ERROR: " . $e->getMessage();
 	}

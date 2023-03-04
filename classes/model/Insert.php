@@ -5,12 +5,25 @@
 	use Classes\Data\Database;
 
 	class Insert extends Database{
-		protected function insertUser($fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status){
-			$sql = 'insert into user_info(first_name,middle_name,last_name,email,cp_number,birth_date,username,password,gender,status,type) values(?,?,?,?,?,?,?,?,?,?,?)';
+		protected function insertUser($fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,$dept){
+			$sql = 'insert into user_info(first_name,middle_name,last_name,email,cp_number,birth_date,username,password,gender,status,type,department) values(?,?,?,?,?,?,?,?,?,?,?,?)';
 			$stmt = $this->connect()->prepare($sql);
 
 			try{
-				$stmt->execute([$fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,'ALUMNI']);
+				$stmt->execute([$fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,'ALUMNI',$dept]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+
+			return $stmt;
+		}
+
+		protected function insertStaff($fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$password){
+			$sql = 'insert into user_info(first_name,middle_name,last_name,email,cp_number,birth_date,username,gender,password,type) values(?,?,?,?,?,?,?,?,?,?)';
+			$stmt = $this->connect()->prepare($sql);
+
+			try{
+				$stmt->execute([$fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$password,"STAFF"]);
 			}catch(PDOException $e){
 				echo "ERROR : " . $e->getMessage();
 			}
@@ -24,6 +37,19 @@
 
 			try{
 				$stmt->execute([$name,$category,$title,$salary,$description,$qualification,$type,$date]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+
+			return $stmt;
+		}
+
+		protected function insertBlast($title,$text,$to,$date){
+			$sql = 'insert into email_blast(title,body,send_to,date_created) values(?,?,?,?)';
+			$stmt = $this->connect()->prepare($sql);
+
+			try{
+				$stmt->execute([$title,$text,$to,$date]);
 			}catch(PDOException $e){
 				echo "ERROR : " . $e->getMessage();
 			}

@@ -24,8 +24,18 @@
 			return $result;
 		}
 
+		function getStaffList(){
+			$result = $this->searchStaffList();
+			return $result;
+		}
+
 		function getEventList(){
 			$result = $this->searchEventList();
+			return $result;
+		}
+
+		function getBlastList(){
+			$result = $this->searchBlastList();
 			return $result;
 		}
 
@@ -59,6 +69,27 @@
 			return false;
 		}
 
+		function getUserDetails($id){
+			$result = $this->searchSpecificUserList($id);
+			if ($result->rowCount() > 0) {
+				$data[] = array();
+				while($row = $result->fetch()){
+					$data[] = $row['user_id'];
+					$data[] = $row['first_name'];
+					$data[] = $row['middle_name'];
+					$data[] = $row['last_name'];
+					$data[] = $row['email'];
+					$data[] = $row['cp_number'];
+					$data[] = $row['birth_date'];
+					$data[] = $row['username'];
+					$data[] = $row['gender'];
+				}
+				return $data;
+			}
+
+			return false;
+		}
+
 		function getEventDetails($id){
 			$result = $this->searchSpecificEventList($id);
 			if ($result->rowCount() > 0) {
@@ -69,7 +100,7 @@
 					$data[] = $row['place'];
 					$data[] = $row['description'];
 					$data[] = $row['set_date'];
-					$data[] = $row['set_time']
+					$data[] = $row['set_time'];
 				}
 				return $data;
 			}
@@ -84,6 +115,24 @@
 
 		function getAllUser(){
 			$result = $this->searchUserByType('ALUMNI');
+			if($result){
+				$data[] = array();
+
+				while($row = $result->fetch()){
+					$sub[] = array();
+					$sub[] = $row['first_name'];
+					$sub[] = $row['last_name'];
+					$sub[] = $row['email'];
+					$data[] = $sub;
+
+					unset($sub);
+				}
+				return $data;
+			}
+		}
+
+		function getEmailBySpecificDept($dept){
+			$result = $this->searchUserByTypeAndDept('ALUMNI',$dept);
 			if($result){
 				$data[] = array();
 

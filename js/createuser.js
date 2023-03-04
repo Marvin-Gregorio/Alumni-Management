@@ -48,9 +48,11 @@ function createUser(){
 				pass:pass,
 				c_pass:c_pass,
 				gender:gender,
-				status:status
+				status:status,
+				dept:dept
 			},
 			success:function(result){
+				console.log(result);
 				Swal.fire({
 					icon: 'success',
 					title: 'Successful...',

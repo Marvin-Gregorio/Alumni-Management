@@ -1,4 +1,6 @@
 <?php
+	set_time_limit(0);
+
 	require '../vendor/autoload.php';
 	require_once realpath("../include/loadclass.php");
 	
@@ -11,7 +13,6 @@
 	    session_start();
 	}
 
-	$insert = new Classes\Controller\InsertController();
 	$search = new Classes\Controller\SearchController();
 
 	date_default_timezone_set('Asia/Manila');
@@ -19,19 +20,23 @@
 	$mail = new PHPMailer(true);
 	
 	setSettings($mail);
-	setContent($mail,$_POST['text']);
+	setContent($mail,$_POST['text'],$_POST['title']);
+
 
 	try{
-		$email = $search->getAllUser();
+		if($_POST['send_to'] == "All"){
+			$email = $search->getAllUser();
+		}else{
+			$email = $search->getEmailBySpecificDept($_POST['send_to']);
+		}
+		
 
-		for($count = 1; $count < sizeof($email[1]); $count++){
+		for($count = 1; $count < sizeof($email); $count++){
 			$name = $email[$count][1] . " " . $email[$count][2];
 			setRecepient($mail,$email[$count][3],$name);
 		}
 
 		$mail->send();
-	
-		$insert->new_message($_POST['text'],$date);
 
 
 	}catch(Exception $e){
@@ -50,11 +55,11 @@
 	    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 	}
 
-	function setContent($mail,$text){
+	function setContent($mail,$text,$title){
 
 	    //Content
 	    $mail->isHTML(true);                                  //Set email format to HTML
-	    $mail->Subject = 'CC-ALUMNI-IMPORTANT ANNOUNCEMENTS!';
+	    $mail->Subject = $title;
 	    $mail->Body    = $text;
 
 	}

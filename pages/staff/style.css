@@ -1,0 +1,64 @@
+:root
+{
+    --blue: ;
+    --yellow: ;
+    --white: #ffffff;
+    --cyan: #00aacc;
+    --light-gray: #e0e0e0;
+    --black: #000000;
+}
+#header
+{
+    background: var(--white);
+}
+.sub-header
+{
+    border-top: 3px solid var(--light-gray);
+}
+#main
+{
+    padding: 20px;
+}
+#nav-menu
+{
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    color: var(--black);
+    font-family: "Poppins", sans-serif;
+}
+#nav-menu:hover
+{
+    color: var(--cyan);
+    transition: 0.3s ease;
+    border-bottom: 3px solid var(--cyan);
+}
+#logo-name
+{
+    vertical-align: baseline;
+}
+.chart
+{
+    padding: 2rem;
+}
+#profile
+{
+    height: 70vh;
+}
+#label-text
+{
+    font-size: 14px;
+    font-weight: bold;
+}
+.educ-chart, .gender-chart, .civil-chart, .emp-chart, .donut-chart
+{
+    width: 400px;
+    height: 100px;
+}
+.error
+{
+    background: #f2dede;
+    color: #a94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+}

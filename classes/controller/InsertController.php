@@ -5,9 +5,18 @@
 
 	class InsertController extends Insert{
 		
-		function new_user($fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status){
+		function new_staff($fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$password){
 			try{
-				$this->insertUser($fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status);
+				$this->insertStaff($fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$password);
+			}catch(Exception $e){
+				echo "caught exception: ". $e->getMessage(). "\n";
+			}
+			
+		}
+
+		function new_user($fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,$dept){
+			try{
+				$this->insertUser($fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,$dept);
 			}catch(Exception $e){
 				echo "caught exception: ". $e->getMessage(). "\n";
 			}
@@ -17,6 +26,15 @@
 		function new_job($name,$category,$title,$salary,$description,$qualification,$type,$date){
 			try{
 				$this->insertJob($name,$category,$title,$salary,$description,$qualification,$type,$date);
+			}catch(Exception $e){
+				echo "caught exception: ". $e->getMessage(). "\n";
+			}
+			
+		}
+
+		function new_blast($title,$text,$to,$date){
+			try{
+				$this->insertBlast($title,$text,$to,$date);
 			}catch(Exception $e){
 				echo "caught exception: ". $e->getMessage(). "\n";
 			}

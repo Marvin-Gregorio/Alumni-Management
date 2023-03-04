@@ -10,7 +10,7 @@
 			<ul class="navbar-nav">
 				<li class="nav-item dropdown">
 				<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				<span class="">Admin | </span><span class="mr-3" id="header_name"></span>
+				<span class="">Staff | </span><span class="mr-3" id="header_name"></span>
 				<img src="../../profileImg/.png" width="50px" class="rounded-circle" id="nav_profile" >
 				</a>
 				
@@ -24,7 +24,6 @@
 <ul class="navbar-nav mx-3">
 <li class="nav-item"><a id="nav-menu" href="admin-dashboard.php" class="nav-link mx-3">Dashboard</a></li>
 <li class="nav-item"><a id="nav-menu" href="admin-list.php" class="nav-link mx-3">Alumni List</a></li>
-<li class="nav-item"><a id="nav-menu" href="admin-staff.php" class="nav-link mx-3">Staff List</a></li>
 <li class="nav-item"><a id="nav-menu" href="jobs-list.php" class="nav-link mx-3">Jobs List</a></li>
 <li class="nav-item"><a id="nav-menu" href="events.php" class="nav-link mx-3">Events</a></li>
 <li class="nav-item"><a id="nav-menu" href="forum.php" class="nav-link mx-3">Email Blast</a></li>
