@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2023 at 05:16 AM
+-- Generation Time: Mar 05, 2023 at 01:59 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -20,70 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `server`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admins`
---
-
-CREATE TABLE `admins` (
-  `id` int(100) NOT NULL,
-  `lastname` varchar(100) NOT NULL,
-  `firstname` varchar(100) NOT NULL,
-  `middlename` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `phone` varchar(100) NOT NULL,
-  `dob` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `username` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `admins`
---
-
-INSERT INTO `admins` (`id`, `lastname`, `firstname`, `middlename`, `email`, `phone`, `dob`, `password`, `username`) VALUES
-(9, 'Dela Cruz', 'Leofer Rodel', 'Tecson', 'Leoferma099@gmail.com', '09995117532', '1999-12-02', '81dc9bdb52d04dc20036dbd8313ed055', 'Leofer_ma'),
-(11, 'Pilorin', 'Aurora', 'K', 'eliasfsdev@gmail.com', '01234567789', '1111-11-11', '81dc9bdb52d04dc20036dbd8313ed055', 'admin');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `alumni`
---
-
-CREATE TABLE `alumni` (
-  `id` int(200) NOT NULL,
-  `lastname` varchar(200) NOT NULL,
-  `firstname` varchar(200) NOT NULL,
-  `middlename` varchar(200) NOT NULL,
-  `permanetaddr` varchar(200) NOT NULL,
-  `presentaddr` varchar(200) NOT NULL,
-  `emailaddr` varchar(200) NOT NULL,
-  `birthdate` date NOT NULL,
-  `contact` varchar(200) NOT NULL,
-  `gender` varchar(200) NOT NULL,
-  `civilstats` varchar(200) NOT NULL,
-  `basiced` varchar(200) NOT NULL,
-  `college` varchar(200) NOT NULL,
-  `gradschool` varchar(200) NOT NULL,
-  `course` varchar(200) NOT NULL,
-  `yeargrad` year(4) NOT NULL,
-  `norg` varchar(200) NOT NULL,
-  `norgcontact` varchar(200) NOT NULL,
-  `org` varchar(200) NOT NULL,
-  `orgemail` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `alumni`
---
-
-INSERT INTO `alumni` (`id`, `lastname`, `firstname`, `middlename`, `permanetaddr`, `presentaddr`, `emailaddr`, `birthdate`, `contact`, `gender`, `civilstats`, `basiced`, `college`, `gradschool`, `course`, `yeargrad`, `norg`, `norgcontact`, `org`, `orgemail`) VALUES
-(8, 'James', 'Lebron', 'Aso', 'LA, Ohio', 'LA, Ohio', 'kingjames@gmail.com', '1989-12-02', '09995117532', 'male', 'single', 'Select', 'bs', 'Select', 'Select', 2023, 'Columban College', '09995117532', 'Columban College', 'columban123@gmail.com'),
-(10, 'Timothy', 'Clarence Laurent', 'Ma', 'HFA Gerald 1st street, AC', 'HFA Gerald 1st street, AC', 'clareng123@gmail.com', '2014-06-20', '1234567890', 'male', 'single', 'elem', 'Select', 'Select', 'Select', 2027, 'N/A', '1234567890', 'N/A', 'test123@gmail.com'),
-(11, 'Janapin', 'Homer', 'M', 'Gordon Height', 'Gordon Height', 'homerjanapin@gmail.com', '2000-09-19', '1234567890', 'male', 'single', 'Select', 'bs', 'Select', 'Select', 2025, 'Leofer', '09995117532', 'Leofer', 'leoferma099@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -118,8 +54,49 @@ CREATE TABLE `educational_info` (
 
 INSERT INTO `educational_info` (`education_id`, `elem_school`, `elem_year`, `junior_school`, `junior_year`, `senior_school`, `senior_year`, `senior_course`, `college_school`, `college_year`, `college_course`, `master_school`, `master_year`, `master_course`, `doctor_school`, `doctor_course`, `doctor_year`, `user_id`) VALUES
 (1, 'OCES', '2008', 'OCABIS', '2012', 'COLUMBAN COLLEGE', '2018', 'BSCS', 'COLUMBAN COLLEGE', '2023', 'BSIT', 'COLUMBAN COLLEGE', '2024', 'MSIT', 'COLUMBAN COLLEGE', 'DSIT', '2026', 8),
-(2, 'COLUMBAN', '2019', 'COLUMBAN', '2020', 'COLUMBAN', '2021', 'BLIS', 'COLUMBAN ', '2022', 'BLIS', 'COLUMBAN', '2023', 'MLIS', 'COLUMBAN', 'DLIS', '2024', 6),
+(2, '', '', '', '', '', '', 'BSCS', '', '', 'BSCS', '', '', 'MSCS', '', 'DSCS', '', 6),
 (3, 'Columban College', '2008', 'Columban College', '2012', 'Columban College', '2014', 'BSOA', 'Columban College', '2018', 'BSIT', 'Columban College', '2019', 'MSIT', 'Columban College', 'DSIT', '2020', 9);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `email_blast`
+--
+
+CREATE TABLE `email_blast` (
+  `blast_id` int(11) NOT NULL,
+  `date_created` datetime NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `body` longtext NOT NULL,
+  `send_to` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `email_blast`
+--
+
+INSERT INTO `email_blast` (`blast_id`, `date_created`, `title`, `body`, `send_to`) VALUES
+(1, '2023-03-04 09:01:28', 'fdasf', 'fadsf', 'CCS'),
+(2, '2023-03-04 04:44:36', 'fadsf', 'fadsf', 'CCS'),
+(3, '2023-03-04 04:44:43', 'fadsf', 'fadsf', 'All'),
+(4, '2023-03-04 04:48:45', 'fdasfsd', 'dffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\na', 'All'),
+(5, '2023-03-04 04:48:45', 'fdasfsd', 'dffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\nadffdsafdf\nfdf\nd\nfds\nafds\nfsd\nf\nsdf\nsdf\nsdf\nsdf\nsdf\nd\na', 'All'),
+(6, '2023-03-04 05:04:27', 'fdasf', 'dfasdf', 'All'),
+(7, '2023-03-04 05:04:59', 'fdasf', 'fdasf', 'CCS'),
+(8, '2023-03-04 05:07:01', 'f', 'f', 'CCS'),
+(9, '2023-03-04 05:07:39', 'f', 'f', 'All'),
+(10, '2023-03-04 05:10:27', 'CC- Announcement', 'ffjasdkfjdkfdj\nfdsaf', 'All'),
+(11, '2023-03-04 05:11:28', 'CC- Announcement', 'ffjasdkfjdkfdj\nfdsaf', 'All'),
+(12, '2023-03-04 05:12:14', 'CC- Announcement', 'ffjasdkfjdkfdj\nfdsaf', 'All'),
+(13, '2023-03-04 05:13:44', 'fa', 'f', 'All'),
+(14, '2023-03-04 05:14:58', 'f', 'fdas', 'All'),
+(15, '2023-03-04 05:15:54', 'f', 'f', 'CCS'),
+(16, '2023-03-04 05:16:47', 'f', 'f', 'CBA'),
+(17, '2023-03-04 05:18:58', 'fda', 'fdas', 'All'),
+(18, '2023-03-04 05:20:57', 'Re : CCS Days', 'We are inviting everyone to join our event', 'All'),
+(19, '2023-03-04 05:23:03', 'fadsfd', 'fdasfdf', 'All'),
+(20, '2023-03-05 02:53:21', 'fdsaff', 'dafdf', 'All'),
+(21, '2023-03-05 07:26:59', 'dsf', 'asdfdf', 'CBA');
 
 -- --------------------------------------------------------
 
@@ -142,48 +119,84 @@ CREATE TABLE `employment_info` (
 
 INSERT INTO `employment_info` (`employment_id`, `company_name`, `company_number`, `company_address`, `company_email`, `user_id`) VALUES
 (1, 'Signopsys Inc.', '09121231234', 'BGC, Taguig', 'signopsys.marketing@gmail.com', 8),
-(2, 'Planate Management Inc.', '09121229012', 'Subic Bay Freeport Zone', 'planate.marketing.philippines@gmail.com', 6),
+(2, 'Planate Management Inc.', '09481621881', 'Subic Bay Freeport Zone, Philippines', 'planate.advertising.ph@gmailcom', 6),
 (3, 'Columban College Inc', '091829192441', '1st St. New Asinan, Olongapo City', 'columban.edu.ph@gmail.com', 9);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `forum`
+-- Table structure for table `events`
 --
 
-CREATE TABLE `forum` (
-  `forum_id` int(11) NOT NULL,
-  `text` longtext NOT NULL,
+CREATE TABLE `events` (
+  `event_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `place` varchar(255) NOT NULL,
+  `set_date` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  `set_time` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`event_id`, `name`, `place`, `set_date`, `description`, `set_time`) VALUES
+(5, 'CCS vs CBA', 'Main Campus', '2023-03-20', 'jfdasf\ndf\'af\ndfjdaf\ndf', '14:58'),
+(6, 'CCS Day', 'Main Quadrangles', '2023-03-17', 'Simple Celebration of the Department', '18:00'),
+(9, 'fdasf', 'fdsaf', '2023-03-22', 'fdasfdff', '02:54');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `interested`
+--
+
+CREATE TABLE `interested` (
+  `interested_id` int(11) NOT NULL,
+  `event_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `interested`
+--
+
+INSERT INTO `interested` (`interested_id`, `event_id`, `user_id`) VALUES
+(4, 5, 6),
+(5, 6, 6),
+(6, 9, 6),
+(7, 6, 8),
+(8, 9, 8);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jobs_list`
+--
+
+CREATE TABLE `jobs_list` (
+  `job_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `salary` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  `qualification` longtext NOT NULL,
+  `type` varchar(255) NOT NULL,
   `date_created` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `forum`
+-- Dumping data for table `jobs_list`
 --
 
-INSERT INTO `forum` (`forum_id`, `text`, `date_created`) VALUES
-(1, 'fdasfd', '2023-02-19 07:38:48'),
-(2, 'fdsafdfasfdfdafafdfas', '2023-02-19 08:33:01'),
-(3, 'fdsafdfasfdfdafafdfas', '2023-02-19 08:33:15'),
-(4, 'fdsafdfasfdfdafafdfas', '2023-02-19 08:33:27'),
-(5, 'fdsafdfasfdfdafafdfas', '2023-02-19 08:33:38'),
-(6, 'fdsafdfasfdfdafafdfas', '2023-02-19 08:33:51'),
-(7, 'fdsafdfasfdfdafafdfas', '2023-02-19 08:34:03'),
-(8, 'asdfjkl;', '2023-02-19 08:35:06'),
-(9, 'asdf', '2023-02-19 08:37:57'),
-(10, 'Marvinfdasfjdkfj', '2023-02-19 09:33:49'),
-(11, 'Hello! I\'fadfjkdf\nfdkasjf;kf\nfadsfjdkf\'', '2023-02-19 09:34:45'),
-(12, 'Good morning Alumni\'s. Congratulations!!!', '2023-02-19 09:58:19'),
-(13, '', '2023-02-19 10:03:27'),
-(14, '', '2023-02-19 10:05:22'),
-(15, 'fadsf', '2023-02-19 10:06:16'),
-(16, 'asdf', '2023-02-19 10:10:17'),
-(17, 'af', '2023-02-19 10:57:45'),
-(18, 'fadsf', '2023-02-19 11:00:50'),
-(19, 'Hello everyone,\n\nWe are excited to announce that our CCS Days occasion will be taking place from March 22-24. We have a lot of fun activities planned, including games, competitions, and a culminating night you won\'t want to miss.\n\nTo help us make sure that we have the right games and activities for everyone, we would like you to complete a short survey. The survey will only take a few minutes to complete, and your feedback will help us make sure that everyone has a great time.\n\nhttps://forms.gle/oZ5N2RDZnzHWhPpM8\nDeadline to answer this survey is until Feb. 24, 2023\n\nWe are looking forward to seeing you all at the event, and we hope that you will enjoy all of the activities that we have planned. If you have any questions, please feel free to contact us.\n\nThank you, and we hope to see you soon!', '2023-02-19 11:16:34'),
-(20, 'Hello! Everyone...', '2023-02-19 11:22:06'),
-(21, 'Hi!...', '2023-02-19 11:28:55'),
-(22, 'Hakuna Matata', '2023-02-19 11:33:45');
+INSERT INTO `jobs_list` (`job_id`, `name`, `category`, `title`, `salary`, `description`, `qualification`, `type`, `date_created`) VALUES
+(2, 'Planate Management Inc.', 'Information Technology', 'Web Developer', '40000', 'Meet with clients to discuss their website design and requirements\nCreate and test apps for the website\nCode for the site using HTML or XML and/or other programming languages\nEngage with members of their team to ascertain the kind of information the site should contain\nWork with designers, such as graphic designers, to determine the site’s layout\nIntegrate audio, video, and graphics into the site\nQuality-test and troubleshoot the website and/or its applications in various browsers', 'HTML\nHTML5\nCSS\nCSS3\nJavaScript\njQuery\nAdobe Suite\nCross browser compatibility\nObject-Oriented Design\nUser Interface Design\nUser Experience Design\nMultimedia content development\nAPIs\nUnderstanding of SEO\nGood communications skills\nAttention to detail\nAbility to juggle multiple tasks at once', 'Full-Time', '2023-03-04 11:17:09'),
+(4, 'ISBX', 'Information Technology', 'IT Administrator', '40000', 'fadsffa\nfasdf\nd\nfad\nfd\nfd\nff', 'f\ndasf\nf\nd\nfasf\nd\nad\nfds\nd\nads\nfd\n', 'Part-Time', '2023-03-04 11:17:13'),
+(5, 'Columban College', 'Basic Metal Production', 'College Instructor', '40000', 'fadsffa\nfasdf\nd\nfad\nfd\nfd\nff', 'f\ndasf\nf\nd\nfasf\nd\nad\nfds\nd\nads\nfd\n', 'Full-Time', '2023-03-04 11:17:13'),
+(6, 'Steelix & Co.', 'Basic Metal Production', 'Welder', '30000', 'fadsffa\nfasdf\nd\nfad\nfd\nfd\nff', 'f\ndasf\nf\nd\nfasf\nd\nad\nfds\nd\nads\nfd\n', 'Full-Time', '2023-03-04 11:17:14'),
+(8, 'Signopsys Inc.', 'Information Technology', 'FInance Manager', '25000', 'faff', 'dfasf', 'Part-Time', '2023-03-04 12:10:58');
 
 -- --------------------------------------------------------
 
@@ -271,16 +284,70 @@ INSERT INTO `session` (`session_id`, `user_id`, `log_date`) VALUES
 (67, 8, '2023-02-20 09:45:55'),
 (68, 7, '2023-02-20 09:58:14'),
 (69, 7, '2023-02-20 10:31:47'),
-(70, 24, '2023-02-20 10:33:18'),
 (71, 6, '2023-02-20 10:38:28'),
 (72, 6, '2023-02-20 10:39:44'),
 (73, 6, '2023-02-20 10:42:32'),
 (74, 6, '2023-02-20 11:32:07'),
 (75, 6, '2023-02-20 11:33:51'),
-(76, 24, '2023-02-20 11:48:44'),
-(77, 24, '2023-02-20 11:49:00'),
 (78, 8, '2023-02-20 11:50:11'),
-(79, 7, '2023-02-20 12:16:25');
+(79, 7, '2023-02-20 12:16:25'),
+(80, 7, '2023-03-04 10:30:05'),
+(81, 7, '2023-03-04 11:07:06'),
+(82, 7, '2023-03-04 11:27:53'),
+(83, 7, '2023-03-04 11:28:51'),
+(84, 7, '2023-03-04 11:29:36'),
+(85, 7, '2023-03-04 11:36:59'),
+(86, 7, '2023-03-04 11:37:00'),
+(87, 7, '2023-03-04 02:13:29'),
+(88, 7, '2023-03-04 03:34:22'),
+(89, 6, '2023-03-04 03:40:03'),
+(90, 7, '2023-03-04 03:40:18'),
+(91, 7, '2023-03-04 04:09:08'),
+(92, 7, '2023-03-04 04:11:30'),
+(93, 7, '2023-03-04 04:32:53'),
+(94, 7, '2023-03-04 04:44:29'),
+(95, 7, '2023-03-04 05:49:15'),
+(101, 9, '2023-03-04 06:44:10'),
+(102, 9, '2023-03-04 06:44:53'),
+(103, 9, '2023-03-04 06:47:16'),
+(104, 9, '2023-03-04 06:48:16'),
+(105, 9, '2023-03-04 06:48:49'),
+(106, 6, '2023-03-04 06:49:21'),
+(107, 9, '2023-03-04 06:51:31'),
+(108, 7, '2023-03-05 02:52:26'),
+(109, 9, '2023-03-05 02:57:39'),
+(110, 6, '2023-03-05 03:00:09'),
+(111, 6, '2023-03-05 03:50:36'),
+(112, 6, '2023-03-05 03:53:36'),
+(113, 7, '2023-03-05 03:54:08'),
+(114, 7, '2023-03-05 04:05:39'),
+(115, 7, '2023-03-05 04:09:45'),
+(116, 8, '2023-03-05 04:10:49'),
+(117, 7, '2023-03-05 04:11:09'),
+(118, 9, '2023-03-05 04:13:57'),
+(119, 7, '2023-03-05 04:15:48'),
+(120, 6, '2023-03-05 04:16:19'),
+(121, 6, '2023-03-05 04:24:06'),
+(122, 6, '2023-03-05 04:26:10'),
+(123, 6, '2023-03-05 04:42:14'),
+(124, 7, '2023-03-05 04:50:28'),
+(125, 6, '2023-03-05 04:52:41'),
+(126, 6, '2023-03-05 05:10:07'),
+(127, 6, '2023-03-05 05:19:32'),
+(128, 6, '2023-03-05 05:34:22'),
+(129, 7, '2023-03-05 05:37:19'),
+(130, 6, '2023-03-05 05:40:34'),
+(131, 6, '2023-03-05 05:43:01'),
+(132, 6, '2023-03-05 05:43:35'),
+(133, 6, '2023-03-05 05:44:07'),
+(134, 7, '2023-03-05 05:54:41'),
+(135, 9, '2023-03-05 05:58:45'),
+(136, 7, '2023-03-05 06:07:16'),
+(137, 6, '2023-03-05 07:52:31'),
+(138, 9, '2023-03-05 07:53:27'),
+(139, 6, '2023-03-05 08:55:47'),
+(140, 7, '2023-03-05 08:56:53'),
+(141, 9, '2023-03-05 08:57:22');
 
 -- --------------------------------------------------------
 
@@ -298,39 +365,27 @@ CREATE TABLE `user_info` (
   `birth_date` date NOT NULL,
   `password` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `type` enum('ALUMNI','ADMIN') NOT NULL,
+  `type` enum('ALUMNI','ADMIN','STAFF') NOT NULL,
   `gender` enum('MALE','FEMALE') NOT NULL,
   `status` enum('SINGLE','MARRIED','WIDOW') NOT NULL,
   `pic` varchar(255) NOT NULL,
-  `department` enum('CCS','CBA','Architecture','CASED','Engineering','Nursing') NOT NULL
+  `department` enum('CCS','CBA','Architecture','CASED','Engineering','Nursing','') NOT NULL,
+  `date_created` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user_info`
 --
 
-INSERT INTO `user_info` (`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `cp_number`, `birth_date`, `password`, `username`, `type`, `gender`, `status`, `pic`, `department`) VALUES
-(6, 'Leofer', 'Martinez', 'Dela Cruz', 'gregoriomarvin56@gmail.com', '09071021182', '2023-03-03', '$2y$12$4V6ZnicgTd5mcNMx.yLi2uRAt0C3MRJhU.pZ37Uck60BWEbolyM72', 'leofer_delacruz', 'ALUMNI', 'MALE', 'SINGLE', '1676738551.png', 'Architecture'),
-(7, 'Anatalia', 'Berania', 'Sy', 'gregoriomarvin.ph@gmail.com', '09182831664', '2023-01-30', '$2y$12$cZomaZADS2GfORuyIslGJOZUZkhLflHe4Sc1ez9IxtUxESwSXidoG', 'admin', 'ADMIN', 'FEMALE', 'MARRIED', '1676721475.png', ''),
-(8, 'Melvin', 'Esguerra', 'Vargas', 'marvingregorio56@gmail.com', '09091231223', '2023-03-02', '$2y$12$EMphGelfoecHxBmwM/pQ1umOiKpKXdyHXhZq0hR/UpcmvUHMyhSpq', 'melvin_vargas', 'ALUMNI', 'MALE', 'SINGLE', '1676738874.png', 'CBA'),
-(9, 'Aurora', 'Gonzalo', 'Pilorin', 'aurora.ccs@gmail.com', '09182421223', '2002-02-19', '$2y$12$ixzzvC0OD4VtYAv0P0EVL.2EhjIZ/EyJey9rT6NAm.ZGJ754823wS', 'aurora_pilorin', 'ALUMNI', 'MALE', 'SINGLE', '1676804344.png', 'CBA'),
-(24, 'April', 'Ross', 'Aquilino', 'april.ccs@gmail.com', '09161212221', '2023-01-31', '$2y$12$BDM9mPwQfDg01t4VW1Ru/.Z24oOHFPvhdxrHB3rMvJu2s76YII6QO', 'april_ross', 'ALUMNI', 'FEMALE', 'SINGLE', '', 'CCS');
+INSERT INTO `user_info` (`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `cp_number`, `birth_date`, `password`, `username`, `type`, `gender`, `status`, `pic`, `department`, `date_created`) VALUES
+(6, 'Leofers', 'Martinez', 'Dela Cruz', 'gregoriomarvin56@gmail.com', '09071021182', '2023-03-03', '$2y$12$E2xQrG5oeg0p3hSwFB6uoeOC/qdIojn0P6FZBcaaW6nhTrMdLy.4i', 'leofer_delacruz', 'ALUMNI', 'MALE', 'SINGLE', '1676738551.png', 'Architecture', '2023-03-01 19:42:25'),
+(7, 'Anatalia', 'Berania', 'Sy', 'gregoriomarvin.ph@gmail.com', '09182831664', '2023-01-30', '$2y$12$cZomaZADS2GfORuyIslGJOZUZkhLflHe4Sc1ez9IxtUxESwSXidoG', 'admin', 'ADMIN', 'FEMALE', 'MARRIED', '1676721475.png', '', '2023-01-01 19:42:35'),
+(8, 'Melvin', 'Esguerra', 'Vargas', 'aurora@gmail.com', '09091231223', '2023-03-02', '$2y$12$EMphGelfoecHxBmwM/pQ1umOiKpKXdyHXhZq0hR/UpcmvUHMyhSpq', 'melvin_vargas', 'ALUMNI', 'MALE', 'SINGLE', '1676738874.png', 'CBA', '2022-12-22 19:42:57'),
+(9, 'Mabel', 'Corazon', 'Queen', 'mable.ccalumni@gmail.com', '09182421223', '2002-02-19', '$2y$12$ixzzvC0OD4VtYAv0P0EVL.2EhjIZ/EyJey9rT6NAm.ZGJ754823wS', 'mabel_corazon', 'STAFF', 'FEMALE', 'SINGLE', '1676804344.png', '', '2022-12-12 00:00:00');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admins`
---
-ALTER TABLE `admins`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `alumni`
---
-ALTER TABLE `alumni`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `educational_info`
@@ -340,6 +395,12 @@ ALTER TABLE `educational_info`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indexes for table `email_blast`
+--
+ALTER TABLE `email_blast`
+  ADD PRIMARY KEY (`blast_id`);
+
+--
 -- Indexes for table `employment_info`
 --
 ALTER TABLE `employment_info`
@@ -347,10 +408,22 @@ ALTER TABLE `employment_info`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `forum`
+-- Indexes for table `events`
 --
-ALTER TABLE `forum`
-  ADD PRIMARY KEY (`forum_id`);
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`event_id`);
+
+--
+-- Indexes for table `interested`
+--
+ALTER TABLE `interested`
+  ADD PRIMARY KEY (`interested_id`);
+
+--
+-- Indexes for table `jobs_list`
+--
+ALTER TABLE `jobs_list`
+  ADD PRIMARY KEY (`job_id`);
 
 --
 -- Indexes for table `session`
@@ -370,22 +443,16 @@ ALTER TABLE `user_info`
 --
 
 --
--- AUTO_INCREMENT for table `admins`
---
-ALTER TABLE `admins`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT for table `alumni`
---
-ALTER TABLE `alumni`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
 -- AUTO_INCREMENT for table `educational_info`
 --
 ALTER TABLE `educational_info`
   MODIFY `education_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `email_blast`
+--
+ALTER TABLE `email_blast`
+  MODIFY `blast_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `employment_info`
@@ -394,22 +461,34 @@ ALTER TABLE `employment_info`
   MODIFY `employment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `forum`
+-- AUTO_INCREMENT for table `events`
 --
-ALTER TABLE `forum`
-  MODIFY `forum_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+ALTER TABLE `events`
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `interested`
+--
+ALTER TABLE `interested`
+  MODIFY `interested_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `jobs_list`
+--
+ALTER TABLE `jobs_list`
+  MODIFY `job_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `session`
 --
 ALTER TABLE `session`
-  MODIFY `session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
 
 --
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- Constraints for dumped tables
