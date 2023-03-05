@@ -43,7 +43,7 @@ function addBlast(){
 				Swal.fire({
 					icon:'success',
 					title:'Success',
-					text:'New Job Added!'
+					text:'Email Sent!'
 				}).then(function(){
 					destroyTable();
 					loadTable();

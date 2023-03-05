@@ -17,7 +17,7 @@
 	$password = password_hash($_POST['pass'],PASSWORD_BCRYPT,$options);
 	
 	try{
-		$insert->new_user($_POST['f_name'],$_POST['m_name'],$_POST['l_name'],$_POST['email'],$_POST['cp_number'],$_POST['b_day'],$_POST['username'],$password,$_POST['gender'],$_POST['status'],$_POST['dept']);
+		$insert->new_user($_POST['f_name'],$_POST['m_name'],$_POST['l_name'],$_POST['email'],$_POST['cp_number'],$_POST['b_day'],$_POST['username'],$password,$_POST['gender'],$_POST['status'],$_POST['dept'],$date);
 	}catch(Exception $e){
 		echo "ERROR: " . $e->getMessage();
 	}

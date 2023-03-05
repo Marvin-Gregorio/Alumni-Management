@@ -19,6 +19,26 @@
 			return false;
 		}
 
+		function likeEvent($eventid,$userid){
+			$result = $this->searchUserInterested($eventid,$userid);
+			if ($result->rowCount() > 0) {
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+		function totalInterested($eventid){
+			$result = $this->searchInterested($eventid);
+			if ($result->rowCount() > 0) {
+				while($row = $result->fetch()){
+					$data = $row['total'];
+				}
+
+				return $data;
+			}
+		}
+
 		function getJobList(){
 			$result = $this->searchJobList();
 			return $result;
@@ -90,6 +110,24 @@
 			return false;
 		}
 
+		function getUserDetailsByUsername($username){
+			$result = $this->searchUserByUsername($username);
+			if ($result->rowCount() > 0) {
+				$data[] = array();
+				while($row = $result->fetch()){
+
+					$data[] = $row['first_name'];
+					$data[] = $row['last_name'];
+					$data[] = $row['email'];
+					$data[] = $row['password'];
+					$data[] = $row['user_id'];
+				}
+				return $data;
+			}
+
+			return false;
+		}
+
 		function getEventDetails($id){
 			$result = $this->searchSpecificEventList($id);
 			if ($result->rowCount() > 0) {
@@ -111,6 +149,14 @@
 		function getAllUserByType($type){
 			$result = $this->searchUserByType($type);
 			return $result;
+		}
+
+		function countAllUserByType($type){
+			$result = $this->countUserByType($type);
+			while($row=$result->fetch()){
+				$data = $row['total'];
+			}
+			return $data;
 		}
 
 		function getAllUser(){
@@ -193,6 +239,37 @@
 			}
 
 			return false;
+		}
+
+		function getEmailCount($dept){
+			$result = $this->searchEmailBlast($dept);
+			if ($result->rowCount() > 0) {
+				$data = 0;
+				while($row = $result->fetch()){
+					$data = $row['total'];
+				}
+				return $data;
+			}
+
+			return false;
+		}
+
+		function getJobCount(){
+			$result = $this->searchJobList();
+			
+			return $result->rowCount();
+		}
+
+		function getNewUsersCount(){
+			$result = $this->searchNewUser();
+			
+			return $result->rowCount();
+		}
+
+		function getEventCount(){
+			$result = $this->searchEventList();
+			
+			return $result->rowCount();
 		}
 
 		function getDailyCount($dept,$date){

@@ -1,4 +1,8 @@
+<?php
+    $id = $_GET['id'];
+    echo "<input type='text' id='jobDetailsId' hidden value='".$id."'>";
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,37 +50,24 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <ul class="list-unstyled">
-                                <li><h3>Gridpoint, Technologies Inc.</h3></li>
-                                <li><b>IT Supervisor (Network Administrator)</b></li>
-                                <li>Pasig City</li>
+                                <li><h3 id="job_name">Gridpoint, Technologies Inc.</h3></li>
+                                <li><b id="job_title">IT Supervisor (Network Administrator)</b></li>
                             </ul>
                         </div>
                         <hr>
                         <div class="form-group">
                             <span><b>Job Description:</b></span>
-                            <ul>
-                                <li>Management of infrastructure, network, equipment, and facilities.</li>
-                                <li>Plans internal and external process improvements for continued service excellence.</li>
-                                <li>Develop a back-up/disaster recovery plan for a network emergency.</li>
-                                <li>Provides troubleshooting for servers, network devices, and firewall configurations.</li>
-                                <li>Notifies end users of outage and/or maintenance schedule.</li>
-                            </ul>
+                            <pre id="job_description"></pre>
                         </div>
                         <div class="form-group">
                             <span><b>Qualifications:</b></span>
-                            <ul>
-                                <li>Bachelor's Degree in Information Science/Technology or any related course..</li>
-                                <li>2-3 years of experience in network and system management and administration. MSCE and Cisco Certification desired..</li>
-                                <li>Strong knowledge of network operating systems (Microsoft NT/2003/Server) and data communication protocols and technologies.</li>
-                                <li>Experience in MS Active Directory, PFSense, Cacti, MRTG, LDAP, TeamViewer, VNC, etc..</li>
-                                <li>Good and functional level of English.</li>
-                            </ul>
+                            <pre id="job_qualification"></pre>
                         </div>
                         <div class="form-group">
-                            <span><b>Job Type :</b> Full-Time</span>
+                            <span id="job_type"><b>Job Type :</b> Full-Time</span>
                         </div>
                         <div class="form-group">
-                            <span><b>Salary :</b> Php20,000-23,000 a month</span>
+                            <span id="job_salary"><b>Salary :</b > Php20,000-23,000 a month</span>
                         </div>
                     </div>
                 </div>
@@ -91,10 +82,10 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
-    <script src="../../js/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../js/logOut.js" type="text/javascript"></script>
     <script src="../../js/nav_profile.js" type="text/javascript"></script>
+    <script src="../../js/jobDetails.js" type="text/javascript"></script>
 </body>
 
 </html>

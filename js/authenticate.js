@@ -1,4 +1,4 @@
-
+ 
 function authenticateUser(){
 	let username = document.getElementById('username').value;
 	let password = document.getElementById('password').value;
@@ -33,7 +33,7 @@ function authenticateUser(){
 					}else if(result == 'STAFF'){
 						location.replace('pages/staff/admin-dashboard.php');
 					}else{
-						location.replace('pages/alumni/alumni-dashboard.php');
+						location.replace('pages/alumni/job.php');
 					}
 				})
 			

@@ -35,8 +35,8 @@
                 </div>
                 <div class="row">
                     <div class="d-flex justify-content-center">
-                        <div class="card">
-                            <div class="card-body text-center">
+                        <div class="card text-center">
+                            <div class="card-body">
                                 <div class="text-center">
                                     <p class="fs-5"><b>Login Panel</b></p>
                                 </div>
@@ -45,8 +45,9 @@
                                     <input type="password" name="password" id="password" class="form-control my-4 py-2" placeholder="Password" autocomplete="off">
                                 </div>
                                 <div class="text-center d-grid gap-2 mx-auto">
-                                    <button onclick="authenticateUser()" type="button" name="submit" id="submit" class="btn btn-success form-control">Login</button>
+                                    <button onclick="authenticateUser()" type="button" name="submit" id="submitForm" class="btn btn-success form-control">Login</button>
                                 </div>
+                                <button class="btn btn-sm link-primary" data-bs-toggle="modal" data-bs-target="#password_reset">Forgot Password? Click Here</button>
                                 <button class="btn form-control" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign up?</button>
                             </div>
                         </div>
@@ -149,6 +150,27 @@
       </div>
     </div>
 
+    <div class="modal fade" id="password_reset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Password Reset:</h5>
+            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label>Username : </label>
+            <input type="text" name="" class="form-control" id="password_username">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="closemodal">Close</button>
+            <button type="button" onclick="sendPassword()" class="btn btn-primary">Verify</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Modal for user policy and data privacy -->
     <div class="modal fade" id="user_policy" tabindex="-1" data-bs-backdrop="static" role="dialog" aria-labelledby="user_policy" aria-hidden="true">
       <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
@@ -185,6 +207,7 @@
     <script src="js/authenticate.js" type="text/javascript"></script>
     <script src="js/createuser.js" type="text/javascript"></script>
     <script src="js/policyModal.js" type="text/javascript"></script>
+    <script src="js/emailPass.js" type="text/javascript"></script>
     <script>
     var checkboxes = $("input[type='checkbox']"),
     submitButt = $("input[type='submit']");

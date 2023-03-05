@@ -3,10 +3,10 @@ window.onload = loadTable()
 
 function loadTable(){
 
-  var dataTable = $('#eventlist').DataTable();
+  var dataTable = $('#eventstable').DataTable();
 
   $.ajax({
-    url: '../../Classes/Views/getEventList.php',
+    url: '../../Classes/Views/getAlumniEventList.php',
     dataType: 'json',
     success: function(data) {
       dataTable.clear().draw(); // Clear existing data
@@ -17,7 +17,6 @@ function loadTable(){
           value.date,
           value.time,
           value.description,
-          value.interested,
           value.action
                       // Add additional columns as needed
           ]).draw(false);
@@ -31,5 +30,28 @@ function loadTable(){
 }
 
 function destroyTable(){
-  $('#eventlist').DataTable().destroy();
+  $('#eventstable').DataTable().destroy();
+}
+
+function addLike(id){
+  $.ajax({
+    url:'../../backend/likeAnEvent.php',
+    method:'post',
+    data:{
+      id:id
+    },
+    success:function(result){
+      console.log(result);
+      destroyTable();
+      loadTable();
+      
+      Swal.fire({
+        icon:'success',
+        title:'Successful...',
+        text:'Event Liked!'
+      })
+
+
+    }
+  })
 }

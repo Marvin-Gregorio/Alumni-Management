@@ -16,11 +16,15 @@
 
   if($result->rowCount() > 0){
     while($row = $result->fetch()){
+
+      $total = $search->totalInterested($row['event_id']);
+
       $data[] = array(
         'name' => $row['name'],
         'place' => $row['place'],
         'date' => date("F d, Y", strtotime($row['set_date'])),
         'time' => date("h:i A", strtotime($row['set_time'])),
+        'interested' => $total,
         'description' => $row['description'],
         'action' => '
 
@@ -35,6 +39,7 @@
       'place' => "",
       'date' => "",
       'time' => "",
+      'interested' => "",
       'description' => "",
       'action' => '',
     );

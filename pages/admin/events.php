@@ -55,6 +55,7 @@
                                 <th>Events Date</th>
                                 <th>Events Time</th>
                                 <th>Events Description</th>
+                                <th>Interested People</th>
                                 <th>Action</th>
                             </tr>
                         </thead>

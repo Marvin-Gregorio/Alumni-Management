@@ -46,7 +46,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <table id="eventstable">
+                        <table id="eventstable" class="table table-hover">
                             <thead style="font-size: 13px;">
                                 <tr>
                                     <th>Events Name</th>
@@ -54,16 +54,10 @@
                                     <th>Events Date</th>
                                     <th>Events Time</th>
                                     <th>Events Description</th>
+                                    <th>Interested?</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>CBA vs CCS</td>
-                                    <td>CC Baretto Gym</td>
-                                    <td>11/24/2022</td>
-                                    <td>01:00 PM</td>
-                                    <td>Come and Join us to watch the game and support your teams</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -88,17 +82,7 @@
     <script src="https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script>
-    <!-- datatable ends here -->
-
-    <script>
-        $(document).ready(function() {
-    var table = $('#eventstable').DataTable( {
-        responsive: true
-    } );
- 
-    new $.fn.dataTable.FixedHeader( table );
-    } );
-    </script>
+    <script src="../../js/alumni_event_list.js" type="text/javascript"></script>
 </body>
 
 </html>

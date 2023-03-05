@@ -5,18 +5,27 @@
 
 	class InsertController extends Insert{
 		
-		function new_staff($fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$password){
+		function new_staff($fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$password,$date){
 			try{
-				$this->insertStaff($fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$password);
+				$this->insertStaff($fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$password,$date);
 			}catch(Exception $e){
 				echo "caught exception: ". $e->getMessage(). "\n";
 			}
 			
 		}
 
-		function new_user($fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,$dept){
+		function event_like($userid,$eventid){
 			try{
-				$this->insertUser($fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,$dept);
+				$this->insertEventLike($userid,$eventid);
+			}catch(Exception $e){
+				echo "caught exception: ". $e->getMessage(). "\n";
+			}
+			
+		}
+
+		function new_user($fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,$dept,$date){
+			try{
+				$this->insertUser($fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,$dept,$date);
 			}catch(Exception $e){
 				echo "caught exception: ". $e->getMessage(). "\n";
 			}

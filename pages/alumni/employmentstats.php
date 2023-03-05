@@ -119,7 +119,7 @@
     <script src="https://fengyuanchen.github.io/cropperjs/js/cropper.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../js/logOut.js" type="text/javascript"></script>
-    <script src="../../js/profile.js" type="text/javascript"></script>
+    <script src="../../js/employment_stats.js" type="text/javascript"></script>
     <script src="../../js/nav_profile.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 

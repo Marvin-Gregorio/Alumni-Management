@@ -9,7 +9,7 @@
 	$insert = new Classes\Controller\InsertController();
 
 	date_default_timezone_set('Asia/Manila');
-
+	$date = date("Y-m-d h:i:s");
 	$options = [
 	  'cost' => 12,
 	];
@@ -24,7 +24,7 @@
 	$password = password_hash($_POST['password'],PASSWORD_BCRYPT,$options);
 	
 	try{
-		$insert->new_staff($fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$password);
+		$insert->new_staff($fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$password,$date);
 	}catch(Exception $e){
 		echo "ERROR: " . $e->getMessage();
 	}

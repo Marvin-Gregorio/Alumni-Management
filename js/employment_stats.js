@@ -73,35 +73,10 @@ function loadAccountDetails(){
         success:function(result){
             result = JSON.parse(result);
             document.getElementById('profileImg').src = '../../profileImg/' + result[0].pic;
-            document.getElementById('fname').value = result[0].first_name;
-            document.getElementById('mname').value = result[0].middle_name;
-            document.getElementById('lname').value = result[0].last_name;
-            document.getElementById('p_email').value = result[0].email;
-            document.getElementById('p_cp_number').value = result[0].cp_number;
-            document.getElementById('b_date').value = result[0].birthdate;
-            document.getElementById('uname').value = result[0].username;
-            document.getElementById('gender').value = result[0].gender;
-            document.getElementById('status').value = result[0].status;
             document.getElementById('company_name').value = result[0].company_name;
             document.getElementById('company_email').value = result[0].company_email;
             document.getElementById('company_address').value = result[0].company_address;
             document.getElementById('company_number').value = result[0].company_number;
-            document.getElementById('elem_school').value = result[0].elem_school;
-            document.getElementById('elem_year').value = result[0].elem_year;
-            document.getElementById('junior_school').value = result[0].junior_school;
-            document.getElementById('junior_year').value = result[0].junior_year;
-            document.getElementById('senior_school').value = result[0].senior_school;
-            document.getElementById('senior_year').value = result[0].senior_year;
-            document.getElementById('senior_course').value = result[0].senior_course;
-            document.getElementById('college_school').value = result[0].college_school;
-            document.getElementById('college_year').value = result[0].college_year;
-            document.getElementById('college_course').value = result[0].college_course;
-            document.getElementById('master_school').value = result[0].master_school;
-            document.getElementById('master_year').value = result[0].master_year;
-            document.getElementById('master_course').value = result[0].master_course;
-            document.getElementById('doctor_school').value = result[0].doctor_school;
-            document.getElementById('doctor_year').value = result[0].doctor_year;
-            document.getElementById('doctor_course').value = result[0].doctor_course;
             
         }
         

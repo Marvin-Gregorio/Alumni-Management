@@ -8,6 +8,7 @@
 
 	$search = new Classes\Controller\SearchController();
 
+	$staff = $search->countAllUserByType('STAFF');
 	$cba = $search->getDeptCount('CBA');
 	$ccs = $search->getDeptCount('CCS');
 	$con = $search->getDeptCount('Nursing');
@@ -24,6 +25,7 @@
 		"coa" => $coa,
 		"cased" => $cased,
 		"total" => $total,
+		"staff" => $staff
 	);
 	
 	echo json_encode($arr);

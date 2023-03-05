@@ -43,7 +43,55 @@
 
     <div class="container-fluid" id="main">
 
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
+                                <h5>No. of Jobs Posted</h5>
+                            </span>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <h3 id="jobs_posted">24</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
+                                <h5>No. of Events Posted</h5>
+                            </span>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <h3 id="events_posted">24</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
+                                <h5>No. of Users Signed Up this Year</h5>
+                            </span>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <h3 id="new_user_count">24</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
+            
+
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
@@ -56,12 +104,16 @@
                         <div class="mb-3" style="position: relative;">
                             <canvas id="alumni" height="20vw" width="80vw"></canvas>
                         </div>
-                        <div class="mb-3">
+                        <div>
                             <span><b>TOTAL NUMBER OF ALUMNI:</b><span class="mx-5 fs-5"><b id="totaluser">6,308</b></span></span>
+                        </div>
+                        <div class="mb-3">
+                            <span><b>TOTAL NUMBER OF STAFF:</b><span class="mx-5 fs-5"><b id="totalstaff">2</b></span></span>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
@@ -76,7 +128,7 @@
                         <div class="mb-3" style="position: relative;">
                             <canvas id="attend" height="20vw" width="80vw"></canvas>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 pb-4">
                             <span><b>TOTAL NUMBER OF SESSION:</b><span class="mx-5 fs-5"><b id="dailyTotal">53,600</b></span></span>
                         </div>
                     </div>
@@ -124,6 +176,27 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-6 mt-4">
+                <div class="card">
+                    <div class="card-body" style="box-shadow: 8px 9px 15px -1px rgba(0,0,0,0.64);">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="px-2" style="border-left: 4px solid #000000; height: 25px;">
+                                <h5>No. of Email Blast</h5>
+                            </span>
+                        </div>
+                        &nbsp;
+                        <div class="mb-3" style="position: relative;">
+                            <canvas id="email_blast" height="20vw" width="80vw"></canvas>
+                        </div>
+                        <div>
+                            <span><b>TOTAL:</b><span class="mx-5 fs-5"><b id="totalBlast">6,308</b></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 

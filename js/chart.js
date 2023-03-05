@@ -6,6 +6,27 @@ let con = 0;
 let coa = 0;
 let coe = 0;
 
+$.ajax({
+    url:'../../backend/getJobsCount.php',
+    success:function(result){
+        document.getElementById('jobs_posted').innerHTML = result;
+    }
+})
+
+$.ajax({
+    url:'../../backend/getEventsCount.php',
+    success:function(result){
+        document.getElementById('events_posted').innerHTML = result;
+    }
+})
+
+$.ajax({
+    url:'../../backend/getNewUsersCount.php',
+    success:function(result){
+        document.getElementById('new_user_count').innerHTML = result;
+    }
+})
+
 //user
 $.ajax({
     url:'../../backend/getUserCount.php',
@@ -18,6 +39,7 @@ $.ajax({
         coe = result[0].coe;
         cased = result[0].cased;
         document.getElementById('totaluser').innerHTML = result[0].total;
+        document.getElementById('totalstaff').innerHTML = result[0].staff;
         loadUser();
     }   
 })
@@ -73,6 +95,22 @@ $.ajax({
     }   
 })
 
+//emailBlast
+$.ajax({
+    url:'../../backend/getEmailCount.php',
+    success:function(result){
+        result = JSON.parse(result);
+        cba = result[0].cba;
+        con = result[0].con;
+        ccs = result[0].ccs;
+        coa = result[0].coa;
+        coe = result[0].coe;
+        cased = result[0].cased;
+        document.getElementById('totalBlast').innerHTML = result[0].total;
+        emailBlast();
+    }
+})
+
 
 function loadUser(){
 
@@ -82,7 +120,7 @@ function loadUser(){
         data: {
             labels: ['CBA', 'CASED', 'CCS', 'COE', 'COA', 'CON'],
             datasets: [{
-                label: 'Number of Session',
+                label: 'Number of Alumni',
                 data: [cba,cased,ccs,coe,coa,con],
                 backgroundColor: [
                     '#ffea00',
@@ -202,4 +240,36 @@ function loadYearly(){
             }
         }
     });
+}
+
+//email blast
+function emailBlast(){
+
+    var ctx = document.getElementById('email_blast').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['CBA', 'CASED', 'CCS', 'COE', 'COA', 'CON'],
+            datasets: [{
+                label: 'Number of Emails Sent',
+                data: [cba,cased,ccs,coe,coa,con],
+                backgroundColor: [
+                    '#ffea00',
+                    '#1565c0',
+                    '#6a1b9a',
+                    '#b71c1c',
+                    '#d50000',
+                    '#1b5e20',
+                ],
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
 }

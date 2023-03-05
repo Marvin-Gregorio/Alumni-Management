@@ -5,12 +5,12 @@
 	use Classes\Data\Database;
 
 	class Insert extends Database{
-		protected function insertUser($fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,$dept){
-			$sql = 'insert into user_info(first_name,middle_name,last_name,email,cp_number,birth_date,username,password,gender,status,type,department) values(?,?,?,?,?,?,?,?,?,?,?,?)';
+		protected function insertUser($fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,$dept,$date){
+			$sql = 'insert into user_info(first_name,middle_name,last_name,email,cp_number,birth_date,username,password,gender,status,type,department,date_created) values(?,?,?,?,?,?,?,?,?,?,?,?,?)';
 			$stmt = $this->connect()->prepare($sql);
 
 			try{
-				$stmt->execute([$fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,'ALUMNI',$dept]);
+				$stmt->execute([$fname,$mname,$lname,$email,$cp,$bday,$username,$password,$gender,$status,'ALUMNI',$dept,$date]);
 			}catch(PDOException $e){
 				echo "ERROR : " . $e->getMessage();
 			}
@@ -24,6 +24,19 @@
 
 			try{
 				$stmt->execute([$fname,$mname,$lname,$email,$cp,$birth,$uname,$gender,$password,"STAFF"]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+
+			return $stmt;
+		}
+
+		protected function insertEventLike($userid,$eventid){
+			$sql = 'insert into interested(event_id,user_id) values(?,?)';
+			$stmt = $this->connect()->prepare($sql);
+
+			try{
+				$stmt->execute([$eventid,$userid]);
 			}catch(PDOException $e){
 				echo "ERROR : " . $e->getMessage();
 			}
