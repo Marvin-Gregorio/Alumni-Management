@@ -40,3 +40,21 @@ function seeMoreDetails(id){
         
     })
 }
+
+function printSearch(){
+    let yearStart = document.getElementById('year_start').value;
+    let yearEnd = document.getElementById('year_end').value;
+    let dept = document.getElementById('print_department').value;
+
+    if(yearStart == "" || yearEnd == ""){
+        Swal.fire({
+            icon:'error',
+            title:'Ooops...',
+            text:'Year Fields are empty!'
+        })
+    }else{
+        $.ajax({
+            url:'../../classes'
+        })
+    }
+}
