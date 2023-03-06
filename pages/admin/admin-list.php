@@ -36,8 +36,45 @@
 	<?php include('header.php') ?>
 
 	<!-- This is Main -->
+	<div class="row mb-3">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-3">
+							<select name="" id="" class="form-select form-select-sm" onchange="verificationFilter(this.value)">
+								<option value="All" selected>All</option>
+								<option value="VERIFIED">VERIFIED</option>
+								<option value="">UNVERIFIED</option>
+							</select>
+						</div>
+						<div class="col-md-3">
+							<select name="" id="print_department" class="form-select form-select-sm" onchange="departmentFilter(this.value)">
+								<option value="All" selected>All</option>
+								<option value="CCS">CCS</option>
+								<option value="CBA">CBA</option>
+								<option value="CASED">CASED</option>
+								<option value="Architecture">Architecture</option>
+								<option value="Engineering">Engineering</option>
+								<option value="Nursing">Nursing</option>
+							</select>
+						</div>
+						<div class="col-md-2">
+							<input type="text" name="" class="form-control" placeholder="Year From" id="year_start">
+						</div>
+						<div class="col-md-2">
+							<input type="text" name="" class="form-control" placeholder="Year To" id="year_end">
+						</div>
+						<div class="col-md-2">
+							<button class="btn btn-success" onclick="printSearch()"><i class="fas fa-print"></i>Print</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-	<div class="container-fluid" id="main">
+   	<div class="container-fluid" id="main">
 
 		<div class="row">
 

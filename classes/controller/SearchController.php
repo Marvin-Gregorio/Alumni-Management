@@ -151,6 +151,16 @@
 			return $result;
 		}
 
+		function getUserByDept($type,$dept){
+			$result = $this->searchUserByTypeAndDept($type,$dept);
+			return $result;
+		}
+
+		function getVerifiedUser($type,$data){
+			$result = $this->searchVerifiedUser($type,$data);
+			return $result;
+		}
+
 		function countAllUserByType($type){
 			$result = $this->countUserByType($type);
 			while($row=$result->fetch()){

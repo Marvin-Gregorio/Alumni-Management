@@ -122,7 +122,7 @@
 						</thead>
 						<tbody>
 						';
-
+						/**
 						if($list){
 							for($count = 1; $count < sizeof($studentList); $count++){
 								$html .='
@@ -135,7 +135,7 @@
 							}
 						}else{
 							$html .='No records found...';
-						}
+						}*/
 						
 							
 

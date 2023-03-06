@@ -248,6 +248,17 @@
 			return $stmt;
 		}
 
+		protected function searchVerifiedUser($type,$data){
+			$sql = 'select * from user_info where type = ? and account_status = ? ';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$type,$data]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
 		protected function countUserByType($username){
 			$sql = 'select count(*) as total from user_info where type = ? ';
 			$stmt = $this->connect()->prepare($sql);
