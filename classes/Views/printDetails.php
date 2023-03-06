@@ -21,8 +21,6 @@
 	$result2 = $search->getEducationalDetails($id);
 	$result3 = $search->getSession($id);
 
-	chmod('../../profileImg/', 0644);
-
 	$mpdf = new \Mpdf\Mpdf();
 	$css = file_get_contents('style.css');
 	$mpdf->WriteHTML($css, \Mpdf\HTMLParserMode::HEADER_CSS);
@@ -30,7 +28,7 @@
 	$header = '
 
 				<div class="row" style="padding-left:60px;">
-					<div class="col-xs-2 text-center"><img src="col.png" style="width:100px;"></div>
+					<div class="col-xs-2 text-center"><img src="../../profileImg/col.png" style="width:100px;"></div>
 					<div class="col-xs-5 text-center">
 						<h4>COLUMBAN COLLEGE INC.</h4>
 						<h4>Olongapo City</h4>
@@ -133,6 +131,30 @@
 				</table>
 			</div>
 		</div>
+
+		User Session
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Date & Time</th>
+				</tr>
+			</thead>
+			<tbody>';
+
+			for($count = 1; $count < sizeof($result3); $count++){
+				$html .= '
+				<tr>
+					<td>'.$result[1].'</td>
+					<td>'.$result[3].'</td>
+					<td>'.$result3[$count].'</td>
+				</tr>';
+			}
+			
+
+		$html .= '</tbody>
+		</table>
 	';
 	$mpdf->WriteHTML($html);
 	$mpdf->Output();
