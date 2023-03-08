@@ -39,46 +39,44 @@
 
     <!-- This is Main -->
 
+        <div class="background-cc">
+            <img src="../../assets/css/images/cc-main.jpg" class="w-100 mx-auto d-block" alt="">
+        </div>
 
-
-    <div class="container" style="padding: 20px;">
-        <div class="row mb-3">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            
-                            <div class="col-md-6">
-                                <select name="" id="" class="form-select form-select-sm" onchange="categoryFilter(this.value)">
-                                    <option selected>All Job Category</option>
-                                    <option value="Information Technology">Information Technology</option>
-                                    <option value="Basic Metal Production">Basic Metal Production</option>
-                                    <option value="Chemical Industries">Chemical Industries</option>
-                                    <option value="Commerce">Commerce</option>
-                                    <option value="Construction">Construction</option>
-                                    <option value="Education">Education</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <select onchange="jobTypeFilter(this.value)" name="" id="" class="form-select form-select-sm">
-                                    <option selected>Job type</option>
-                                    <option value="Full-Time">Full-Time </option>
-                                    <option value="Part-Time">Part-Time</option>
-                                    <option value="Temporary">Temporary</option>
-                                    <option value="Contract">Contract</option>
-                                    <option value="Internship">Internship</option>
-                                    <option value="Fresh Graduate">Fresh Graduate</option>
-                                </select>
-                            </div>
+        <div class="container" style="padding: 30px">
+            <div class="mb-3">
+                <span><b>COLUMBAN COLLEGE, INC. CELEBRATES ITS 61ST YEAR</b></span>
+            </div>
+            <div class="mb-3">
+                <span><b>SUSTAINING THE CULTURE OF GLOBAL EXCELLENCE,<br>
+                    COMPETITIVENESS AND SERVICE.
+                </b></span>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <span>
+                                Activities: <br>
+                                November 21, 2022 Opening Foundation <br>
+                                November 22, 2022 Games
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container" id="jobContainer">
-        
-    </div>
+        <div class="container text-center" style="padding:20px">
+            <div class="row">
+
+            <span class="mb-5"><h3>Campus Gallery</h3></span>
+
+                <div class="col-md-4"><img src="../../assets/css/images/4.jpg" width="70%" alt=""></div>
+                <div class="col-md-4"><img src="../../assets/css/images/5.jpg" width="70%" alt=""></div>
+                <div class="col-md-4"><img src="../../assets/css/images/7.jpg" width="70%" alt=""></div>
+            </div>
+        </div>
 
     <!-- This is Script Js Link -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>

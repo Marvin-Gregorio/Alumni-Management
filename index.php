@@ -56,9 +56,10 @@
             </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal SignUp -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Sign Up Form:</h5>
@@ -68,6 +69,7 @@
           </div>
           <div class="modal-body">
             <div class="row">
+              <span><b>Personal Information:</b></span>
             <div class="col-md-4">
                 <label>First name:</label>
                 <input type="text" class="form-control form-control-sm" autocomplete="off" id="f_name">
@@ -141,13 +143,145 @@
                 </select>
             </div>
             </div>
+
+            <div class="row">
+            <span><b>Educational Background:</b></span>
+              <div class="col-md-4">
+                <label>Elementary (Grade 1-6)</label>
+                <input class="form-control form-control-sm" id="elem_school">
+              </div>
+              <div class="col-md-2">
+                <label>Year Grad</label>
+                <input class="form-control form-control-sm" id="elem_year">
+              </div>
+              <div class="col-md-4">
+                <label>Junior HighSchool (Grade 7-10)</label>
+                <input class="form-control form-control-sm" id="junior_school">
+              </div>
+              <div class="col-md-2">
+                <label>Year Grad</label>
+                <input class="form-control form-control-sm" id="junior_year">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+              <label>Strand:</label>
+                  <select id="senior_course" class="form-control form-control-sm">
+                    <option selected>Select Strand</option>
+                    <option value="STEM">STEM</option>
+                    <option value="TVL">TVL</option>
+                    <option value="ABM">ABM</option>
+                    <option value="HUMSS">HUMMS</option>
+                    <option value="GAS">GAS</option>
+                  </select>
+              </div>
+              <div class="col-md-4">
+                <label>School name</label>
+                <input class="form-control form-control-sm" id="senior_school">
+              </div>
+              <div class="col-md-2">
+                <label>Year Grad</label>
+                <input class="form-control form-control-sm" id="senior_year">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <label>Undergraduate</label>
+                <select id="college_course" class="form-control form-control-sm">
+                    <option selected>Select Course</option>
+                    <option value="BSCS">BSCS</option>
+                    <option value="BSOA">BSOA</option>
+                    <option value="BLIS">BLIS</option>
+                    <option value="BSIT">BSIT</option>
+                  </select>
+              </div>
+              <div class="col-md-4">
+                <label>School name</label>
+                <input class="form-control form-control-sm" id="college_school">
+              </div>
+              <div class="col-md-2">
+                <label>Year</label>
+                <input class="form-control form-control-sm" id="college_year">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <label>Masteral</label>
+                <select id="master_course" class="form-control form-control-sm">
+                    <option selected>Select Masteral</option>
+                    <option value="MSCS">MSCS</option>
+                    <option value="MSOA">MSOA</option>
+                    <option value="MLIS">MLIS</option>
+                    <option value="MSIT">MSIT</option>
+                  </select>
+              </div>
+              <div class="col-md-4">
+                <label>School name</label>
+                <input class="form-control form-control-sm" id="master_school">
+              </div>
+              <div class="col-md-2">
+                <label>Year</label>
+                <input class="form-control form-control-sm" id="master_year">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <label>Doctorate</label>
+                <select id="doctor_course" class="form-control form-control-sm">
+                  <option selected>Select Doctorate</option>
+                    <option value="DSCS">DSCS</option>
+                    <option value="DSOA">DSOA</option>
+                    <option value="DLIS">DLIS</option>
+                    <option value="DSIT">DSIT</option>
+                  </select>
+              </div>
+              <div class="col-md-4">
+                <label>School name</label>
+                <input class="form-control form-control-sm" id="doctor_school">
+              </div>
+              <div class="col-md-2">
+                <label>Year</label>
+                <input class="form-control form-control-sm" id="doctor_year">
+              </div>
+            </div>
+
+            <div class="row">
+            <span><b>Employment Status:</b></span>
+              <div class="col-md-12">
+                <label>Company Name</label>
+                <input type="text" id="company_name" value="" class="form-control form-control-sm">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <label>Company Email:</label>
+                <input type="text" id="company_email" value="" class="form-control form-control-sm">
+              </div>
+              <div class="col-md-4">
+                <label>Company Number:</label>
+                <input type="text" id="company_number" value="" class="form-control form-control-sm">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label>Company Address: </label>
+                <input type="text" id="company_address" value="" class="form-control form-control-sm">
+              </div>
+            </div>
+
           </div>
+
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closemodal">Close</button>
             <button type="button" onclick="createUser()" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
+
     </div>
 
     <div class="modal fade" id="password_reset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

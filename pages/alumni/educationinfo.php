@@ -106,12 +106,14 @@
             <div class="row">
               <div class="col-md-4">
               <span><b>Senior Highschool (Grade 11-12)</b></span>
-              <label>Course:</label>
+              <label>Strand:</label>
                   <select id="senior_course" class="form-control form-control-sm">
-                    <option value="BSCS">TVL</option>
-                    <option value="BSOA">ABM</option>
-                    <option value="BLIS">HUMMS</option>
-                    <option value="BSIT">GAS</option>
+                    <option selected>Select Strand</option>
+                    <option value="STEM">STEM</option>
+                    <option value="TVL">TVL</option>
+                    <option value="ABM">ABM</option>
+                    <option value="HUMSS">HUMMS</option>
+                    <option value="GAS">GAS</option>
                   </select>
               </div>
               <div class="col-md-4">
