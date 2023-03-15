@@ -23,7 +23,7 @@
 
 <body style="background-color: #e0e0e0;">
 
-    <div class="d-flex justify-content-center align-items-center vh-100">
+    <!-- <div class="d-flex justify-content-center align-items-center vh-100">
         
             <div>
                 <div class="text-center">
@@ -48,26 +48,24 @@
                                     <button onclick="authenticateUser()" type="button" name="submit" id="submitForm" class="btn btn-success form-control">Login</button>
                                 </div>
                                 <button class="btn btn-sm link-primary" data-bs-toggle="modal" data-bs-target="#password_reset">Forgot Password? Click Here</button>
-                                <button class="btn form-control"><a href="signup.php" class="nav-link">Sign up?</a></button>
+                                <button class="btn form-control" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign up?</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </div>
+    </div> -->
 
     <!-- Modal SignUp -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Sign Up Form:</h5>
-            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
+    <div class="container" style="padding: 20px">
+      <div class="row justify-content-evenly">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header">
+              <h5>Sign Up Form:</h5>
+            </div>
+            <div class="card-body">
+              
             <div class="row">
               <span><b>Personal Information:</b></span>
             <div class="col-md-4">
@@ -83,6 +81,7 @@
                 <input type="text" class="form-control form-control-sm" autocomplete="off" id="l_name">
             </div>
             </div>
+
             <div class="row">
             <div class="col-md-6">
                 <label>Email:</label>
@@ -97,6 +96,7 @@
                 <input type="date" class="form-control form-control-sm" autocomplete="off" id="b_day">
             </div>
             </div>
+
             <div class="row">
             <div class="col-md-4">
                 <label>Username:</label>
@@ -111,11 +111,12 @@
                 <input type="text" class="form-control form-control-sm" autocomplete="off" id="c_pass">
             </div>
             </div>
+
             <div class="row">
             <div class="col-md-8">
                 <label>Department:</label>
                 <select class="form-select form-select-sm" autocomplete="off" id="dept">
-                    <option selected><--Select Department--></option>
+                    <option selected>Select Department</option>
                     <option value="CCS">College of Computer Studies</option>
                     <option value="CBA">College of Business Administration</option>
                     <option value="CASED">College of Arts, Science, and Education</option>
@@ -127,7 +128,7 @@
             <div class="col-md-2">
                 <label>Gender:</label>
                 <select class="form-select form-select-sm" autocomplete="off" id="gender">
-                    <option selected><--Select Gender--></option>
+                    <option selected>Select Gender</option>
                     <option value="MALE">Male</option>
                     <option value="FEMALE">Female</option>
                 </select>
@@ -136,7 +137,7 @@
             <div class="col-md-2">
                 <label>Civil Status:</label>
                 <select class="form-select form-select-sm" autocomplete="off" id="status">
-                    <option selected><--Select Stauts--></option>
+                    <option selected>Select Stauts</option>
                     <option value="SINGLE">Single</option>
                     <option value="MARRIED">Married</option>
                     <option value="WIDOW">Widow</option>
@@ -256,6 +257,7 @@
                 <input type="text" id="company_name" value="" class="form-control form-control-sm">
               </div>
             </div>
+
             <div class="row">
               <div class="col-md-8">
                 <label>Company Email:</label>
@@ -266,6 +268,7 @@
                 <input type="text" id="company_number" value="" class="form-control form-control-sm">
               </div>
             </div>
+
             <div class="row">
               <div class="col-md-12">
                 <label>Company Address: </label>
@@ -273,34 +276,34 @@
               </div>
             </div>
 
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closemodal">Close</button>
-            <button type="button" onclick="createUser()" class="btn btn-primary">Save changes</button>
+            </div>
+            <div class="card-footer">
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-danger"><a href="index.php" class="nav-link">Go Back</a></button>
+                <button type="button" onclick="createUser()" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
 
-    <!-- This is password reset -->
-    <div class="modal fade" id="password_reset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+    <!-- Modal for user policy and data privacy -->
+    <div class="modal fade" id="user_policy" tabindex="-1" data-bs-backdrop="static" role="dialog" aria-labelledby="user_policy" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Password Reset:</h5>
-            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <h5 class="modal-title" id="exampleModalLabel">Data Privacy Policy</h5>
           </div>
           <div class="modal-body">
-            <label>Username : </label>
-            <input type="text" name="" class="form-control" id="password_username">
+            <p class="mb-3"><b>Republic Act No. 10173, otherwise known as the Data Privacy Act is a law that
+                seeks to protect all forms of information, be it private, personal, or sensitive.
+                It is meant to cover both natural and juridical persons involved in the processing 
+                of personal information.</b></p><br>
+            <input type="checkbox" name="check" id="check" class="mx-3"><label><b>I agree the <a href="#">terms of use</a></b></label>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="closemodal">Close</button>
-            <button type="button" onclick="sendPassword()" class="btn btn-primary">Verify</button>
+            <input type="submit" value="Accept" class="btn btn-success" data-bs-dismiss="modal" disabled>
           </div>
         </div>
       </div>

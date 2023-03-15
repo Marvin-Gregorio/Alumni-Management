@@ -78,6 +78,56 @@
             </div>
         </div>
 
+        <div class="footer" style="background:#ffffff;">
+        <div class="container" style="padding: 30px">
+        <div class="text-center">
+            <h5 class="card-title mb-3 fs-3" style="padding: 50px;"><b>Our Campuses</b></h5>
+        </div>
+        <hr>
+        <div class="row text-center mb-5">
+            <div class="col-md-4">
+                <h5 class="card-title mb-3 fs-4" style="padding: 20px;">Main Campus</h5>
+                <p class="card-text">
+                    #1 First St., New Asinan
+                    <br>
+                    Olongapo City 2200
+                    <br>
+                    Philippines
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="card-title mb-3 fs-4" style="padding: 20px;">Baretto Campus</h5>
+                <p class="card-text">
+                    Rizal St., Bo. Barretto
+                    <br>
+                    Olongapo City 2200
+                    <br>
+                    Philippines
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="card-title mb-3 fs-4" style="padding: 20px;">Sta. Cruz Campus</h5>
+                <p class="card-text">
+                    National Highway, Bo, Naulo
+                    <br>
+                    Sta. Cruz , Zambales 2213
+                    <br>
+                    Philippines
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="">
+            <p>This site publishes CCI information only. External links by third partiy providers have separate data privacy and security policies and agreement with the school.
+We strictly adhere to the Data Privacy Act of 2012.</p>
+        </div>
+        <hr>
+        <div class="text-center">
+            <p>COPYRIGHT © 2023. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+        </div>
+
     <!-- This is Script Js Link -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

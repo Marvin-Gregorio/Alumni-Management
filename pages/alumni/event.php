@@ -41,7 +41,7 @@
 
 
 
-    <div class="container-" style="padding: 20px;">
+    <!-- <div class="container-" style="padding: 20px;">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -60,6 +60,67 @@
                             <tbody>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container" style="padding: 20px;">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><b class="fs-4">CCS Day</b></li>
+                            <li><b>Main Quadrangles</b></li>
+                            <li><b>March 17, 2023</b></li>
+                            <li><b>06:00pm</b></li>
+                            <li><b>Simple Celebration of Department</b></li>
+                            <li><b><button class="btn btn btn-primary"><i class="fas fa-thumbs-up"></i> Yes</button></b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><b class="fs-4">CCS Day</b></li>
+                            <li><b>Main Quadrangles</b></li>
+                            <li><b>March 17, 2023</b></li>
+                            <li><b>06:00pm</b></li>
+                            <li><b>Simple Celebration of Department</b></li>
+                            <li><b><button class="btn btn btn-primary"><i class="fas fa-thumbs-up"></i> Yes</button></b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><b class="fs-4">CCS Day</b></li>
+                            <li><b>Main Quadrangles</b></li>
+                            <li><b>March 17, 2023</b></li>
+                            <li><b>06:00pm</b></li>
+                            <li><b>Simple Celebration of Department</b></li>
+                            <li><b><button class="btn btn btn-primary"><i class="fas fa-thumbs-up"></i> Yes</button></b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><b class="fs-4">CCS Day</b></li>
+                            <li><b>Main Quadrangles</b></li>
+                            <li><b>March 17, 2023</b></li>
+                            <li><b>06:00pm</b></li>
+                            <li><b>Simple Celebration of Department</b></li>
+                            <li><b><button class="btn btn btn-primary"><i class="fas fa-thumbs-up"></i> Yes</button></b></li>
+                        </ul>
                     </div>
                 </div>
             </div>
