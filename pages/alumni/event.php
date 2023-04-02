@@ -41,7 +41,7 @@
 
 
 
-    <!-- <div class="container-" style="padding: 20px;">
+    <div class="container-" style="padding: 20px;">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -64,8 +64,8 @@
                 </div>
             </div>
         </div>
-    </div> -->
-
+    </div>
+<!-- 
     <div class="container" style="padding: 20px;">
         <div class="row">
             <div class="col-md-3">
@@ -125,7 +125,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- This is Script Js Link -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
