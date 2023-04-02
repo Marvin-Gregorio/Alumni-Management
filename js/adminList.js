@@ -53,8 +53,11 @@ function printSearch(){
             text:'Year Fields are empty!'
         })
     }else{
-        $.ajax({
-            url:'../../classes'
-        })
+        console.log(yearEnd);
+        console.log(yearStart);
+        console.log(dept);
+
+        let url = "../../classes/views/printSpecific.php?dept=" + dept + "&yearStart=" + yearStart + "&yearEnd=" + yearEnd;
+        window.location = url;
     }
 }

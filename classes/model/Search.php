@@ -204,6 +204,28 @@
 			return $stmt;
 		}
 
+		protected function searchJoinedTablev1($dept,$start,$end){
+			$sql = 'select user_info.user_id from user_info inner join educational_info on user_info.user_id = educational_info.user_id where (elem_year >= ? and elem_year <= ?) or (junior_year >= ? and junior_year <= ?) or (senior_year >= ? and senior_year <= ?) or (college_year >= ? and college_year <= ?) or (master_year >= ? and master_year <= ?) or (doctor_year >= ? and doctor_year <= ?)';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$start,$end,$start,$end,$start,$end,$start,$end,$start,$end,$start,$end]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}
+
+		protected function searchJoinedTablev2($dept,$start,$end){
+			$sql = 'select user_info.user_id from user_info inner join educational_info on user_info.user_id = educational_info.user_id where user_info.department = ? and  ((elem_year >= ? and elem_year <= ?) or (junior_year >= ? and junior_year <= ?) or (senior_year >= ? and senior_year <= ?) or (college_year >= ? and college_year <= ?) or (master_year >= ? and master_year <= ?) or (doctor_year >= ? and doctor_year <= ?))';
+			$stmt = $this->connect()->prepare($sql);
+			try{
+				$stmt->execute([$dept,$start,$end,$start,$end,$start,$end,$start,$end,$start,$end,$start,$end]);
+			}catch(PDOException $e){
+				echo "ERROR : " . $e->getMessage();
+			}
+			return $stmt;
+		}		
+
 		protected function searchCategoryJobList($data){
 			$sql = 'select * from jobs_list where category = ?';
 			$stmt = $this->connect()->prepare($sql);

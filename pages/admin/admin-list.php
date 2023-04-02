@@ -42,13 +42,6 @@
 				<div class="card-body">
 					<div class="row">
 						<div class="col-md-3">
-							<select name="" id="" class="form-select form-select-sm" onchange="verificationFilter(this.value)">
-								<option value="All" selected>All</option>
-								<option value="VERIFIED">VERIFIED</option>
-								<option value="">UNVERIFIED</option>
-							</select>
-						</div>
-						<div class="col-md-3">
 							<select name="" id="print_department" class="form-select form-select-sm" onchange="departmentFilter(this.value)">
 								<option value="All" selected>All</option>
 								<option value="CCS">CCS</option>

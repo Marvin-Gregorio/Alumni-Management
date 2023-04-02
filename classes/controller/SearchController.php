@@ -69,6 +69,15 @@
 			return $result;
 		}
 
+		function getSpecificPrint($dept,$start,$end){
+			if($dept == "All"){
+				$result = $this->searchJoinedTablev1($dept,$start,$end);
+			}else{
+				$result = $this->searchJoinedTablev2($dept,$start,$end);
+			}
+			return $result;
+		}
+
 		function getJobDetails($id){
 			$result = $this->searchSpecificJobList($id);
 			if ($result->rowCount() > 0) {

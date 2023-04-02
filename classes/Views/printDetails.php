@@ -21,22 +21,20 @@
 	$result2 = $search->getEducationalDetails($id);
 	$result3 = $search->getSession($id);
 
-	chmod('../../profileImg/', 0644);
-
-	$mpdf = new \Mpdf\Mpdf();
+	$mpdf = new \Mpdf\Mpdf(['debug' => true]);
 	$css = file_get_contents('style.css');
 	$mpdf->WriteHTML($css, \Mpdf\HTMLParserMode::HEADER_CSS);
 
 	$header = '
 
 				<div class="row" style="padding-left:60px;">
-					<div class="col-xs-2 text-center"><img src="col.png" style="width:100px;"></div>
+					<div class="col-xs-2 text-center"><img src="../../assets/css/images/logo.png" style="width:100px;"></div>
 					<div class="col-xs-5 text-center">
 						<h4>COLUMBAN COLLEGE INC.</h4>
 						<h4>Olongapo City</h4>
 						<h4>Alumni Management Office</h4>
 					</div>
-					<div class="col-xs-2 text-center"><img src="../../profile/gtc.jpeg" style="width:100px;"></div>
+					<div class="col-xs-2 text-center"><img src="../../assets/css/images/logo.png" alt="alumni-logo" style="width:100px;"></div>
 				</div>
 
 				<hr>';
