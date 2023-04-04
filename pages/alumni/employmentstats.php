@@ -112,6 +112,34 @@
                 </div>
             </div>
         </div>
+        <form method="post">
+        <input style="display: none;" type="file" name="crop_image" class="crop_image" id="upload_image" />
+    </form>
+    <div class="modal fade" id="modal_crop" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Crop Image Before Upload</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <div class="img-container">
+                      <div>
+                          <div class="mt-2">
+                              <img src="" style="max-height:800px;" id="sample_image"/>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" id="crop_and_upload" class="btn btn-primary">Crop</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              </div>
+          </div>
+      </div>
+    </div>
     </div>
 
 </body>
