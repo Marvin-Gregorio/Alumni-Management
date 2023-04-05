@@ -191,11 +191,56 @@
               <div class="col-md-4">
                 <label>Undergraduate</label>
                 <select id="college_course" class="form-control form-control-sm">
-                    <option selected>Select Course</option>
-                    <option value="BSCS">BSCS</option>
-                    <option value="BSOA">BSOA</option>
-                    <option value="BLIS">BLIS</option>
-                    <option value="BSIT">BSIT</option>
+                    <option selected>-select course-</option>
+                    <!-- College of Computer Studies -->
+                    <option disabled>College of Computer Studies</option>
+                    <option value="BSCS">BSCS -Bachelor of Science in Computer Science</option>
+                    <option value="BSOA">BSOA -Bachelor of Science in Office Administration</option>
+                    <option value="BLIS">BLIS -Bachelor of Library Information and Science</option>
+                    <option value="BSIT">BSIT -Bachelor of Science in Information Technology</option>
+                    <option value="ACT">ACT -Associate of Communication and Technology</option>
+                    <!-- College of Business and Accountant -->
+                    <option disabled>College of Business and Accountancy</option>
+                    <option value="BSBA">BSA -Bachelor of Science in Accountancy</option>
+                    <option value="BSHM">BSHM -Bachelor of Science in Hospitality Management</option>
+                    <option value="BSTM">BSTM -Bachelor of Science in Tourism Management</option>
+                    <option value="BSBA-FM">BSBA-FM -Bachelor of Science in Business Administration Major in Financial Management</option>
+                    <option value="BSBA-HRDM">BSBA-HRDM -Bachelor of Science in Business Administration Major in Human Resource Dev.Management</option>
+                    <option value="BSBA-MM">BSBA-MM Bachelor of Science in Business Administration Major in Marketing Management</option>
+                    <!-- College of Engineer -->
+                    <option disabled>College of Engineer</option>
+                    <option value="BSCpE">BSCE -Bachelor of Science in Computer Engineer</option>
+                    <option value="BSCE">BSCE -Bachelor of Science in Civil Engineer</option>
+                    <option value="BSECE">BSECE -Bachelor of Science in Electronics Engineer</option>
+                    <option value="BSEE">BSEE -Bachelor of Science in Electrical Engineer</option>
+                    <option value="BSIE">BSIE -Bachelor of Science in Industrial Engineer</option>
+                    <!-- College of Architecture -->
+                    <option disabled>College of Architecture</option>
+                    <option value="BSARCH">BSARCH -Bachelor of Science in Architecture</option>
+                    <!-- College of Nursing -->
+                    <option disabled>College of Nursing</option>
+                    <option value="BSN">BSN -Bachelor of Science in Nursing</option>
+                    <!-- College of Arts and Science Education -->
+                    <option disabled>College of Arts and Science Education</option>
+                    <option value="BEd">BEd -Bachelor of Elementary Education</option>
+                    <option value="BPed">BPed -Bachelor of Physical Education</option>
+                    <option value="BECE">BECE -Bachelor of Early Childhood Education</option>
+                    <option value="BHS">BHS -Bachelor of Human Service</option>
+                    <option value="AB-C">AB-C -Bachelor of Arts in Communication</option>
+                    <option value="AB-PS">BAPS -Bachelor of Arts in Political Science</option>
+                    <option value="BSSW">BSSW-Bachelor of Science in Social Work</option>
+                    <option value="BSED-E">BSED-E -Bachelor of Science in Education Major in English</option>
+                    <option value="BSED-F">BSED-F -Bachelor of Science in Education Major in Filipino</option>
+                    <option value="BSED-M">BSED-M -Bachelor of Science in Education Major in Mathematics</option>
+                    <option value="BSED-S">BSED-S -Bachelor of Science in Education Major in Science</option>
+                    <option value="BSED-SS">BSED-SS -Bachelor of Science in Education Major in Social Studies</option>
+                    <option value="BSED-RE">BSED-RE -Bachelor of Science in Education Major in Religious Education</option>
+                    <option value="BSED-VE">BSED-VE -Bachelor of Science in Education Major in Values Education</option>
+                    <option value="CPEd">CPEd -Certificate Programs in Professional Education</option>
+                    <option value="CECEd">CECEd -Certificate Programs in Education</option>
+                    <option value="CPEd">CPEd -Certificate Programs in Physical Education</option>
+                    <option value="CREd">CREd -Certificate Programs in Religous Education</option>
+                    <option value="CVEd">CVEd -Certificate Programs in Values Education</option>
                   </select>
               </div>
               <div class="col-md-4">
