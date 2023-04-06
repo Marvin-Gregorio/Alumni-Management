@@ -159,7 +159,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
       <div class="card">
         <div class="card-body">
         <div class="text-center">
-          <img src="../../profileImg/profile.jpg"class="w-100 img img-thumbnail" id="profileImg">
+          <img src="../../profileImg/profile.jpg" class="img img-thumbnail" width="50%" id="profileImg">
+          <br>
           <button class="btn btn-primary form-control mt-2" onclick="clickImage()">Change Profile</button>     
         </div>
         <div class="mt-4">
