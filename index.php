@@ -38,7 +38,7 @@
                         <div class="card text-center">
                             <div class="card-body">
                                 <div class="text-center">
-                                    <p class="fs-5"><b>Login Panel</b></p>
+                                    <p class="fs-5"><b>Login</b></p>
                                 </div>
                                 <div>
                                     <input type="text" name="username" id="username" class="form-control my-4 py-2" placeholder="Username" autocomplete="off">
@@ -57,7 +57,7 @@
     </div>
 
     <!-- Modal SignUp -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -115,7 +115,7 @@
             <div class="col-md-8">
                 <label>Department:</label>
                 <select class="form-select form-select-sm" autocomplete="off" id="dept">
-                    <option selected><--Select Department--></option>
+                    <option selected>Select Department</option>
                     <option value="CCS">College of Computer Studies</option>
                     <option value="CBA">College of Business Administration</option>
                     <option value="CASED">College of Arts, Science, and Education</option>
@@ -127,7 +127,7 @@
             <div class="col-md-2">
                 <label>Gender:</label>
                 <select class="form-select form-select-sm" autocomplete="off" id="gender">
-                    <option selected><--Select Gender--></option>
+                    <option selected>Select Gender</option>
                     <option value="MALE">Male</option>
                     <option value="FEMALE">Female</option>
                 </select>
@@ -136,7 +136,7 @@
             <div class="col-md-2">
                 <label>Civil Status:</label>
                 <select class="form-select form-select-sm" autocomplete="off" id="status">
-                    <option selected><--Select Stauts--></option>
+                    <option selected>Select Stauts</option>
                     <option value="SINGLE">Single</option>
                     <option value="MARRIED">Married</option>
                     <option value="WIDOW">Widow</option>
@@ -282,7 +282,7 @@
         </div>
       </div>
 
-    </div>
+    </div> -->
 
     <!-- This is password reset -->
     <div class="modal fade" id="password_reset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -308,7 +308,7 @@
 
 
     <!-- dont delete this -->
-    <button hidden id="policyButton" class="btn form-control" data-bs-toggle="modal" data-bs-target="#user_policy">Policy</button>
+    <!-- <button hidden id="policyButton" class="btn form-control" data-bs-toggle="modal" data-bs-target="#user_policy">Policy</button> -->
 
     <!-- This is Script Js Link -->
 

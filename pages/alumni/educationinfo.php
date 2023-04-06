@@ -130,7 +130,8 @@
                 <span><b>Undergraduate</b></span>
               <label>Course:</label>
                   <select id="college_course" class="form-control form-control-sm">
-                    <option selected>-select course-</option>
+                    <option selected>-select-</option>
+                    <option value="">N/A</option>
                     <!-- College of Computer Studies -->
                     <option disabled>College of Computer Studies</option>
                     <option value="BSCS">BSCS -Bachelor of Science in Computer Science</option>
@@ -198,6 +199,8 @@
               <span><b>Masteral</b></span>
               <label>Course:</label>
                   <select id="master_course" class="form-control form-control-sm">
+                    <option selected>-select-</option>
+                    <option value="">N/A</option>
                     <option value="MSCS">MSCS</option>
                     <option value="MSOA">MSOA</option>
                     <option value="MLIS">MLIS</option>
@@ -218,6 +221,8 @@
               <span><b>Doctorate</b></span>
               <label>Course:</label>
                   <select id="doctor_course" class="form-control form-control-sm">
+                  <option selected>-select-</option>
+                    <option value="">N/A</option>
                     <option value="DSCS">DSCS</option>
                     <option value="DSOA">DSOA</option>
                     <option value="DLIS">DLIS</option>

@@ -116,7 +116,7 @@
             <div class="col-md-8">
                 <label>Department:</label>
                 <select class="form-select form-select-sm" autocomplete="off" id="dept">
-                    <option selected>Select Department</option>
+                    <option selected>-Select Department-</option>
                     <option value="CCS">College of Computer Studies</option>
                     <option value="CBA">College of Business Administration</option>
                     <option value="CASED">College of Arts, Science, and Education</option>
@@ -170,6 +170,7 @@
               <label>Strand:</label>
                   <select id="senior_course" class="form-control form-control-sm">
                     <option selected>Select Strand</option>
+                    <option value="">N/A</option>
                     <option value="STEM">STEM</option>
                     <option value="TVL">TVL</option>
                     <option value="ABM">ABM</option>
@@ -192,6 +193,7 @@
                 <label>Undergraduate</label>
                 <select id="college_course" class="form-control form-control-sm">
                     <option selected>-select course-</option>
+                    <option value="">N/A</option>
                     <!-- College of Computer Studies -->
                     <option disabled>College of Computer Studies</option>
                     <option value="BSCS">BSCS -Bachelor of Science in Computer Science</option>
@@ -258,6 +260,7 @@
                 <label>Masteral</label>
                 <select id="master_course" class="form-control form-control-sm">
                     <option selected>Select Masteral</option>
+                    <option value="">N/A</option>
                     <option value="MSCS">MSCS</option>
                     <option value="MSOA">MSOA</option>
                     <option value="MLIS">MLIS</option>
@@ -279,6 +282,7 @@
                 <label>Doctorate</label>
                 <select id="doctor_course" class="form-control form-control-sm">
                   <option selected>Select Doctorate</option>
+                  <option value="">N/A</option>
                     <option value="DSCS">DSCS</option>
                     <option value="DSOA">DSOA</option>
                     <option value="DLIS">DLIS</option>
