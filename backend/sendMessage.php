@@ -34,9 +34,9 @@
 		for($count = 1; $count < sizeof($email); $count++){
 			$name = $email[$count][1] . " " . $email[$count][2];
 			setRecepient($mail,$email[$count][3],$name);
+			$mail->send();
 		}
 
-		$mail->send();
 
 
 	}catch(Exception $e){
@@ -66,7 +66,8 @@
 
 	function setRecepient($mail,$email,$name){
 	    //Recipients
-	    $mail->setFrom('gregoriomarvin.ph@gmail.com', 'CC-ALUMNI');
+	    $mail->setFrom('ccialumnisystem@gmail.com', 'CC-ALUMNI');
+	    $mail->clearAddresses();
 	    $mail->addAddress($email, $name);
 	}
 	

@@ -373,6 +373,7 @@
 					$data[] = $row['gender'];
 					$data[] = $row['status'];
 					$data[] = $row['pic'];
+					$data[] = $row['department'];
 					
 				}
 				return $data;

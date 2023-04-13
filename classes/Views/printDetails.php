@@ -43,13 +43,17 @@
 	$footer = '<hr>Document generated on '. $present;
 	$mpdf->setHTMLFooter($footer);
 
-	$html = '
+	if(is_array($result2)){
+		$html = '
 		<div class="row">
 		<table class="table">
 		<tr>
 			<td style="width:50%">
-				<img src="../../profileImg/'.$result[10].'" class="img-thumbnail" style="width:200px;">
-			</td>
+				';
+				if($result[10] != null){
+					$html .='<img src="../../profileImg/'.$result[10].'" class="img-thumbnail" style="width:200px;">';
+				}
+			$html .='</td>
 
 			<td style="width:50%">
 				<h3>Educational Information:</h3>
@@ -76,8 +80,48 @@
 			</td>
 
 		</tr>
-		</table>
-		<div>
+		</table>';
+	}else{
+		$html = '
+		<div class="row">
+		<table class="table">
+		<tr>
+			<td style="width:50%">
+				';
+				if($result[10] != null){
+					$html .='<img src="../../profileImg/'.$result[10].'" class="img-thumbnail" style="width:200px;">';
+				}
+			$html .='</td>
+
+			<td style="width:50%">
+				<h3>Educational Information:</h3>
+				<p style="color:white">fdas</p>
+
+				<div>
+					<label class="fw-semibold" >Elementary: </label>
+				</div>
+				<div>
+					<label class="fw-semibold" >Junior High: </label>
+				</div>
+				<div>
+					<label class="fw-semibold" >Senior High: </label>
+				</div>
+				<div>
+					<label class="fw-semibold" >Undegratduate: </label>
+				</div>
+				<div>
+					<label class="fw-semibold" >Masteral: </label>
+				</div>
+				<div>
+					<label class="fw-semibold" >Doctoral: </label>
+				</div>
+			</td>
+
+		</tr>
+		</table>';
+	}
+
+		$html .='<div>
 				<table class="table">
 					<tbody>
 						<tr>
@@ -107,25 +151,45 @@
 								</div>
 									
 
-							</td>
-							<td style="width:50%">
-								<h3>Employment Information:</h3>
-								<p style="color:white">fdas</p>
-								<div>
-									<label class="fw-semibold" >Company Name: '.$result1[1] .'</label>
-								</div>
-								<div>
-									<label class="fw-semibold" >Company Email: '.$result1[2].'</label>
-								</div>
-								<div>
-									<label class="fw-semibold" >Company Number: '.$result1[3].'</label>
-								</div>
-								<div>
-									<label class="fw-semibold" >Company Address: '.$result1[4].'</label>
-								</div>
-							</td>
+							</td>';
 							
-						</tr>
+							if(is_array($result1)){
+								$html .='<td style="width:50%">
+									<h3>Employment Information:</h3>
+									<p style="color:white">fdas</p>
+									<div>
+										<label class="fw-semibold" >Company Name: '.$result1[1] .'</label>
+									</div>
+									<div>
+										<label class="fw-semibold" >Company Email: '.$result1[2].'</label>
+									</div>
+									<div>
+										<label class="fw-semibold" >Company Number: '.$result1[3].'</label>
+									</div>
+									<div>
+										<label class="fw-semibold" >Company Address: '.$result1[4].'</label>
+									</div>
+								</td>';
+							}else{
+								$html .='<td style="width:50%">
+									<h3>Employment Information:</h3>
+									<p style="color:white">fdas</p>
+									<div>
+										<label class="fw-semibold" >Company Name: </label>
+									</div>
+									<div>
+										<label class="fw-semibold" >Company Email: </label>
+									</div>
+									<div>
+										<label class="fw-semibold" >Company Number: </label>
+									</div>
+									<div>
+										<label class="fw-semibold" >Company Address: </label>
+									</div>
+								</td>';
+							}
+							
+						$html .='</tr>
 						
 					</tbody>
 				</table>

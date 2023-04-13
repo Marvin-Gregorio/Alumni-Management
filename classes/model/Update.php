@@ -97,12 +97,12 @@
 			return $stmt;
 		}
 
-		protected function updatePersonalInfo($id,$fname,$mname,$lname,$email,$cp,$b_date,$uname,$gender,$status){
-			$sql = 'update user_info set first_name = ?, middle_name = ?, last_name = ?, email = ?, cp_number = ?, birth_date = ?, username = ?, gender = ?, status = ? where user_id = ?';
+		protected function updatePersonalInfo($id,$fname,$mname,$lname,$email,$cp,$b_date,$uname,$gender,$status,$dept){
+			$sql = 'update user_info set first_name = ?, middle_name = ?, last_name = ?, email = ?, cp_number = ?, birth_date = ?, username = ?, gender = ?, status = ?, department = ? where user_id = ?';
 			$stmt = $this->connect()->prepare($sql);
 
 			try{
-				$stmt->execute([$fname,$mname,$lname,$email,$cp,$b_date,$uname,$gender,$status,$id]);
+				$stmt->execute([$fname,$mname,$lname,$email,$cp,$b_date,$uname,$gender,$status,$dept,$id]);
 			}catch(PDOException $e){
 				echo "ERROR : " . $e->getMessage();
 			}

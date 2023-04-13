@@ -83,7 +83,8 @@
 		"master_course" => $result2[13],
 		"doctor_school" => $result2[14],
 		"doctor_year" => $result2[15],
-		"doctor_course" => $result2[16]
+		"doctor_course" => $result2[16],
+		"dept" => $result[11]
 	);
 	
 	echo json_encode($arr);

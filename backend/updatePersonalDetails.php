@@ -22,9 +22,10 @@
     $uname = $_POST['uname'];
     $gender = $_POST['gender'];
     $status = $_POST['status'];
+    $dept = $_POST['dept'];
 
     try{
-        $update->personalInfo($id,$fname,$mname,$lname,$email,$cp,$b_date,$uname,$gender,$status);
+        $update->personalInfo($id,$fname,$mname,$lname,$email,$cp,$b_date,$uname,$gender,$status,$dept);
     }catch(Exception $e){
         echo "error: " . $e->getMessage();
     }

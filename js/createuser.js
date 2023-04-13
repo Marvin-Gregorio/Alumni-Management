@@ -12,6 +12,7 @@ function createUser(){
 	let gender = document.getElementById('gender').value;
 	let status = document.getElementById('status').value;
 	let dept = document.getElementById('dept').value;
+	
 
 	if(pass != c_pass){
 		Swal.fire({

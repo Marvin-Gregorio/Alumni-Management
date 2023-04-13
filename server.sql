@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 05, 2023 at 01:59 PM
+-- Generation Time: Apr 13, 2023 at 05:12 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -55,7 +55,8 @@ CREATE TABLE `educational_info` (
 INSERT INTO `educational_info` (`education_id`, `elem_school`, `elem_year`, `junior_school`, `junior_year`, `senior_school`, `senior_year`, `senior_course`, `college_school`, `college_year`, `college_course`, `master_school`, `master_year`, `master_course`, `doctor_school`, `doctor_course`, `doctor_year`, `user_id`) VALUES
 (1, 'OCES', '2008', 'OCABIS', '2012', 'COLUMBAN COLLEGE', '2018', 'BSCS', 'COLUMBAN COLLEGE', '2023', 'BSIT', 'COLUMBAN COLLEGE', '2024', 'MSIT', 'COLUMBAN COLLEGE', 'DSIT', '2026', 8),
 (2, '', '', '', '', '', '', 'BSCS', '', '', 'BSCS', '', '', 'MSCS', '', 'DSCS', '', 6),
-(3, 'Columban College', '2008', 'Columban College', '2012', 'Columban College', '2014', 'BSOA', 'Columban College', '2018', 'BSIT', 'Columban College', '2019', 'MSIT', 'Columban College', 'DSIT', '2020', 9);
+(3, 'Columban College', '2008', 'Columban College', '2012', 'Columban College', '2014', 'BSOA', 'Columban College', '2018', 'BSIT', 'Columban College', '2019', 'MSIT', 'Columban College', 'DSIT', '2020', 9),
+(4, '1', '2012', '2', '2014', '3', '2018', 'STEM', '4', '2019', 'BSCpE', '5', '2020', 'MSOA', '6', 'DLIS', '2021', 33);
 
 -- --------------------------------------------------------
 
@@ -96,7 +97,20 @@ INSERT INTO `email_blast` (`blast_id`, `date_created`, `title`, `body`, `send_to
 (18, '2023-03-04 05:20:57', 'Re : CCS Days', 'We are inviting everyone to join our event', 'All'),
 (19, '2023-03-04 05:23:03', 'fadsfd', 'fdasfdf', 'All'),
 (20, '2023-03-05 02:53:21', 'fdsaff', 'dafdf', 'All'),
-(21, '2023-03-05 07:26:59', 'dsf', 'asdfdf', 'CBA');
+(21, '2023-03-05 07:26:59', 'dsf', 'asdfdf', 'CBA'),
+(22, '2023-03-06 02:07:59', 'FREE DEAL', 'FDSFKDJFKDASJFKD\nDFSADJFKSDF\nDSFJD\nSFJDSFJDS', 'All'),
+(23, '2023-03-06 02:10:45', 'faffa', 'dfadfasdfds', 'CCS'),
+(24, '2023-03-06 02:15:34', 'fadsf', 'asdfads', 'All'),
+(25, '2023-03-06 02:37:52', 'fadsf', 'fadf', 'All'),
+(26, '2023-04-13 10:13:06', 'Hello', 'fdkfjakfjdskfjdf\nfadskjfasd;kfds', 'All'),
+(27, '2023-04-13 10:14:20', 'Sample', 'adsfjdskfajsd;kfj', 'All'),
+(28, '2023-04-13 10:15:31', 'Sample', 'fjdskafjs;dkfjds\nfsdfjsdkfsad\nfsdfjds\nfsdafkdsa\nf', 'All'),
+(29, '2023-04-13 10:16:56', 'Sample', 'fjdskafjs;dkfjds\nfsdfjsdkfsad\nfsdfjds\nfsdafkdsa\nf', 'All'),
+(30, '2023-04-13 10:17:39', 'Sample', 'fjdskafjs;dkfjds\nfsdfjsdkfsad\nfsdfjds\nfsdafkdsa\nf', 'All'),
+(31, '2023-04-13 10:20:31', 'fdsafdfasfd', 'fdasfdfadsfsdfdsf\ndf\nasdf\nadf\ndf\nads\nf', 'All'),
+(32, '2023-04-13 10:22:28', 'Sample', 'fdsaffasdffads', 'All'),
+(33, '2023-04-13 10:25:12', 'fdsafdfsad', 'fdfdfads', 'All'),
+(34, '2023-04-13 10:26:27', 'Sample', 'fdasfdsfdsafdasf\nf\ndf\ndsaf\ndf\nasdfd', 'All');
 
 -- --------------------------------------------------------
 
@@ -120,7 +134,8 @@ CREATE TABLE `employment_info` (
 INSERT INTO `employment_info` (`employment_id`, `company_name`, `company_number`, `company_address`, `company_email`, `user_id`) VALUES
 (1, 'Signopsys Inc.', '09121231234', 'BGC, Taguig', 'signopsys.marketing@gmail.com', 8),
 (2, 'Planate Management Inc.', '09481621881', 'Subic Bay Freeport Zone, Philippines', 'planate.advertising.ph@gmailcom', 6),
-(3, 'Columban College Inc', '091829192441', '1st St. New Asinan, Olongapo City', 'columban.edu.ph@gmail.com', 9);
+(3, 'Columban College Inc', '091829192441', '1st St. New Asinan, Olongapo City', 'columban.edu.ph@gmail.com', 9),
+(4, 'Planate', '09178139023809', 'fjadskl;fjfirwfghg', 'planate@gmail.com', 33);
 
 -- --------------------------------------------------------
 
@@ -144,7 +159,7 @@ CREATE TABLE `events` (
 INSERT INTO `events` (`event_id`, `name`, `place`, `set_date`, `description`, `set_time`) VALUES
 (5, 'CCS vs CBA', 'Main Campus', '2023-03-20', 'jfdasf\ndf\'af\ndfjdaf\ndf', '14:58'),
 (6, 'CCS Day', 'Main Quadrangles', '2023-03-17', 'Simple Celebration of the Department', '18:00'),
-(9, 'fdasf', 'fdsaf', '2023-03-22', 'fdasfdff', '02:54');
+(11, 'CBA DAYS', 'FDSAF', '2023-03-17', 'FDSF\nFDAS\nFDAS\nFDS\nFDSA\n', '14:05');
 
 -- --------------------------------------------------------
 
@@ -167,7 +182,10 @@ INSERT INTO `interested` (`interested_id`, `event_id`, `user_id`) VALUES
 (5, 6, 6),
 (6, 9, 6),
 (7, 6, 8),
-(8, 9, 8);
+(8, 9, 8),
+(9, 11, 6),
+(10, 11, 8),
+(11, 11, 33);
 
 -- --------------------------------------------------------
 
@@ -196,7 +214,8 @@ INSERT INTO `jobs_list` (`job_id`, `name`, `category`, `title`, `salary`, `descr
 (4, 'ISBX', 'Information Technology', 'IT Administrator', '40000', 'fadsffa\nfasdf\nd\nfad\nfd\nfd\nff', 'f\ndasf\nf\nd\nfasf\nd\nad\nfds\nd\nads\nfd\n', 'Part-Time', '2023-03-04 11:17:13'),
 (5, 'Columban College', 'Basic Metal Production', 'College Instructor', '40000', 'fadsffa\nfasdf\nd\nfad\nfd\nfd\nff', 'f\ndasf\nf\nd\nfasf\nd\nad\nfds\nd\nads\nfd\n', 'Full-Time', '2023-03-04 11:17:13'),
 (6, 'Steelix & Co.', 'Basic Metal Production', 'Welder', '30000', 'fadsffa\nfasdf\nd\nfad\nfd\nfd\nff', 'f\ndasf\nf\nd\nfasf\nd\nad\nfds\nd\nads\nfd\n', 'Full-Time', '2023-03-04 11:17:14'),
-(8, 'Signopsys Inc.', 'Information Technology', 'FInance Manager', '25000', 'faff', 'dfasf', 'Part-Time', '2023-03-04 12:10:58');
+(8, 'Signopsys Inc.', 'Information Technology', 'FInance Manager', '25000', 'faff', 'dfasf', 'Part-Time', '2023-03-04 12:10:58'),
+(11, 'COlmban College', 'Education', 'College Professor', '30000', 'daffdaf\nadf\ndf\ndsf\ndaf\ndf\ndf\ndsa', 'dsfds\nfad\nfd\nfd\nfds\nfd\nsfdsf', 'Part-Time', '2023-03-06 02:04:49');
 
 -- --------------------------------------------------------
 
@@ -347,7 +366,36 @@ INSERT INTO `session` (`session_id`, `user_id`, `log_date`) VALUES
 (138, 9, '2023-03-05 07:53:27'),
 (139, 6, '2023-03-05 08:55:47'),
 (140, 7, '2023-03-05 08:56:53'),
-(141, 9, '2023-03-05 08:57:22');
+(141, 9, '2023-03-05 08:57:22'),
+(142, 6, '2023-03-06 10:19:56'),
+(143, 6, '2023-03-06 10:21:02'),
+(144, 7, '2023-03-06 10:21:48'),
+(145, 7, '2023-03-06 02:02:32'),
+(146, 9, '2023-03-06 02:09:43'),
+(147, 7, '2023-03-06 02:15:21'),
+(148, 6, '2023-03-06 02:16:49'),
+(149, 7, '2023-03-06 02:17:58'),
+(150, 6, '2023-03-06 02:18:48'),
+(151, 7, '2023-03-06 02:20:26'),
+(152, 6, '2023-03-06 02:27:35'),
+(153, 7, '2023-03-06 02:37:39'),
+(154, 8, '2023-04-02 04:42:01'),
+(155, 7, '2023-04-02 04:44:06'),
+(156, 7, '2023-04-02 05:55:54'),
+(157, 8, '2023-04-02 06:01:50'),
+(158, 7, '2023-04-03 01:43:54'),
+(159, 7, '2023-04-13 10:01:21'),
+(160, 9, '2023-04-13 10:04:46'),
+(161, 6, '2023-04-13 10:11:12'),
+(162, 6, '2023-04-13 10:12:05'),
+(163, 7, '2023-04-13 10:12:41'),
+(164, 6, '2023-04-13 10:27:18'),
+(165, 33, '2023-04-13 10:33:30'),
+(166, 7, '2023-04-13 10:33:49'),
+(167, 33, '2023-04-13 10:56:46'),
+(168, 33, '2023-04-13 11:00:29'),
+(169, 33, '2023-04-13 11:09:43'),
+(170, 7, '2023-04-13 11:10:08');
 
 -- --------------------------------------------------------
 
@@ -378,10 +426,11 @@ CREATE TABLE `user_info` (
 --
 
 INSERT INTO `user_info` (`user_id`, `first_name`, `middle_name`, `last_name`, `email`, `cp_number`, `birth_date`, `password`, `username`, `type`, `gender`, `status`, `pic`, `department`, `date_created`) VALUES
-(6, 'Leofers', 'Martinez', 'Dela Cruz', 'gregoriomarvin56@gmail.com', '09071021182', '2023-03-03', '$2y$12$E2xQrG5oeg0p3hSwFB6uoeOC/qdIojn0P6FZBcaaW6nhTrMdLy.4i', 'leofer_delacruz', 'ALUMNI', 'MALE', 'SINGLE', '1676738551.png', 'Architecture', '2023-03-01 19:42:25'),
+(6, 'Leofers', 'Martinez', 'Dela Cruz', 'marvingregorio56@gmail.com', '09071021182', '2023-03-03', '$2y$12$C0nD3Pz7K4V9dRRDTDWN5eb01DONoi06xeupLyG4uwD/TfwCnfv1e', 'leofer_delacruz', 'ALUMNI', 'MALE', 'SINGLE', '1676738551.png', 'Architecture', '2023-03-01 19:42:25'),
 (7, 'Anatalia', 'Berania', 'Sy', 'gregoriomarvin.ph@gmail.com', '09182831664', '2023-01-30', '$2y$12$cZomaZADS2GfORuyIslGJOZUZkhLflHe4Sc1ez9IxtUxESwSXidoG', 'admin', 'ADMIN', 'FEMALE', 'MARRIED', '1676721475.png', '', '2023-01-01 19:42:35'),
-(8, 'Melvin', 'Esguerra', 'Vargas', 'aurora@gmail.com', '09091231223', '2023-03-02', '$2y$12$EMphGelfoecHxBmwM/pQ1umOiKpKXdyHXhZq0hR/UpcmvUHMyhSpq', 'melvin_vargas', 'ALUMNI', 'MALE', 'SINGLE', '1676738874.png', 'CBA', '2022-12-22 19:42:57'),
-(9, 'Mabel', 'Corazon', 'Queen', 'mable.ccalumni@gmail.com', '09182421223', '2002-02-19', '$2y$12$ixzzvC0OD4VtYAv0P0EVL.2EhjIZ/EyJey9rT6NAm.ZGJ754823wS', 'mabel_corazon', 'STAFF', 'FEMALE', 'SINGLE', '1676804344.png', '', '2022-12-12 00:00:00');
+(8, 'Melvin', 'Esguerra', 'Vargas', 'melvinevargas@gmail.com', '09091231223', '2023-03-02', '$2y$12$EMphGelfoecHxBmwM/pQ1umOiKpKXdyHXhZq0hR/UpcmvUHMyhSpq', 'melvin_vargas', 'ALUMNI', 'MALE', 'SINGLE', '1680424991.png', 'CCS', '2022-12-22 19:42:57'),
+(9, 'Mabel', 'Corazon', 'Queen', 'mable.ccalumni@gmail.com', '09182421223', '2002-02-19', '$2y$12$ixzzvC0OD4VtYAv0P0EVL.2EhjIZ/EyJey9rT6NAm.ZGJ754823wS', 'mabel_corazon', 'STAFF', 'FEMALE', 'SINGLE', '1676804344.png', '', '2022-12-12 00:00:00'),
+(33, 'fdsafd', 'fasdf', 'fdsaf', 'daragreg28@gmail.com', '31902382093', '2023-03-30', '$2y$12$nIirXs9pDGgLlZGBTPH69eXR1O1k1rmamLjX1ZS7TOMWUS0f59XWO', 'fasdfdfdasfsdf', 'ALUMNI', 'MALE', 'SINGLE', '1681354640.png', 'CBA', '2023-04-13 10:32:29');
 
 --
 -- Indexes for dumped tables
@@ -446,49 +495,49 @@ ALTER TABLE `user_info`
 -- AUTO_INCREMENT for table `educational_info`
 --
 ALTER TABLE `educational_info`
-  MODIFY `education_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `education_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `email_blast`
 --
 ALTER TABLE `email_blast`
-  MODIFY `blast_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `blast_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `employment_info`
 --
 ALTER TABLE `employment_info`
-  MODIFY `employment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `employment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `interested`
 --
 ALTER TABLE `interested`
-  MODIFY `interested_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `interested_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `jobs_list`
 --
 ALTER TABLE `jobs_list`
-  MODIFY `job_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `job_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `session`
 --
 ALTER TABLE `session`
-  MODIFY `session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `session_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=171;
 
 --
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- Constraints for dumped tables

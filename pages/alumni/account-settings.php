@@ -133,6 +133,18 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <option value="WIDOW">Widow</option>
               </select>
               </div>
+              <div class="col-md-8">
+                <label>Department:</label>
+                <select class="form-select form-select-sm" autocomplete="off" id="dept">
+                    <option selected>-Select Department-</option>
+                    <option value="CCS">College of Computer Studies</option>
+                    <option value="CBA">College of Business Administration</option>
+                    <option value="CASED">College of Arts, Science, and Education</option>
+                    <option value="ARCHITECTURE">College of Architecture</option>
+                    <option value="ENGINEERING">College of Engineering</option>
+                    <option value="NURSING">College of Nursing</option>
+                </select>
+            </div>
               <div class="text-end">
               <button onclick="updatePersonalDetails()" class="btn btn-info text-white mt-2">Update Profile Info</button>  
               </div>

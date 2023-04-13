@@ -96,7 +96,7 @@
 
 	function setRecepient($mail,$email,$name){
 	    //Recipients
-	    $mail->setFrom('gregoriomarvin.ph@gmail.com', 'CC-ALUMNI');
+	    $mail->setFrom('ccialumnisystem@gmail.com', 'CC-ALUMNI');
 	    $mail->addAddress($email, $name);
 	}
 	

@@ -72,6 +72,7 @@ function loadAccountDetails(){
         url:'../../backend/getProfileDetails.php',
         success:function(result){
             result = JSON.parse(result);
+            console.log(result);
             document.getElementById('profileImg').src = '../../profileImg/' + result[0].pic;
             document.getElementById('fname').value = result[0].first_name;
             document.getElementById('mname').value = result[0].middle_name;
@@ -81,6 +82,7 @@ function loadAccountDetails(){
             document.getElementById('b_date').value = result[0].birthdate;
             document.getElementById('uname').value = result[0].username;
             document.getElementById('gender').value = result[0].gender;
+            document.getElementById('dept').value = result[0].dept;
             document.getElementById('status').value = result[0].status;
             document.getElementById('company_name').value = result[0].company_name;
             document.getElementById('company_email').value = result[0].company_email;
@@ -103,6 +105,7 @@ function loadAccountDetails(){
             document.getElementById('doctor_year').value = result[0].doctor_year;
             document.getElementById('doctor_course').value = result[0].doctor_course;
             
+            
         }
         
     })
@@ -119,6 +122,7 @@ function updatePersonalDetails(){
     let uname = document.getElementById('uname').value;
     let gender = document.getElementById('gender').value;
     let status = document.getElementById('status').value;
+    let dept = document.getElementById('dept').value;
 
     $.ajax({
         url:'../../backend/updatePersonalDetails.php',
@@ -132,7 +136,8 @@ function updatePersonalDetails(){
             b_date:b_date,
             uname:uname,
             gender:gender,
-            status:status
+            status:status,
+            dept:dept
         },
         success:function(result){
             console.log(result);

@@ -59,9 +59,9 @@
 			
 		}
 
-		function personalInfo($id,$fname,$mname,$lname,$email,$cp,$b_date,$uname,$gender,$status){
+		function personalInfo($id,$fname,$mname,$lname,$email,$cp,$b_date,$uname,$gender,$status,$dept){
 			try{
-				$this->updatePersonalInfo($id,$fname,$mname,$lname,$email,$cp,$b_date,$uname,$gender,$status);
+				$this->updatePersonalInfo($id,$fname,$mname,$lname,$email,$cp,$b_date,$uname,$gender,$status,$dept);
 			}catch(Exception $e){
 				echo "caught exception: ". $e->getMessage(). "\n";
 			}
