@@ -14,6 +14,9 @@
     <!-- This is Bootstrap CSS Link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 
+    <!-- This is Canvass Style Sheet for Signup -->
+    <link rel="stylesheet" href="signup-style.css">
+
     <!-- This is Table Link -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -21,7 +24,7 @@
 
 </head>
 
-<body style="background-color: #e0e0e0;">
+<body>
 
     <!-- <div class="d-flex justify-content-center align-items-center vh-100">
         
@@ -57,7 +60,14 @@
     </div> -->
 
     <!-- Modal SignUp -->
-    <div class="container" style="padding: 20px">
+    <div class="container">
+      <div class="text-center">
+        <img src="assets/css/images/logo.png" width="150px" alt="">
+      </div>
+      <div class="text-center mb-3">
+          <h3 id="school-name">Columban College, Inc.</h3>
+          <span id="cp-title" class="fw-semibold">Alumni Management System</span>
+      </div>
       <div class="row justify-content-evenly">
         <div class="col-md-8">
           <div class="card">
@@ -128,7 +138,7 @@
             <div class="col-md-2">
                 <label>Gender:</label>
                 <select class="form-select form-select-sm" autocomplete="off" id="gender">
-                    <option selected>Select Gender</option>
+                    <option selected>-select-</option>
                     <option value="MALE">Male</option>
                     <option value="FEMALE">Female</option>
                 </select>
@@ -137,7 +147,7 @@
             <div class="col-md-2">
                 <label>Civil Status:</label>
                 <select class="form-select form-select-sm" autocomplete="off" id="status">
-                    <option selected>Select Stauts</option>
+                    <option selected>-select-</option>
                     <option value="SINGLE">Single</option>
                     <option value="MARRIED">Married</option>
                     <option value="WIDOW">Widow</option>
@@ -150,8 +160,8 @@
             </div>
             <div class="card-footer">
               <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-danger"><a href="index.php" class="nav-link">Go Back</a></button>
-                <button type="button" onclick="createUser()" class="btn btn-primary">Save changes</button>
+                <button class="btn btn-sm" id="gobackbutton"><a href="index.php" class="nav-link">Go Back</a></button>
+                <button type="button" id="savechangesbutton" onclick="createUser()" class="btn btn-sm">Save changes</button>
               </div>
             </div>
           </div>

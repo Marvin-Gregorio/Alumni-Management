@@ -1,0 +1,13 @@
+body
+{
+    background-color: #e0e0e0;
+}
+.container
+{
+    padding: 20px;
+}
+#gobackbutton, #savechangesbutton
+{
+    background-color: #0084ff;
+    color: #ffffff;
+}
