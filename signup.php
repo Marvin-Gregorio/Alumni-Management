@@ -160,8 +160,8 @@
             </div>
             <div class="card-footer">
               <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-sm" id="gobackbutton"><a href="index.php" class="nav-link">Go Back</a></button>
-                <button type="button" id="savechangesbutton" onclick="createUser()" class="btn btn-sm">Save changes</button>
+                <button class="btn btn-sm" id="gobackbutton"><a href="index.php" class="nav-link">Back</a></button>
+                <button type="button" id="savechangesbutton" onclick="createUser()" class="btn btn-sm">Submit</button>
               </div>
             </div>
           </div>
@@ -184,7 +184,7 @@
             <input type="checkbox" name="check" id="check" class="mx-3"><label><b>I agree the <a href="#">terms of use</a></b></label>
           </div>
           <div class="modal-footer">
-            <input type="submit" value="Accept" class="btn btn-success" data-bs-dismiss="modal" disabled>
+            <input type="submit" value="Accept" class="btn btn-sm" id="acceptbuttonn" data-bs-dismiss="modal" disabled>
           </div>
         </div>
       </div>

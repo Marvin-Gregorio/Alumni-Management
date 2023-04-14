@@ -6,8 +6,21 @@ body
 {
     padding: 20px;
 }
-#gobackbutton, #savechangesbutton
+#gobackbutton
 {
-    background-color: #0084ff;
+    background-color: #ad0101;
     color: #ffffff;
+    font-weight: bold;
+}
+#savechangesbutton
+{
+    background-color: #005bb1;
+    color: #ffffff;
+    font-weight: bold;
+}
+#acceptbuttonn
+{
+    background-color: #005bb1;
+    color: #ffffff;
+    font-weight: bold;
 }

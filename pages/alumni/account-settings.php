@@ -78,9 +78,15 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         </div>
         <div class="col-sm-8">
             <div class="d-flex mb-2">
-              <button type="button" class="btn btn-info btn-sm text-white mx-2"><a href="account-settings.php" class="nav-link">Personal Information</a></button>
-              <button type="button" class="btn btn-info btn-sm text-white mx-2"><a href="educationinfo.php" class="nav-link">Educational Background</a></button>
-              <button type="button" class="btn btn-info btn-sm text-white mx-2"><a href="employmentstats.php" class="nav-link">Employment Status</a></button>
+              <button type="button" class="btn btn-info btn-sm text-white mx-2">
+                <a href="account-settings.php" class="nav-link">Personal Information</a>
+              </button>
+              <button type="button" class="btn btn-info btn-sm text-white mx-2">
+                <a href="educationinfo.php" class="nav-link">Educational Background</a>
+              </button>
+              <button type="button" class="btn btn-info btn-sm text-white mx-2">
+                <a href="employmentstats.php" class="nav-link">Employment Status</a>
+              </button>
             </div>
           <div class="card">
             <div class="card-body">
