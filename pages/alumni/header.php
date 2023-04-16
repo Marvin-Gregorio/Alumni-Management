@@ -20,7 +20,7 @@
 </nav>
 
 
-<Header class="navbar navbar-expand-sm sticky-top" id="header">
+<Header class="navbar navbar-expand-sm sub-header" id="header">
 <div class="container-fluid">
 <ul class="navbar-nav mx-3">
 <li class="nav-item"><a id="nav-menu" href="job.php" class="nav-link mx-3">Jobs</a></li>

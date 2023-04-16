@@ -15,6 +15,10 @@ body::-webkit-scrollbar
 {
     background: var(--white);
 }
+.sub-header
+{
+    border-top: 3px solid var(--light-gray);
+}
 #nav-menu
 {
     font-weight: 600;
