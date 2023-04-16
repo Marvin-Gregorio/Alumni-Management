@@ -115,8 +115,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
-                <button onclick="addEvent()" type="button" class="btn btn-sm btn-info"><i class="fas fa-floppy-disk"></i> Save</button>
+                <button type="button" class="btn btn-sm" style="background-color:#ad0101; color:#ffffff;font-weight:bold;" data-bs-dismiss="modal">Close</button>
+                <button onclick="addEvent()" type="button" class="btn btn-sm" style="background-color:#005bb1; color:#ffffff;font-weight:bold;"><i class="fas fa-floppy-disk"></i> Save</button>
             </div>
         </div>
     </div>
@@ -166,8 +166,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
-                <button onclick="updateEvent()" type="button" class="btn btn-sm btn-info"><i class="fas fa-floppy-disk"></i> Save</button>
+                <button type="button" class="btn btn-sm" style="background-color:#ad0101; color:#ffffff;font-weight:bold;" data-bs-dismiss="modal">Close</button>
+                <button onclick="updateEvent()" type="button" class="btn btn-sm" style="background-color:#005bb1; color:#ffffff;font-weight:bold;"><i class="fas fa-floppy-disk"></i> Save</button>
             </div>
         </div>
     </div>

@@ -44,7 +44,7 @@
                  <div class="card-body">
                     <div class="d-flex justify-content-between">
                         <span><b>Events</b></span>
-                        <a href="" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#createevents"><i class="fas fa-circle-plus"></i><p id="blastBtn">New Email Blast</p></a>
+                        <a href="" id="blastBtn" class="btn btn-sm" style="background-color: #005bb1; color: #ffffff; font-weight: bold;" data-bs-toggle="modal" data-bs-target="#createevents"><i class="fas fa-circle-plus"></i> New Email Blast</a>
                     </div>
                     <hr>
                     <table id="blastlist" class="table table-hover">
@@ -109,8 +109,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
-                    <button onclick="addBlast()" type="button" class="btn btn-sm btn-info"><i class="fas fa-floppy-disk"></i> Save</button>
+                    <button type="button" class="btn btn-sm" style="background-color:#ad0101; color:#ffffff;font-weight:bold;" data-bs-dismiss="modal">Close</button>
+                    <button onclick="addBlast()" type="button" class="btn btn-sm" style="background-color:#005bb1; color:#ffffff;font-weight:bold;"><i class="fas fa-floppy-disk"></i> Save</button>
                 </div>
             </div>
         </div>

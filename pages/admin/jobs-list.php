@@ -77,7 +77,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <span><b>List of Vacancies</b></span>
-                            <a href="" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#vacancylist"><i class="fas fa-circle-plus"></i> Add Vacancy</a>
+                            <a href="" class="btn btn-sm" style="background-color: #005bb1; color: #ffffff; font-weight:bold;" data-bs-toggle="modal" data-bs-target="#vacancylist"><i class="fas fa-circle-plus"></i> Add Vacancy</a>
                         </div>
                         <hr>
                         <table id="joblist" class="table table-hover">
@@ -184,8 +184,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
-                    <button onclick="addJob()" type="button" class="btn btn-sm btn-info"><i class="fas fa-floppy-disk"></i> Save</button>
+                    <button type="button" class="btn btn-sm" style="background-color:#ad0101; color:#ffffff;font-weight:bold;" data-bs-dismiss="modal">Close</button>
+                    <button onclick="addJob()" type="button" class="btn btn-sm" style="background-color:#005bb1; color:#ffffff;font-weight:bold;"><i class="fas fa-floppy-disk"></i> Save</button>
                 </div>
             </div>
         </div>
@@ -265,8 +265,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
-                    <button onclick="updateJob()" type="button" class="btn btn-sm btn-info"><i class="fas fa-floppy-disk"></i> Save</button>
+                    <button type="button" class="btn btn-sm" style="background-color:#ad0101; color:#ffffff;font-weight:bold;" data-bs-dismiss="modal">Close</button>
+                    <button onclick="updateJob()" type="button" class="btn btn-sm" style="background-color:#005bb1; color:#ffffff;font-weight:bold;"><i class="fas fa-floppy-disk"></i> Save</button>
                 </div>
             </div>
         </div>

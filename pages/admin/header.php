@@ -10,7 +10,7 @@
 			<ul class="navbar-nav">
 				<li class="nav-item dropdown">
 				<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				<span class="">Admin | </span><span class="mr-3" id="header_name"></span>
+				<span class=""><b>Admin</b> | </span><span class="mr-3" id="header_name"></span>
 				<img src="../../profileImg/.png" width="50px" class="rounded-circle" id="nav_profile" >
 				</a>
 				

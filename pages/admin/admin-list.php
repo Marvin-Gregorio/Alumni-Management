@@ -59,7 +59,7 @@
 							<input type="text" name="" class="form-control" placeholder="Year To" id="year_end">
 						</div>
 						<div class="col-md-2">
-							<button class="btn btn-success" onclick="printSearch()"><i class="fas fa-print"></i>Print</button>
+							<button class="btn" style="background-color: #005bb1;color:#ffffff;font-weight:bold;" onclick="printSearch()"><i class="fas fa-print"></i>Print</button>
 						</div>
 					</div>
 				</div>
@@ -215,7 +215,7 @@
 						</div>
 						
 						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-sm" style="background-color:#ad0101; color:#ffffff;font-weight:bold;"  data-bs-dismiss="modal">Close</button>
 						</div>
 					</div>
 				</div>

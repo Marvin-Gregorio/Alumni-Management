@@ -167,7 +167,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
             <div class="modal-content">
               <div class="modal-header">
                   <h5 class="modal-title">Crop Image Before Upload</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">×</span>
                   </button>
               </div>
@@ -181,8 +181,8 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                   </div>
               </div>
               <div class="modal-footer">
-                  <button type="button" id="crop_and_upload" class="btn btn-primary">Crop</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="button" id="crop_and_upload" class="btn btn-sm" style="background-color: #005bb1;color:#ffffff;font-weight:bold;">Crop</button>
+                  <button type="button" class="btn btn-sm" style="background-color:#ad0101; color:#ffffff;font-weight:bold;" data-bs-dismiss="modal">Cancel</button>
               </div>
           </div>
       </div>
