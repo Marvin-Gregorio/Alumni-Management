@@ -29,6 +29,6 @@
 <li class="nav-item"><a id="nav-menu" href="forum.php" class="nav-link mx-3">Email Blast</a></li>
 <li class="nav-item"><a id="nav-menu" href="account-settings.php" class="nav-link mx-3">Account Settings</a></li>
 </ul>
-<a onclick="logOut()" class="btn btn-danger">Sign-out</a>
+<a onclick="logOut()" class="btn btn-sm" style="background-color: #ad0101; color: #ffffff; font-weight: bold;">Sign-out</a>
 </div>
 </Header>

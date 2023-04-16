@@ -25,7 +25,7 @@
                         <div class="col-md-12">
                             <div class="d-flex justify-content-between">
                                 <a href="viewdetailsJob.php?id='.$row["job_id"].'" class="text-decoration-none"><b>'.$row["title"].'</b></a>
-                                <a href="viewdetailsJob.php?id='.$row["job_id"].'" class="btn btn-warning btn-sm"><b>Job Details</b></a>
+                                <a href="viewdetailsJob.php?id='.$row["job_id"].'" class="btn btn-sm" style="background-color: #005bb1; color:#ffffff;"><b>Job Details</b></a>
                             </div>
                         </div>
                     </div>

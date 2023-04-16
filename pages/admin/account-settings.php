@@ -161,7 +161,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         <div class="text-center">
           <img src="../../profileImg/profile.jpg" class="img img-thumbnail" width="50%" id="profileImg">
           <br>
-          <button class="btn btn-primary form-control mt-2" onclick="clickImage()">Change Profile</button>     
+          <button class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;" onclick="clickImage()"><b>Change Profile</b></button>     
         </div>
         <div class="mt-4">
           <h5>Change Password:</h5>
@@ -177,7 +177,9 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
             <label>Confirm Password: </label>
             <input type="password" id="confirm_pass" class="form-control">
           </div>
-          <button onclick="updatePassword()" class="btn btn-primary mt-2 form-control">Update Password</button>
+          <div class="text-end">
+            <button onclick="updatePassword()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;">Update Password</button>
+          </div>
         </div>
         </div>
       </div>
@@ -234,7 +236,9 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
               </select>
             </div>
           </div>
-          <button onclick="updatePersonalDetails()" class="btn btn-primary form-control mt-2">Update Profile Info</button>  
+          <div class="text-end">
+            <button onclick="updatePersonalDetails()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;">Update Profile Info</button>
+          </div>  
         </div>
         </div>
       </div>

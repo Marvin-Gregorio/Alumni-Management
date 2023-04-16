@@ -49,7 +49,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
               <div class="text-center">
                 <img src="../../profileImg/profile.jpg" class="img-thumbnail" width="50%" id="profileImg">
                 <br>
-                <button class="btn btn-info text-white mt-2" onclick="clickImage()"><b>Change Profile</b></button>     
+                <button class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;" onclick="clickImage()"><b>Change Profile</b></button>     
               </div>
               <div class="row">
                 <h5><b>Change Password:</b></h5>
@@ -71,20 +71,20 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 </div>
               </div>
                 <div class="text-end">
-                <button onclick="updatePassword()" class="btn btn-info text-white mt-2"><b>Update Password</b></button>
+                <button onclick="updatePassword()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;"><b>Update Password</b></button>
                 </div>
             </div>
           </div>
         </div>
         <div class="col-sm-8">
             <div class="d-flex mb-2">
-              <button type="button" class="btn btn-info btn-sm text-white mx-2">
+              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;">
                 <a href="account-settings.php" class="nav-link">Personal Information</a>
               </button>
-              <button type="button" class="btn btn-info btn-sm text-white mx-2">
+              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;">
                 <a href="educationinfo.php" class="nav-link">Educational Background</a>
               </button>
-              <button type="button" class="btn btn-info btn-sm text-white mx-2">
+              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;">
                 <a href="employmentstats.php" class="nav-link">Employment Status</a>
               </button>
             </div>
@@ -152,7 +152,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 </select>
             </div>
               <div class="text-end">
-              <button onclick="updatePersonalDetails()" class="btn btn-info text-white mt-2">Update Profile Info</button>  
+              <button onclick="updatePersonalDetails()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;">Update Profile Info</button>  
               </div>
             </div>
             </div>

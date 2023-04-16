@@ -44,7 +44,7 @@
                    <div class="card-body">
                     <div class="d-flex justify-content-between">
                         <span><b>Events</b></span>
-                        <a href="" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#createevents"><i class="fas fa-circle-plus"></i> Add Events</a>
+                        <a href="" class="btn btn-sm" style="background-color: #005bb1;color:#ffffff;font-weight:bold;" data-bs-toggle="modal" data-bs-target="#createevents"><i class="fas fa-circle-plus"></i> Add Events</a>
                     </div>
                     <hr>
                     <table id="eventlist" class="table table-hover">

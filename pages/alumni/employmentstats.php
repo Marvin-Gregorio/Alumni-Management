@@ -47,7 +47,7 @@
                         <div class="text-center">
                             <img src="../../profileImg/profile.jpg" class="img-thumbnail" width="50%" id="profileImg">
                             <br>
-                            <button class="btn btn-info text-white mt-2" onclick="clickImage()"><b>Change Profile</b></button>
+                            <button class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;" onclick="clickImage()"><b>Change Profile</b></button>
                         </div>
                         <div class="row">
                             <h5><b>Change Password</b></h5>
@@ -69,16 +69,16 @@
                             </div>
                         </div>
                         <div class="text-end">
-                            <button onclick="updatePassword()" class="btn btn-info text-white mt-2"><b>Update Password</b></button>
+                            <button onclick="updatePassword()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;"><b>Update Password</b></button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-8">
             <div class="d-flex mb-2">
-              <button type="button" class="btn btn-info btn-sm text-white mx-2"><a href="account-settings.php" class="nav-link">Personal Information</a></button>
-              <button type="button" class="btn btn-info btn-sm text-white mx-2"><a href="educationinfo.php" class="nav-link">Educational Background</a></button>
-              <button type="button" class="btn btn-info btn-sm text-white mx-2"><a href="employmentstats.php" class="nav-link">Employment Status</a></button>
+              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;"><a href="account-settings.php" class="nav-link">Personal Information</a></button>
+              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;"><a href="educationinfo.php" class="nav-link">Educational Background</a></button>
+              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;"><a href="employmentstats.php" class="nav-link">Employment Status</a></button>
             </div>
                 <div class="card">
                     <div class="card-body">
@@ -106,7 +106,7 @@
               </div>
             </div>
             <div class="text-end">
-            <button onclick="updateEmploymentDetails()" class="btn btn-info text-white mt-2">Update Employment Info</button>
+            <button onclick="updateEmploymentDetails()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;">Update Employment Info</button>
             </div>
                     </div>
                 </div>

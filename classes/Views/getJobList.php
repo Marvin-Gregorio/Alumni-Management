@@ -22,9 +22,9 @@
         'type' => $row['type'],
         'action' => '
 
-        <a onclick=displayData('.$row["job_id"].') class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#viewvacancy"><i class="fas fa-pen-to-square"></i></a>
+        <a onclick=displayData('.$row["job_id"].') class="btn btn-sm" style="background-color:#005bb1;color:#ffffff;font-weight:bold;font-size:.8rem;" data-bs-toggle="modal" data-bs-target="#viewvacancy"><i class="fas fa-pen-to-square"></i></a>
         
-        <a onclick=removeRow('.$row["job_id"].')  class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>',
+        <a onclick=removeRow('.$row["job_id"].')  class="btn btn-sm" style="background-color:#ad0101;color:#ffffff;font-weight:bold;font-size:.8rem;"><i class="fas fa-trash"></i></a>',
       );
     }
   }else{

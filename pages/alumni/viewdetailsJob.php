@@ -13,7 +13,7 @@
     <title>Columban College, Inc. | Alumni Database Management System</title>
 
     <!-- This is Website Logo -->
-    <link rel="icon" href="assets/css/images/logo.png">
+    <link rel="icon" href="/assets/css/images/logo.png">
 
     <!-- This is Additionanl CSS Link -->
     <link rel="stylesheet" href="style.css">
@@ -74,7 +74,7 @@
             </div>
         </div>
         <div class="d-flex justify-content-between mt-3">
-            <a href="job.php" class="btn btn-sm btn-danger text-white"><i class="fas fa-arrow-left"></i> <b>Back</b></a>
+            <a href="job.php" class="btn btn-sm" style="background-color: #ad0101; color: #ffffff; font-weight: bold;"><i class="fas fa-arrow-left"></i> <b>Back</b></a>
         </div>
     </div>
 
