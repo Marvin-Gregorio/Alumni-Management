@@ -64,6 +64,7 @@
 		"gender" => $result[8],
 		"status" => $result[9],
 		"pic" => $result[10],
+		"dept" =>$result[11],
 		"company_name" => $result1[1],
 		"company_email" => $result1[3],
 		"company_number" => $result1[2],

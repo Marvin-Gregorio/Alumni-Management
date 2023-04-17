@@ -50,7 +50,7 @@
                             
                             <div class="col-md-6">
                                 <select name="" id="" class="form-select form-select-sm" onchange="categoryFilter(this.value)">
-                                    <option selected>All Job Category</option>
+                                    <!--<option selected>All Job Category</option>-->
                                     <option value="Information Technology">Information Technology</option>
                                     <option value="Basic Metal Production">Basic Metal Production</option>
                                     <option value="Chemical Industries">Chemical Industries</option>
@@ -61,7 +61,7 @@
                             </div>
                             <div class="col-md-6">
                                 <select onchange="jobTypeFilter(this.value)" name="" id="" class="form-select form-select-sm">
-                                    <option selected>Job type</option>
+                                    <!--<option selected>Job type</option>-->
                                     <option value="Full-Time">Full-Time </option>
                                     <option value="Part-Time">Part-Time</option>
                                     <option value="Temporary">Temporary</option>

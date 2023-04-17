@@ -43,7 +43,6 @@
 					<div class="row">
 						<div class="col-md-3">
 							<select name="" id="print_department" class="form-select form-select-sm" onchange="departmentFilter(this.value)">
-								<option value="All" selected>All</option>
 								<option value="CCS">CCS</option>
 								<option value="CBA">CBA</option>
 								<option value="CASED">CASED</option>
@@ -150,6 +149,11 @@
 								<div class="mt-1">
 									<label class="fw-semibold" >Status:</label>
 									<p><span id="status"> </span></p>
+								</div>
+
+								<div class="mt-1">
+									<label class="fw-semibold" >Department:</label>
+									<p><span id="college_dept"> </span></p>
 								</div>
 
 							</div>

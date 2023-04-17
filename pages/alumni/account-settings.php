@@ -146,9 +146,9 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                     <option value="CCS">College of Computer Studies</option>
                     <option value="CBA">College of Business Administration</option>
                     <option value="CASED">College of Arts, Science, and Education</option>
-                    <option value="ARCHITECTURE">College of Architecture</option>
-                    <option value="ENGINEERING">College of Engineering</option>
-                    <option value="NURSING">College of Nursing</option>
+                    <option value="Architecture">College of Architecture</option>
+                    <option value="Engineering">College of Engineering</option>
+                    <option value="Nursing">College of Nursing</option>
                 </select>
             </div>
               <div class="text-end">

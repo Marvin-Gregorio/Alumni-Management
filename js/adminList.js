@@ -7,6 +7,7 @@ function seeMoreDetails(id){
         data:{id:id},
         success:function(result){
             result = JSON.parse(result);
+            console.log(result);
             document.getElementById('fname').innerHTML = result[0].first_name + " ";
             document.getElementById('mname').innerHTML = result[0].middle_name + " ";
             document.getElementById('lname').innerHTML = result[0].last_name;
@@ -36,6 +37,7 @@ function seeMoreDetails(id){
             document.getElementById('doctor_school').innerHTML = result[0].doctor_school;
             document.getElementById('doctor_year').innerHTML = result[0].doctor_year;
             document.getElementById('doctor_course').innerHTML = result[0].doctor_course;
+            document.getElementById('college_dept').innerHTML = result[0].dept;
         }
         
     })
