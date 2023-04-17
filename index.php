@@ -44,8 +44,8 @@
                                     <input type="text" name="username" id="username" class="form-control my-4 py-2" placeholder="Username" autocomplete="off">
                                     <input type="password" name="password" id="password" class="form-control my-4 py-2" placeholder="Password" autocomplete="off">
                                 </div>
-                                <div class="text-center d-grid gap-2 mx-auto">
-                                    <button onclick="authenticateUser()" type="button" name="submit" id="submitForm" class="btn btn-sm" style="background-color: #005bb1; color:#ffffff;">Login</button>
+                                <div class="text-center">
+                                    <button onclick="authenticateUser()" type="button" name="submit" id="submitForm" class="btn form-control" style="background-color: #005bb1; color:#ffffff; font-weight:bold;">Login</button>
                                 </div>
                                 <button class="btn btn-sm link-primary" data-bs-toggle="modal" data-bs-target="#password_reset">Forgot Password? Click Here</button>
                                 <button class="btn form-control"><a href="signup.php" class="nav-link">Sign up?</a></button>
@@ -299,8 +299,8 @@
             <input type="text" name="" class="form-control" id="password_username">
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="closemodal">Close</button>
-            <button type="button" onclick="sendPassword()" class="btn btn-primary">Verify</button>
+            <button type="button" class="btn btn-sm" style="background-color: #ad0101; color:#ffffff;" data-bs-dismiss="modal" id="closemodal">Close</button>
+            <button type="button" onclick="sendPassword()" class="btn btn-sm" style="background-color: #005bb1; color:#ffffff;">Verify</button>
           </div>
         </div>
       </div>

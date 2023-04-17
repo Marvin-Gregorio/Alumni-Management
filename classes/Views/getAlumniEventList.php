@@ -37,7 +37,7 @@
           'date' => date("F d, Y", strtotime($row['set_date'])),
           'time' => date("h:i A", strtotime($row['set_time'])),
           'description' => $row['description'],
-          'action' => '<button onclick="addLike('.$row["event_id"].')" class="btn btn-primary"><i class="fas fa-thumbs-up"></i> Yes</button>'
+          'action' => '<button onclick="addLike('.$row["event_id"].')" class="btn btn-sm" style="background-color:#005bb1;color:#ffffff;font-weight:bold;"><i class="fas fa-thumbs-up"></i> Yes</button>'
         );
       }
 

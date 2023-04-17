@@ -10,7 +10,7 @@
 			<ul class="navbar-nav">
 				<li class="nav-item dropdown">
 				<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				<span class=""><b>Alumni</b> | </span><span class="mr-3" id="header_name"></span>
+				<span class=""><b style="color:#005bb1;">Alumni</b> | </span><span class="mr-3" id="header_name"></span>
 				<img src="" width="40px" class="rounded-circle" id="nav_profile">
 				</a>
 				

@@ -178,7 +178,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
             <input type="password" id="confirm_pass" class="form-control">
           </div>
           <div class="text-end">
-            <button onclick="updatePassword()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;">Update Password</button>
+            <button onclick="updatePassword()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;font-weight:bold;">Update Password</button>
           </div>
         </div>
         </div>
@@ -237,7 +237,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
             </div>
           </div>
           <div class="text-end">
-            <button onclick="updatePersonalDetails()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;">Update Profile Info</button>
+            <button onclick="updatePersonalDetails()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;font-weight:bold;">Update Profile Info</button>
           </div>  
         </div>
         </div>

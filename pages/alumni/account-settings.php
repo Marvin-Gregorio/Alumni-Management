@@ -78,13 +78,13 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         </div>
         <div class="col-sm-8">
             <div class="d-flex mb-2">
-              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;">
+              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;font-weight:bold;">
                 <a href="account-settings.php" class="nav-link">Personal Information</a>
               </button>
-              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;">
+              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;font-weight:bold;">
                 <a href="educationinfo.php" class="nav-link">Educational Background</a>
               </button>
-              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;">
+              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;font-weight:bold;">
                 <a href="employmentstats.php" class="nav-link">Employment Status</a>
               </button>
             </div>
@@ -152,7 +152,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 </select>
             </div>
               <div class="text-end">
-              <button onclick="updatePersonalDetails()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;">Update Profile Info</button>  
+              <button onclick="updatePersonalDetails()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;font-weight:bold;">Update Profile Info</button>  
               </div>
             </div>
             </div>

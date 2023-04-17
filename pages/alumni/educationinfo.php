@@ -76,9 +76,9 @@
             </div>
             <div class="col-md-8">
             <div class="d-flex mb-2">
-              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;"><a href="account-settings.php" class="nav-link">Personal Information</a></button>
-              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;"><a href="educationinfo.php" class="nav-link">Educational Background</a></button>
-              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;"><a href="employmentstats.php" class="nav-link">Employment Status</a></button>
+              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;font-weight:bold;"><a href="account-settings.php" class="nav-link">Personal Information</a></button>
+              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;font-weight:bold;"><a href="educationinfo.php" class="nav-link">Educational Background</a></button>
+              <button type="button" class="btn btn-sm mx-2" style="background-color: #005bb1; color:#ffffff;font-weight:bold;"><a href="employmentstats.php" class="nav-link">Employment Status</a></button>
             </div>
                 <div class="card">
                     <div class="card-body">
@@ -239,7 +239,7 @@
               </div>
             </div>
             <div class="text-end">
-            <button onclick="updateEducationalDetails()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;"  >Update Educational Info</button>
+            <button onclick="updateEducationalDetails()" class="btn btn-sm mt-2" style="background-color: #005bb1; color:#ffffff;font-weight:bold;"  >Update Educational Info</button>
             </div>
                     </div>
                 </div>
